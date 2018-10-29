@@ -12,7 +12,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/bionic64"
+  config.vm.box_url = "https://s3.amazonaws.com/coding-environment/vagrant-boxes/20181026/package.box"
+  config.vm.box = "university-bootcamp/coding-environment"
 
   config.vm.network "forwarded_port", guest: 3000, host: 3030, host_ip: "127.0.0.1", auto_correct: true
 
