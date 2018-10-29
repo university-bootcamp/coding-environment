@@ -28,7 +28,7 @@ Then go to [Heroku.com](http://Heroku.com) and create an account there as well.
 Step 2:  Get the files for your development environment
 -----------
 
-Download and unzip the following file: [vagrant.zip](https://github.com/FirehoseProject/firehose-vagrant-rails5/raw/master/tools/vagrant.zip?raw=true) to your __Desktop__. Unzip the file, it will create a folder called `vagrant` on your Desktop.  This is where all your web development environment will live.
+Download and unzip the following file: [coding-environment.zip](https://github.com/university-bootcamp/coding-environment/archive/coding-environment.zip) to your __Desktop__. Unzip the file, it will create a folder called `vagrant` on your Desktop.  This is where all your web development environment will live.
 
 Step 3: Install the tools
 -------
