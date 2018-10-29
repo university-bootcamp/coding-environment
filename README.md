@@ -1,10 +1,6 @@
 # Coding Environment Installation Guide
 
-These instructions will setup a system that can be used as a development environment.  When this process is finished, you will be able to run and work on projects using the following tools and services.
-
-* ruby, version 2.2+
-* Ruby on Rails, version 5.2+
-* PostgreSQL
+These instructions will setup a system that can be used as a development environment.  When this process is finished, you will be able to run and work on projects using Ruby on Rails and PostgreSQL.
 
 When this setup is finished, you will be able to preview a Ruby on Rails web application within a web browser that will look like the following.
 
