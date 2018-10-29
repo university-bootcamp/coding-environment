@@ -8,5 +8,5 @@ When this setup is finished, you will be able to preview a Ruby on Rails web app
 
 ## Select Your Operating System to Install
 
-* [Windows](windows.md)
-* [Apple Macintosh](mac.md)
+### * [Windows](windows.md)
+### * [Apple Macintosh](mac.md)
