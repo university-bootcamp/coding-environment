@@ -57,9 +57,9 @@ The previous steps installed all the programs that were needed to use a vagrant 
 
 Turning on your virtual environment will take a bit longer than usual on the first time.
 
-**Open the terminal** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window.
+**Open the terminal** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window that 
 
-![terminal](images/terminal.png)
+![terminal](/images/terminal.png)
 
 
 A terminal window will come up, and then run the following two commands:
