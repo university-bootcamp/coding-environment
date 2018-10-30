@@ -87,7 +87,7 @@ If everything is successful you will see output that looks like the following.
 
 ![Screenshot](images/success-vagrant-mac.png)
 
-If you see this, continue to **Step 4**: vagrant has been installed and started as expected.
+If you see this, continue to **Step 4**: vagrant has been installed and started as expected.  If this isn't what your screen looks like, continue below and find the message that matches the output you're seeing.
 
 **[ERROR] — Not a vagrant project.**
 
@@ -95,10 +95,12 @@ If you see this, continue to **Step 4**: vagrant has been installed and started 
 
 **[ERROR] — `vagrant up` failed.**
 
-
 [send back to cloudide].
 
 
+**[SOMETHING ELSE]**
+
+Maybe ask a TA
 
 ## Step 4: Log into your dev environment
 
