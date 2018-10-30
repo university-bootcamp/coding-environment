@@ -71,13 +71,17 @@ cd ~/Desktop/coding-environment
 
 > **Note**:  this command will require you to download a file that is hundreds of megabytes long.  Make sure you are on a strong Internet connection before you run this command.
 
-Run the following command.
+Run the following command — and **after the command completes, read the next section before you run another command.**
 
 ```
 vagrant up
 ```
 
-> ### IMPORTANT: Watch out for error messages at this step.
+#### IMPORTANT: Watch out for error messages at the previous step!
+
+Here'
+
+
 > 
 > If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
 
