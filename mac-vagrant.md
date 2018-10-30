@@ -83,9 +83,11 @@ The previous command may complete with a variety of messages.  **It also may ins
 
 **[SUCCESS] — Everything is successful.**
 
-If everything is successful you will see the following message.
+If everything is successful you will see output that looks like the following.
 
-[Screenshot]
+![Screenshot](images/success-vagrant-mac.png)
+
+If you see this, continue to **Step 4**: vagrant has been installed and started as expected.
 
 **[ERROR] — Not a vagrant project.**
 
