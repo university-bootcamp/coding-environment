@@ -29,7 +29,7 @@ Vagrant is a program that will allow you to run a virtual machine on your comput
 
 This next step is the suggested install process.  Some computers do not work well with vagrant — if this happens using an alternative could be helpful.
 
-[Setup your vagrant environment on your Mac](mac-vagrant.md)
+**[Click here to setup your vagrant environment on your Mac](mac-vagrant.md)**
 
 ## Step 2: [Alternative] Setup a CloudIDE
 
