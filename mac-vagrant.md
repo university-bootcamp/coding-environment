@@ -57,15 +57,14 @@ The previous steps installed all the programs that were needed to use a vagrant 
 
 Turning on your virtual environment will take a bit longer than usual on the first time.
 
-**Open the terminal** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window that 
+**Open the terminal** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window.
 
-![terminal](/images/terminal.png)
+You will need to run two commands in your terminal windows.
 
-
-A terminal window will come up, and then run the following two commands:
+**First**, run the following command to change your working directory, to make it so you're working with the web development environment you downloaded earlier.
 
 ```
-cd ~/Desktop/vagrant
+cd ~/Desktop/coding-environment
 ```
 
 Then type this command.  It will need to download a large file, so it will take a few moments to complete:
