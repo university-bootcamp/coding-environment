@@ -37,7 +37,6 @@ There are three programs you will need to install to setup your environment:  Su
 **First**, visit the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), click Find the Mac OS X section and click "Universal (32 and 64-bit)".  Run the file you downloaded and follow the instructions (you're clicking next most of the time)
 **Finally**, restart your computer if you're prompted to.
 
-
 ## Step 3: Turn on your Web Dev Environment
 
 
