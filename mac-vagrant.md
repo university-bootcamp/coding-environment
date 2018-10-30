@@ -67,13 +67,19 @@ You will need to run two commands in your terminal windows.
 cd ~/Desktop/coding-environment
 ```
 
-Then type this command.  It will need to download a large file, so it will take a few moments to complete:
+**Second**, you will need to run the command to turn on your virtual computer environment.
+
+> **Note**:  this command will require you to download a file that is hundreds of megabytes long.  Make sure you are on a strong Internet connection before you run this command.
+
+Run the following command.
 
 ```
 vagrant up
 ```
 
-**NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
+> ### IMPORTANT: Watch out for error messages at this step.
+> 
+> If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
 
 
 ## Step 4: Log into your dev environment
