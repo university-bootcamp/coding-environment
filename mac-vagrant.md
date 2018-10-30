@@ -1,16 +1,20 @@
+# Vagrant Web Development Setup for Apple Macintosh Computers
 
-### Step 2A: Get the files
-
+In this step, we will install, configure and test your vagrant web development environment.  At the end of this process, you will see a web application that is running from within this environment active inside your web browser.
 
 > **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
 
-Your vagrant virtual machine will need a variety of ot
+Follow the following steps to install and use your vagrant environment.
 
+## Step 1: Get the files
 
-Download and unzip the following file: [coding-environment.zip](https://github.com/university-bootcamp/coding-environment/archive/coding-environment.zip) to your __Desktop__. Unzip the file, it will create a folder called `vagrant` on your Desktop.  This is where all your web development environment will live.
+Your vagrant virtual machine will need a variety of files to set this up.
 
+* **Download and unzip** [coding-environment.zip](https://github.com/university-bootcamp/coding-environment/archive/coding-environment.zip) to your `Desktop` folder.
 
-### Step 2B: Install the tools
+*Note:* _This is where all your web development environment will live._
+
+## Step 2: Install the tools
 
 
 * Go to the [VirtualBox Website](https://www.virtualbox.org/wiki/Downloads), click the link to Download "OS X hosts".  Open the dmg file that downloads, then double click on VirtualBox.pkg that pops up and follow the instructions (you're clicking continue most of the time).  Once you go through that step close out the "VirtualBox" window.
@@ -19,7 +23,7 @@ Download and unzip the following file: [coding-environment.zip](https://github.c
 * Restart your computer if you're prompted to.
 
 
-### Step 2C: Turn on your Web Dev Environment
+## Step 3: Turn on your Web Dev Environment
 
 
 Open up the **Terminal Window**: Hold Command+Spacebar, in the Spotlight type 'Terminal' and hit the enter key.
@@ -39,7 +43,7 @@ vagrant up
 **NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
 
 
-### Step 2D: Log into your dev environment
+## Step 4: Log into your dev environment
 
 To log into your web-dev environment follow the following steps:
 
@@ -57,10 +61,9 @@ development environment that looks like this:
 This brings you into your web dev environment ready to run commands.
 
 
-Step 6: Accounts
-------------
+## Step 5: Accounts
 
-#### Generate SSH Key
+### Step 5A: Generate SSH Key
 
  Inside the web development terminal window, where it says `[Web Dev]` in blue, run the following lines one by one. _important note: the command has backticks (`) not single-quotes ('), either copy and paste the command or if you type it use the key to the left of the 1 to type the backtick in the first line_:
 
@@ -74,7 +77,7 @@ ssh-keygen -t rsa -C "Firehose Vagrant" -N '' -f ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa
 ```
 
-#### Configure Heroku with SSH Keys
+### Step 5B: Configure Heroku with SSH Keys
 First we need to update the `heroku-cli` with the following command:
 
 ```
@@ -96,7 +99,7 @@ Finally, we need to add our ssh key to our heroku account:
 heroku keys:add
 ```
 
-#### Configure Github with SSH Keys
+### Step 5C: Configure Github with SSH Keys
 
 Then run this command.  Once this command runs it will prompt you for your GitHub username (note this is your username not your email address) and your password.  Enter these values and then press enter.  It should tell you "ok!".  If it gives you an error message you probably entered an invalid username and password (so try to run that command again).
 
@@ -123,8 +126,7 @@ _We need an amazon developer account for some image storage space on Amazons S3 
 * Sign-up and create an account for [Amazon Web Services](http://aws.amazon.com/). Anything we'll do during this course will cost you nothing, so don't worry about your credit card being charged.
 
 
-Step 7: Test
----------
+## Step 6: Test
 
  In the web development terminal window,  where it says `[Web Dev]` in blue, run this, _important note: after you run `rails s` it won't give you the prompt to continue to enter commands. This is by design, so move onto the next step even if it looks like it's just hanging_:
 
@@ -139,8 +141,7 @@ rails s -b 0.0.0.0 -p 3000
 Open a web browser on your computer and go to: [http://127.0.0.1:3030](http://127.0.0.1:3030).  You should see the welcome aboard page come up.
 
 
-Step 8: Stop your rails server
--------------
+## Step 7: Stop your rails server
 
 Now return to a window where you can enter commands in web development terminal window.
 
@@ -149,8 +150,7 @@ Now return to a window where you can enter commands in web development terminal 
 This stops the webpage from working, but will allow you to enter new commands.
 
 
-Step 9: Know your web development environment
----------------
+## Step 8: Know your web development environment
 
 
 Knowing and understanding how to connect to your web development environment when you want to start coding is pretty important.
