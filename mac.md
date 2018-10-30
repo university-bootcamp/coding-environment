@@ -12,13 +12,13 @@ You will need to use two different services in the process: GitHub & Heroku.
 
 GitHub is a service that will allow you to collaborate and back-up your code.  You will need to create an account on this site.
 
-**First**, visit [GitHub.com](http://github.com) and create an account.
+**First**,  _**[visit GitHub.com](http://github.com)**_ and create an account.
 
 ### Heroku
 
 Heroku is a service that will allow you to put your project live on the Internet.  You will need to create an account on this site.
 
-**Second**, visit [Heroku.com](http://Heroku.com) and create an account.
+**Second**, visit _**[Heroku.com](http://Heroku.com)**_ and create an account.
 
 
 ## Step 2: [Suggested] Setup vagrant
@@ -27,7 +27,7 @@ Vagrant is a program that will allow you to run a virtual machine on your comput
 
 This next step is the suggested install process.  Some computers do not work well with vagrant — if this happens using an alternative could be helpful.
 
-**Next**, [Click here to setup your vagrant environment on your Mac](mac-vagrant.md).
+**Next**, _**[click here to setup your vagrant environment on your Mac](mac-vagrant.md)**_.
 
 ## Step 2: [Alternative] Setup a Cloud IDE
 
@@ -41,6 +41,6 @@ Cloud IDEs will give you a professional coding environment all within your web b
 
 Since these Cloud IDEs will give you the full power of a linux virtual machine that is accessible within a web browser, this is a great option to set up a coding environment with, also.
 
-**Alternatively**, [Click here to use a CloudIDE to use your coding environment](cloud-ide.md).
+**Alternatively**, **_[Click here to use a CloudIDE to use your coding environment](cloud-ide.md)_**.
 
 ## Step 3:  Understand your environment
