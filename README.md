@@ -10,3 +10,8 @@ When this setup is finished, you will be able to preview a Ruby on Rails web app
 
 * [Windows](windows.md)
 * [Apple Macintosh](mac.md)
+
+
+# TODO
+
+* Regenerate the zip file.
