@@ -81,11 +81,21 @@ vagrant up
 
 The previous command may complete with a variety of messages.  **It also may instruct you to run commands that will cause problems in your environment**: so make sure to read this section before doing anything.
 
-Here'
+**[SUCCESS] — Everything is successful.**
 
+If everything is successful you will see the following message.
 
-> 
+[Screenshot]
+
+**[ERROR] — Not a vagrant project.**
+
 > If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
+
+**[ERROR] — `vagrant up` failed.**
+
+
+[send back to cloudide].
+
 
 
 ## Step 4: Log into your dev environment
