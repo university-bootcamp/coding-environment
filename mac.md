@@ -1,12 +1,12 @@
 # Apple Macintosh Development Environment setup
 
-These instructions will install a web development coding environment on your machine and set up all the required accounts that you will need.
+These instructions will install a web development coding environment on your machine and set up all the required accounts that you will need on your Apple Macintosh computer.
 
 ## Step 1: Create web development accounts
 
 You will need to use two different services in the process: GitHub & Heroku.
 
-**Note:** You may be prompted if you want to install programs on your machine when setting up GitHub and Heroku account — you will not need to install these programs yet.
+> **Note:** You may be prompted if you want to install programs on your machine when setting up GitHub and Heroku account — you will not need to install these programs yet.
 
 ### GitHub
 
