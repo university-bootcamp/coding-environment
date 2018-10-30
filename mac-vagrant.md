@@ -1,6 +1,9 @@
 
 ### Step 2A: Get the files
 
+
+> **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
+
 Your vagrant virtual machine will need a variety of ot
 
 
