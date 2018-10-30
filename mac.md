@@ -1,5 +1,25 @@
-Mac Setup with Vagrant
-==================
+# Apple Macintosh Development Environment setup
+
+These instructions will install a web development coding environment on your machine and set up all the required accounts that you will need.
+
+## Step 1: Create web development accounts
+
+You will need to use two different services in the process: GitHub & Heroku.
+
+**Note:** You may be prompted if you want to install programs on your machine when setting up GitHub and Heroku account — you will not need to install these programs yet.
+
+### GitHub
+
+GitHub is a service that will allow us to collaborate and back-up our code.  
+
+**First**, visit [GitHub.com](http://github.com) and create an account.
+
+### Heroku
+
+**Second**, visit [Heroku.com](http://Heroku.com) and create an account.
+
+
+## Step 2: Set up vagrant
 
 This will run you through the steps to configure your web development environment using the vagrant install process.
 
@@ -11,18 +31,6 @@ Word inside Windows on your Mac) make sure to close Parallels before going throu
 play nicely with Vagrant.
 
 
-Step 1: Create accounts if you haven't already
---------
-
-**Note:** These websites may ask you if you want to also download the software programs to go along with the accounts (The Heroku ToolBelt, GitHub for Windows, or GitHub for Mac).  We won't be using these programs so you won't need to download them.
-
-### Part A
-
-First go to [GitHub.com](http://github.com) and create an account.
-
-### Part B
-
-Then go to [Heroku.com](http://Heroku.com) and create an account there as well.
 
 
 Step 2:  Get the files for your development environment
