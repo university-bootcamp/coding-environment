@@ -77,7 +77,7 @@ Run the following command — and **after the command completes, read the next s
 vagrant up
 ```
 
-#### IMPORTANT: Watch out for error messages at the previous step!
+### IMPORTANT: Watch out for error messages at the previous step!
 
 Here'
 
