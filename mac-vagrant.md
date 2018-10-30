@@ -31,7 +31,7 @@ There are three programs you will need to install to setup your environment:  Su
 > If this happens do the following:
 > * open Launch Pad 
 > * navigate to `System Preferences > Security & Privacy`
-> * Click the [open anyway](http://i.imgur.com/XPVpfRf.png) option.
+> * Click the [Open Anyway](http://i.imgur.com/XPVpfRf.png) option.
 > 
 > If you see an error that _"Sublime Text" is an application downloaded from the internet. Are you sure you want to open it?_ [(screenshot)](http://i.imgur.com/bjtmqkw.png), press the **Open** button.  
 > 
@@ -51,10 +51,16 @@ There are three programs you will need to install to setup your environment:  Su
 
 **Finally**, restart your computer if you're prompted to.
 
-## Step 3: Turn on your Web Dev Environment
+## Step 3: Starting Your Virtual Machine
 
+The previous steps installed all the programs that were needed to use a vagrant virtual machine.  The next step will run through the steps of turning the environment on for the first time.
 
-Open up the **Terminal Window**: Hold Command+Spacebar, in the Spotlight type 'Terminal' and hit the enter key.
+Turning on your virtual environment will take a bit longer than usual on the first time.
+
+**Open the terminal** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window.
+
+![terminal](images/terminal.png)
+
 
 A terminal window will come up, and then run the following two commands:
 
