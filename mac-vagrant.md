@@ -26,7 +26,18 @@ There are three programs you will need to install to setup your environment:  Su
 
 **Second**, open the file and [drag the Sublime Text program into the Applications folder](http://i.imgur.com/pgjF3WL.png), then launch the program by going into your _Launch Pad_ and finding "Sublime Text".  
 
-> **Note:** This may say that this is from an [unidentified developer and is unallowed, to continue](http://i.imgur.com/FNTYmyL.png) if this happens open Launch Pad > System Preferences > Security & Privacy and click [open Anyway](http://i.imgur.com/XPVpfRf.png). )  It will probably tell you ["Sublime Text" is an application downloaded from the internet. Are you sure you want to open it?](http://i.imgur.com/bjtmqkw.png)  Press **Open**.  This will launch the Sublime Text editor, and you'll be good.  If you need more help check out [this Sublime Text install video](https://vimeo.com/88292868) we made.
+> **Note:** When you follow this step, you may be presented with an error because this program wasn't installed from the App Store.  The error may [look like this](http://i.imgur.com/FNTYmyL.png).
+> 
+> If this happens do the following:
+> * open Launch Pad 
+> * navigate to `System Preferences > Security & Privacy`
+> * Click the [open anyway](http://i.imgur.com/XPVpfRf.png) option.
+> 
+> If you see an error that _"Sublime Text" is an application downloaded from the internet. Are you sure you want to open it?_ [(screenshot)](http://i.imgur.com/bjtmqkw.png), press the **Open** button.  
+> 
+> This will launch the Sublime Text editor, and you'll be good.  
+> 
+> If you need more help check out [this Sublime Text install video](https://vimeo.com/88292868) that shows how to do this.
 
 ### Program 2 — VirtualBox
 
