@@ -12,7 +12,7 @@ Your vagrant virtual machine will need a variety of files to set this up.
 
 * **Download and unzip** [coding-environment.zip](https://github.com/university-bootcamp/coding-environment/archive/coding-environment.zip) to your `Desktop` folder.
 
-*Note:* _This is where all your web development environment will live._
+**Note:** _This folder will become the folder where your web development environment and source code will be used._
 
 ## Step 2: Install the tools
 
