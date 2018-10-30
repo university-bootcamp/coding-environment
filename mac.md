@@ -31,6 +31,8 @@ This next step is the suggested install process.  Some computers do not work wel
 
 ## Step 2: [Alternative] Setup a Cloud IDE
 
+> **If you setup an environment with vagrant successfully, you can skip this step.**
+
 Sometimes, when trying to set up virtual computers on your machine problems will arise.  At these times, it is often the best solution to use a Cloud IDE solution.
 
 Cloud IDEs will give you a professional coding environment all within your web browser.  There are a number of reasons to use Cloud IDEs.
