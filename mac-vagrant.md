@@ -14,11 +14,11 @@ Your vagrant virtual machine will need a variety of files to set this up.
 
 **Note:** _This folder will become the folder where your web development environment and source code will be used._
 
-## Step 2: Install the programs
+## Step 2: Install three programs
 
 There are three programs you will need to install to setup your environment:  Sublime text, VirtualBox and vagrant.
 
-### First, install the Sublime Text Editor
+### Program 1 — Install the Sublime Text Editor
 
 > You may have already installed this program, but if you haven't follow these steps.
 
@@ -27,12 +27,12 @@ There are three programs you will need to install to setup your environment:  Su
 
 > **Note:** This may say that this is from an [unidentified developer and is unallowed, to continue](http://i.imgur.com/FNTYmyL.png) if this happens open Launch Pad > System Preferences > Security & Privacy and click [open Anyway](http://i.imgur.com/XPVpfRf.png). )  It will probably tell you ["Sublime Text" is an application downloaded from the internet. Are you sure you want to open it?](http://i.imgur.com/bjtmqkw.png)  Press **Open**.  This will launch the Sublime Text editor, and you'll be good.  If you need more help check out [this Sublime Text install video](https://vimeo.com/88292868) we made.
 
-### Second, install the VirtualBox software.
+### Program 2 — Install the VirtualBox software.
 
 **First**, visit the [VirtualBox Website](https://www.virtualbox.org/wiki/Downloads), click the link to Download "OS X hosts".  
 **Second**, Open the dmg file that downloads, then double click on VirtualBox.pkg that pops up and follow the instructions (you're clicking continue most of the time).  Once you go through that step close out the "VirtualBox" window.
 
-### Third, install the Vagrant software.
+### Program 3 — install the Vagrant software.
 
 **First**, visit the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), click Find the Mac OS X section and click "Universal (32 and 64-bit)".  Run the file you downloaded and follow the instructions (you're clicking next most of the time)
 **Finally**, restart your computer if you're prompted to.
