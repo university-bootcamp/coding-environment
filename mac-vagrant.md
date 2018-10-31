@@ -91,39 +91,53 @@ If you see this, continue to **Step 4**: vagrant has been installed and started 
 
 **[ERROR] — `Vagrant environment or target machine` error message` shown.**
 
-The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command**.
-
 The error message will look like this:
 
 ![Screenshot](images/vagrant-init.png)
 
+The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command**.
+
 **If you see this error**, _**[click here to understand and fix the problem so the `vagrant up` command works](https://workspace.thefirehoseproject.com/comments/48)**_.
 
-**[ERROR] — `vagrant up` failed.**
+**[ERROR] — `vagrant up` timeouts.**
 
-[send back to cloudide].
+Error messages indicating that:
 
+> Timed out while waiting for the machine to boot.  This means Vagrant was unable to communicate with the guest machine within th e configured ("config.vm.boot_timeout" value) time period.
 
-**[SOMETHING ELSE]**
+This error message indicates that your computer was unable to connect to the vagrant environment.  This can happen if your computer is incompatible with vagrant.
 
-Maybe ask a TA
+When this error message happens it's often best to try to run the command an additional time to see if the command executes successfully the next time.
+
+**Typically, we suggest switching to use a Cloud IDE if this problem persists.** **_[Click here to use a CloudIDE to use your coding environment](cloud-ide.md)_**.
+
+**[SOMETHING ELSE] — the output produces something else and does not indicate that everything worked as expected.**
+
+If you encountered an output that is different than the above actions your environment is in a state that is slightly different than these instructions expect.  Because of this, you should ask for help for a TA.
+
+To get the best answer, use the following template to ask for help.
+
+> Hello.  I'm setting up my web development environment using vagrant and when running the `vagrant up` command I encountered an unusual problem.  Attached is a screenshot of the error.
+
+Then take a screenshot of the full output of the command you just ran in the terminal window and include it in your request for help.  We will get back to you about it, soon!
 
 ## Step 4: Log into your dev environment
 
-To log into your web-dev environment follow the following steps:
+The previous steps installed, configured and turned on a virtual computer that you can use for web development.  The next steps will log you into your environment, so you can begin using it.
 
-__First__:  After `vagrant up` finishes, in the terminal type:
+After `vagrant up` finishes, enter the following command in the terminal window.
 
 ```
 vagrant ssh
 ```
 
-__Second__: Then you'll be prompted with a terminal window inside your web
-development environment that looks like this:
+This command will change your regular terminal window into a terminal window that you can use to run commands inside the virtual computer that was setup.
 
-![web-dev-environment](http://i.imgur.com/UdZvZTj.png)
-
-This brings you into your web dev environment ready to run commands.
+> When you are logged into your virtual computer and it is ready for you to run commands inside this virtual machine your terminal will look like this.
+> 
+> ![Vagrant SSH output](images/vagrant-ssh.png)
+> 
+> This brings you into your web dev environment ready to run commands.
 
 
 ## Step 5: Accounts
