@@ -89,9 +89,15 @@ If everything is successful you will see output that looks like the following.
 
 If you see this, continue to **Step 4**: vagrant has been installed and started as expected.  If this isn't what your screen looks like, continue below and find the message that matches the output you're seeing.
 
-**[ERROR] — Not a vagrant project.**
+**[ERROR] — `Vagrant environment or target machine` error message` shown.**
 
-> If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
+The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command*.
+
+The error message will look like this:
+
+![Screenshot](images/vagrant-init.png)
+
+**If you see this error**, _**[click here to understand and fix the problem so the `vagrant up` command works](https://workspace.thefirehoseproject.com/comments/48)**_.
 
 **[ERROR] — `vagrant up` failed.**
 

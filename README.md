@@ -15,3 +15,4 @@ When this setup is finished, you will be able to preview a Ruby on Rails web app
 # TODO
 
 * Regenerate the zip file.
+* https://workspace.thefirehoseproject.com/comments/48 — linked to
