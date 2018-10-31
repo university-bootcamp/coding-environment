@@ -210,21 +210,35 @@ heroku keys:add
 
 This step will finalize the connection between your coding environment and the heroku service.
 
-### Step 5C: Configure Github with SSH Keys
+### Step 5C: Configure heroku with SSH key
 
-Then run this command.  Once this command runs it will prompt you for your GitHub username (note this is your username not your email address) and your password.  Enter these values and then press enter.  It should tell you "ok!".  If it gives you an error message you probably entered an invalid username and password (so try to run that command again).
+Your environment will need to connect it's SSH key to the GitHub service, too.  We have written a script to help with this process.
+
+> The command below will execute a script that we've written to automatically connect your GitHub account wit your SSH key.  
+> 
+> In this process, the program will prompt you for your GitHub username.  Keep in mind, this is your `username` for GitHub.com not your email address.
+
+**Next**, copy and paste the following command in your coding enviroment.  After running this command, enter your GitHub username and password to connect your account.
 
 ```
 curl https://gist.githubusercontent.com/kenmazaika/fa8ea7dfbae413638cfd111b974bc74a/raw/ecb5e91c044d92389d0cfd3c2229e57187384d6d/github_auth.rb  > ~/.firehose-github.rb && ruby ~/.firehose-github.rb
 ```
 
-Once the dollar-sign returns, run these commands and provide your name and email address inside the double quotes instead of the dummy data:
+> **Important**:  After running the above command the command should display the text `ok!` in the terminal window.
+>
+> If it gives an error message, this usually indicates that you had problems when entering your username or password.  If this happens, try the above command again and enter your credentials another time.
+
+#### Configure the git program
+
+The above steps set git and GitHub to use your SSH key as a way to connect to your account.  There are also two configuration options you will need to provide git.
+
+**Enter the following command in your web development environment**, and also be sure to adjust the email address in the command you execute to be your actual email address instead of the `you@example.com` address.
 
 ```
 git config --global user.email "you@example.com"
 ```
 
-And then run:
+**Enter the following command in your web development environment**, and also be sure to adjust the email address in the command you execute to be your name instead of the `Your Name` value.
 
 ```
 git config --global user.name "Your Name"
