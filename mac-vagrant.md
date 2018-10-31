@@ -91,7 +91,7 @@ If you see this, continue to **Step 4**: vagrant has been installed and started 
 
 **[ERROR] — `Vagrant environment or target machine` error message` shown.**
 
-The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command*.
+The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command**.
 
 The error message will look like this:
 
