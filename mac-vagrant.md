@@ -140,24 +140,50 @@ This command will change your regular terminal window into a terminal window tha
 > This brings you into your web dev environment ready to run commands.
 
 
-## Step 5: Accounts
+## Step 5: Connecting your environment with your accounts
+
+In the previous steps you setup accounts on GitHub.com and heroku.com.  For these accounts to work correctly, you will need to connect your coding environment with these accounts.
 
 ### Step 5A: Generate SSH Key
 
- Inside the web development terminal window, where it says `[Web Dev]` in blue, run the following lines one by one. _important note: the command has backticks (`) not single-quotes ('), either copy and paste the command or if you type it use the key to the left of the 1 to type the backtick in the first line_:
+An `SSH key` is a password file that exists on your computer.  First, we will need to generate a password file for our environment to use and we will do that in this section.  In the next part, we'll use this password file with our accounts.
+
+> **Note:** The command that we are suggesting to run includes the backtick character, ```.  This is a different character than the single quote character, `'`.
+> 
+> Wither copy and paste the command below, or if you type it use the correct backtick character.  Usually, you can find this character on your keyboard on the key to the left of the 1 button.
+
+This first command will run the command to turn on the SSH program in your environment.
+
+*First*, run the following command in your virtual computer environment, the terminal window with the green `[ENV]` in the prompt.
 
 ```
 eval `ssh-agent -s`
 ```
+
+After the SSH agent begins running, run the following command to generate an SSH key (a password file) inside your coding environment.
+
+**Next**, copy and paste the following command into the `[ENV]` terminal window.
+
+
 ```
 ssh-keygen -t rsa -C "Firehose Vagrant" -N '' -f ~/.ssh/id_rsa
 ```
+
+This file that was created needs to be registered on your computer.
+
+**Finally**, copy and paste the following command into the `[ENV]` terminal window.
+
 ```
 ssh-add ~/.ssh/id_rsa
 ```
 
-### Step 5B: Configure Heroku with SSH Keys
-First we need to update the `heroku-cli` with the following command:
+This is everything you need to do to generate new SSH keys and have them setup in your coding environment.  Now we can use these SSH keys with the accounts you created.
+
+### Step 5B: Configure heroku with SSH key
+
+Your environment will need a heroku command line tool, the heroku `cli`, which will need to be installed.
+
+**First**, copy and paste the following command to install this program into your coding environment.
 
 ```
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
@@ -165,18 +191,24 @@ wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 ```
 
 Next, we will need to log into our heroku account in this coding environment.
-This will prompt you for your Heroku email and password.
-Run the following command to start to initiate the login process,
-then enter your email and password when you're prompted for it:
+
+> The next command will prompt you for the email address and password that you used when setting up your heroku account.
+
+**Next**, run the following command and enter your email address and heroku password when prompted for it.
 
 ```
 heroku login
 ```
-Finally, we need to add our ssh key to our heroku account:
+
+This step logs your computer into your heroku account.  Connecting your heroku account with your SSH keys will make it so you won't have to manually log into heroku in the future when using it.
+
+**Finally**, add your ssh key to your heroku account by running the following command in your coding enviroment.
 
 ```
 heroku keys:add
 ```
+
+This step will finalize the connection between your coding environment and the heroku service.
 
 ### Step 5C: Configure Github with SSH Keys
 
