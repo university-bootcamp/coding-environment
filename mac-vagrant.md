@@ -244,12 +244,7 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
-##Amazon AWS services##
-
-_We need an amazon developer account for some image storage space on Amazons S3 service (this will cost you nothing)_
-
-* Sign-up and create an account for [Amazon Web Services](http://aws.amazon.com/). Anything we'll do during this course will cost you nothing, so don't worry about your credit card being charged.
-
+After running these steps without error messages git will be setup and configured as expected in your coding environment.
 
 ## Step 6: Test
 

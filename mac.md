@@ -4,7 +4,7 @@ These instructions will install a web development coding environment on your mac
 
 ## Step 1: Create web development accounts
 
-You will need to use two different services in the process: GitHub & Heroku.
+You will need to use three different services in the process: GitHub, Heroku & Amazon Web Services (AWS).
 
 > **Note:** You may be prompted if you want to install programs on your machine when setting up GitHub and Heroku account — you will not need to install these programs yet.
 
@@ -20,6 +20,14 @@ Heroku is a service that will allow you to put your project live on the Internet
 
 **Second**, _**[visit Heroku.com](http://Heroku.com)**_ and create an account.
 
+
+### Amazon Web Services
+
+Amazon Web Services provides web services that can plug into the web applications that you use.  In this course, we will be using the `Amazon S3` storage service for storage space for image and video uploading.
+
+**Third**, [create an account on Amazon Web Services](http://aws.amazon.com/).  Although you will need to enter your credit card information to verify your account, AWS provides a free tier of the services that we will use in throughout the course.
+
+The free tier on AWS will be more than enough for all the needs in this course.
 
 ## Step 2: [Suggested] Setup vagrant
 
