@@ -54,6 +54,38 @@ There are found programs you will need to install to setup your environment:  Su
 
 
 
+## Step 3: Starting Your Virtual Machine
+
+The previous steps installed all the programs that were needed to use a vagrant virtual machine.  The next step will run through the steps of turning the environment on for the first time.
+
+Turning on your virtual environment will take a bit longer than usual on the first time.
+
+**Windows Command Prompt** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window.
+
+
+You will need to run two commands in your terminal windows.
+
+**First**, run the following command to change your working directory, to make it so you're working with the web development environment you downloaded earlier.
+
+```
+cd Desktop\coding-environment
+```
+
+**Second**, you will need to run the command to turn on your virtual computer environment.
+
+> **Note**:  this command will require you to download a file that is hundreds of megabytes long.  Make sure you are on a strong Internet connection before you run this command.
+
+Run the following command — and **after the command completes, read the next section before you run another command.**
+
+```
+vagrant up
+```
+
+
+
+**NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
+
+
 
 ----EDITTED UP TO HERE -----
 
@@ -92,7 +124,7 @@ The previous command may complete with a variety of messages.  **It also may ins
 
 If everything is successful you will see output that looks like the following.
 
-![Screenshot](images/success-vagrant-mac.png)
+![Screenshot](images/success-vagrant-windows.png)
 
 If you see this, continue to **Step 4**: vagrant has been installed and started as expected.  If this isn't what your screen looks like, continue below and find the message that matches the output you're seeing.
 
@@ -100,11 +132,13 @@ If you see this, continue to **Step 4**: vagrant has been installed and started 
 
 The error message will look like this:
 
-![Screenshot](images/vagrant-init.png)
+![Screenshot](images/vagrant-init-windows.png)
 
 The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command**.
 
 **If you see this error**, _**[click here to understand and fix the problem so the `vagrant up` command works](https://workspace.thefirehoseproject.com/comments/48)**_.
+
+
 
 **[ERROR] — `vagrant up` timeouts.**
 
@@ -127,6 +161,10 @@ To get the best answer, use the following template to ask for help.
 > Hello.  I'm setting up my web development environment using vagrant and when running the `vagrant up` command I encountered an unusual problem.  Attached is a screenshot of the error.
 
 Then take a screenshot of the full output of the command you just ran in the terminal window and include it in your request for help.  We will get back to you about it, soon!
+
+----EDITTED-----
+
+
 
 ## Step 4: Log into your dev environment
 
