@@ -6,14 +6,17 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
+  # config.ssh.username = 'vagrant'
+  # config.ssh.password = 'vagrant'
+
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box_url = "https://s3.amazonaws.com/coding-environment/vagrant-boxes/20181026/package.box"
-  config.vm.box = "university-bootcamp/coding-environment"
+  config.vm.box_url = "https://s3.amazonaws.com/coding-environment/vagrant-boxes/20181031/package.box"
+  config.vm.box = "university-bootcamp/coding-environment-v1"
 
   config.vm.network "forwarded_port", guest: 3000, host: 3030, host_ip: "127.0.0.1", auto_correct: true
 
@@ -53,15 +56,13 @@ Vagrant.configure("2") do |config|
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
-    vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
-
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-
+    #   # Display the VirtualBox GUI when booting the machine
+      # vb.gui = true
+    #
+    #   # Customize the amount of memory on the VM:
+    vb.memory = "1024"
   end
+
 
   #
   # View the documentation for the provider you are using for more
