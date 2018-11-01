@@ -99,7 +99,7 @@ _**If you ever see instructions that tell you to visit the URL `localhost:3030` 
 
 **Location of project files** — when using this coding environment, most people will store the code for their specific projects in the folder in the directly in the home folder of their environment.
 
-_**If you ever see instructions that suggest changing your directory or using the `/vagrant/src` folder, you should rather use the folder where your code lives instead.  This will usually involve changing the directory to the home folder, using the `cd ~` command, instead.
+_**If you ever see instructions that suggest changing your directory or using the `/vagrant/src` folder**_ — you should rather use the folder where your code lives instead.  This will usually involve changing the directory to the home folder, using the `cd ~` command, instead.
 
 ## Your environment setup process is now complete!
 
