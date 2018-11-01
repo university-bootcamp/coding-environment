@@ -17,6 +17,7 @@ When this setup is finished, you will be able to preview a Ruby on Rails web app
 * Regenerate the zip file.
 * https://workspace.thefirehoseproject.com/comments/48 — linked to
 * Vagrant setup.  Explicitly say "This [env] will be refered to as 'coding environment'"
+* Windows explicit error - https://workspace.thefirehoseproject.com/comments/45
 * Vagrant cheat sheets, https://online.bootcampspot.com/cheat-sheets/vagrant-windows, are configured for `coding-environment`.
 * show steps about needing to allow vagrant (David's screenshot)
 

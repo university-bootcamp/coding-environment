@@ -89,7 +89,7 @@ If everything is successful you will see output that looks like the following.
 
 If you see this, continue to **Step 4**: vagrant has been installed and started as expected.  If this isn't what your screen looks like, continue below and find the message that matches the output you're seeing.
 
-**[ERROR] — `Vagrant environment or target machine` error message` shown.**
+**[ERROR] — `Vagrant environment or target machine` error message shown.**
 
 The error message will look like this:
 

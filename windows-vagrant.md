@@ -81,13 +81,7 @@ Run the following command — and **after the command completes, read the next s
 vagrant up
 ```
 
-
-
 **NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
-
-
-
-----EDITTED UP TO HERE -----
 
 
 ## Step 3: Starting Your Virtual Machine
@@ -128,7 +122,7 @@ If everything is successful you will see output that looks like the following.
 
 If you see this, continue to **Step 4**: vagrant has been installed and started as expected.  If this isn't what your screen looks like, continue below and find the message that matches the output you're seeing.
 
-**[ERROR] — `Vagrant environment or target machine` error message` shown.**
+**[ERROR] — `Vagrant environment or target machine` error message shown.**
 
 The error message will look like this:
 
@@ -137,7 +131,6 @@ The error message will look like this:
 The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command**.
 
 **If you see this error**, _**[click here to understand and fix the problem so the `vagrant up` command works](https://workspace.thefirehoseproject.com/comments/48)**_.
-
 
 
 **[ERROR] — `vagrant up` timeouts.**
@@ -180,40 +173,31 @@ After `vagrant up` finishes you will be able to connect to your environment usin
 
 **Third**, press the `Open` button.
 
-> **Note**: _You may be prompted with a PuTTY Security Alert asking if you trust the connection.  
-> 
+> **Note**: _You may be prompted with a PuTTY Security Alert asking if you trust the connection._
+>
 > ![Security alert](http://i.imgur.com/Nw2Th29.gif)
 >
 > If this comes up press `Yes` to continue and stop prompting you with this warning.
 
+> **Note:** after you press the `Open` button, you may see an error message appear that suggests the `Network Connection Refused`.
+>
+> If this happens, follow the instructions in [this guide](https://workspace.thefirehoseproject.com/comments/45) to fix this.
 
+**Fourth**, you will need to enter a login and password to log into your environment.  Enter the following values:
 
-
----EDITTED--
-
-* You will be prompted for a user.  Enter: __vagrant__
-* You will be prompted for a password.  Enter: __vagrant__
-
-**NOTE:** If this comes back with an error message that says "network connection refused" see [this guide](https://workspace.thefirehoseproject.com/comments/45) about how to fix that.
-
-
+| **Field** | **Value** |
+|---|---|
+| Username  | `vagrant`  |
+| Password  | `vagrant` |
 
 
 
 
 This command will change your regular terminal window into a terminal window that you can use to run commands inside the virtual computer that was setup.
 
-> When you are logged into your virtual computer and it is ready for you to run commands inside this virtual machine your terminal will look like this.
-> 
-> ![Vagrant SSH output](images/vagrant-ssh.png)
-> 
-> This brings you into your web dev environment ready to run commands.
+When you are logged into your virtual computer and it is ready for you to run commands inside this virtual machine.
 
-
-----EDITTED-----
-
-
-
+This brings you into your web dev environment ready to run commands.
 
 
 ## Step 5: Connecting your environment with your accounts
