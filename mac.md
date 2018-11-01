@@ -54,3 +54,49 @@ Since these Cloud IDEs will give you the full power of a linux virtual machine t
 **Alternatively**, **_[click here to use a CloudIDE to use your coding environment](cloud-ide.md)_**.
 
 ## Step 3:  Understand your environment
+
+By following these steps you have installed a coding environment and tested that it is working as expected.  Since there are different options to choose for a coding environment some of the steps you need to use the environment may have slight changes you need when following the instructions.
+
+Since the different coding environments are each a little different depending on the choices you've made in the previous steps, following the instructions could be a little different.
+
+Here are the details that you will need to know about how to use the different coding environments when following through web development instruction materials.
+
+### Vagrant
+
+The following information will be important for you to know about the installation process you just finished if you are using the vagrant setup before beginning to use it.
+
+1. Between each of the coding sessions you do, especially if you restart your machine, you will need to run the command to start your vagrant environment prior to connecting.
+
+```
+vagrant up
+```
+
+2. When this command completes, either run the `vagrant.command` program or run the command `vagrant ssh` to log into your terminal using vagrant.
+
+After this completes you will be taken to a coding environment inside your virtual machine, and the command will show `[ENV]`.
+
+3. Before starting any new projects it can be helpful to start fresh.
+
+If you notice any Ruby on Rails servers that are still running from either the install process or a different application, you should close them, to give you a fresh start.
+
+**To ensure that your server is not running** — if you visit the URL `localhost:3030` in your browser, you should not see a web page load.  You should ensure that your server is not running before starting new server windows.
+
+**If you ever want to preview the application that is running within your coding environment** — visiting the `localhost:3030` within your environment will allow you to do this.
+
+**Location of project files** — when using this vagrant environment, most people will store the code for their specific projects in the folder in the location `/vagrant/src` inside their coding environment.
+
+All the files within this folder inside the vagrant environment will be automatically synced outside the vagrant environment to folder inside the `coding-environment/src` folder that is located outside the virtual machine, usually on your _Desktop_.
+
+### Cloud IDE — Important Things to Know!
+
+The following information will be important for you to know about the installation process you just finished if you are using a Cloud IDE setup.
+
+**If you ever want to preview the application that is running within your coding environment** — you will need to...
+
+[STEPS HERE]
+
+_**If you ever see instructions that tell you to visit the URL `localhost:3030` and you are using a CloudIDE**_ — instead you should make sure to follow the steps above to preview the web application in your coding environment.
+
+**Location of project files** — when using this coding environment, most people will store the code for their specific projects in the folder in the directly in the home folder of their environment.
+
+_**If you ever see instructions that suggest changing your directory or using the `/vagrant/src` folder, you should rather use the folder where your code lives instead.  This will usually involve changing the directory to the home folder, using the `cd ~` command, instead.

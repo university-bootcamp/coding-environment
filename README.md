@@ -18,3 +18,9 @@ When this setup is finished, you will be able to preview a Ruby on Rails web app
 * https://workspace.thefirehoseproject.com/comments/48 — linked to
 * Vagrant setup.  Explicitly say "This [env] will be refered to as 'coding environment'"
 * Vagrant cheat sheets, https://online.bootcampspot.com/cheat-sheets/vagrant-windows, are configured for `coding-environment`.
+* show steps about needing to allow vagrant (David's screenshot)
+
+* Ticket [after pilot] - vagrant specific instructions in the lessons
+  - update github "understanding environment"
+  - understand lessons to be more agnostic to environment, not vagrant specific.
+  - localhost:3030 call out.
