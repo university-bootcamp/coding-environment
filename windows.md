@@ -1,173 +1,106 @@
-Windows Setup with Vagrant
-==================
+# Microsoft Windows Development Environment setup
 
-This will run you through the steps to configure your web development environment using the vagrant install process.
+These instructions will install a web development coding environment on your machine and set up all the required accounts that you will need on your Microsoft Windows computer.
 
-Step 1 - Create accounts if you haven't already
---------
+## Step 1: Create web development accounts
 
-**Note:** These websites may ask you if you want to also download the software programs to go along with the accounts (The Heroku ToolBelt, GitHub for Windows, or GitHub for Mac).  We won't be using these programs so you won't need to download them.
+You will need to use three different services in the process: GitHub, Heroku & Amazon Web Services (AWS).
 
-### Part A
+> **Note:** You may be prompted if you want to install programs on your machine when setting up GitHub and Heroku account — you will not need to install these programs yet.
 
-First go to [GitHub.com](http://github.com) and create an account.
+### GitHub
 
-### Part B
+GitHub is a service that will allow you to collaborate and back-up your code.  You will need to create an account on this site.
 
-Then go to [Heroku.com](http://Heroku.com) and create an account there as well.
+**First**,  _**[visit GitHub.com](http://github.com)**_ and create an account.
 
-Step 2:  Get the files for your development environment
------------
+### Heroku
 
-Download and unzip the following file: [coding-environment.zip](https://github.com/university-bootcamp/coding-environment/archive/coding-environment.zip) to your __Desktop__. Unzip the file onto your Desktop, so it creates a folder called `coding-environment` on your Desktop.  This is where all your web development environment will live.
+Heroku is a service that will allow you to put your project live on the Internet.  You will need to create an account on this site.
 
-Step 3: Install the tools
--------
-
-* Go to the [VirtualBox Website](https://www.virtualbox.org/wiki/Downloads), click the link to Download "Windows hosts".  Find the VirutalBox.exe file you just downloaded in your internet browser.  Right-click the VirutalBox.exe, press "Run as Administrator", and follow the instructions (you're clicking next most of the time). If you are on Windows 10 or upgrade to Windows 10, make sure to have the latest VirutalBox version.
-* Go to the [Sublime Text Editor Website](http://sublimetext.com/) and click "Download for Windows".  Once the program downloads, find the file in Windows Explorer and right click the file, click "Run as Administrator" and follow the instructions (you're clicking next most of the time)
-* Download [Putty SSH Client](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), copy the putty.exe file onto your desktop (that way you can start things up quickly)
-* Go to the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), click Find the Windows section and click "Universal (32 and 64-bit)".  Run the file you downloaded and follow the instructions (you're clicking next most of the time)
-* Restart your computer if you're prompted to.
+**Second**, _**[visit Heroku.com](http://Heroku.com)**_ and create an account.
 
 
-Step 4: Turn on your Web Dev Environment
---------
+### Amazon Web Services
 
-Open up the **Windows Command Prompt**: click the **Start** button ![Picture of the Start button](http://imgur.com/GFYgPUT.png). In the Search box, type _Command Prompt_, and then, in the list of results, double-click Command Prompt.
+Amazon Web Services provides web services that can plug into the web applications that you use.  In this course, we will be using the `Amazon S3` storage service for storage space for image and video uploading.
 
-A command prompt will come up, and then run the following two commands:
+**Third**, [create an account on Amazon Web Services](http://aws.amazon.com/).  Although you will need to enter your credit card information to verify your account, AWS provides a free tier of the services that we will use in throughout the course.
 
-```
-cd Desktop\vagrant
-```
+The free tier on AWS will be more than enough for all the needs in this course.
 
-Then type this command.  It will take a few moments to complete (it needs to download a very large file):
+## Step 2: [Suggested] Setup vagrant
+
+Vagrant is a program that will allow you to run a virtual machine on your computer — and within this virtual machine you can run your web application projects.
+
+This next step is the suggested install process.  Some computers do not work well with vagrant — if this happens using an alternative could be helpful.
+
+**Next**, _**[click here to setup your vagrant environment on your Windows machine](windows-vagrant.md)**_.
+
+## Step 2: [Alternative] Setup a Cloud IDE
+
+> **If you setup an environment with vagrant successfully, you can skip this step.**
+
+Sometimes, when trying to set up virtual computers on your machine problems will arise.  At these times, it is often the best solution to use a Cloud IDE solution.
+
+Cloud IDEs will give you a professional coding environment all within your web browser.  There are a number of reasons to use Cloud IDEs.
+
+* They can work regardless of the computer you're using if you can visit sites inside your web browser.
+* They provide the flexibility to log into your environment from different computers.
+* Since everything will be access through a browser, they often can work with unusual Internet, firewall or restrictions from your ISP & router.
+
+Since these Cloud IDEs will give you the full power of a linux virtual machine that is accessible within a web browser, this is a great option to set up a coding environment with, also.
+
+**Alternatively**, **_[click here to use a CloudIDE to use your coding environment](cloud-ide.md)_**.
+
+## Step 3:  Understand your environment
+
+By following these steps you have installed a coding environment and tested that it is working as expected.  Since there are different options to choose for a coding environment some of the steps you need to use the environment may have slight changes you need when following the instructions.
+
+Since the different coding environments are each a little different depending on the choices you've made in the previous steps, following the instructions could be a little different.
+
+Here are the details that you will need to know about how to use the different coding environments when following through web development instruction materials.
+
+### Vagrant
+
+The following information will be important for you to know about the installation process you just finished if you are using the vagrant setup before beginning to use it.
+
+1. Between each of the coding sessions you do, especially if you restart your machine, you will need to run the command to start your vagrant environment prior to connecting.
 
 ```
 vagrant up
 ```
 
-This `vagrant up` command takes several minutes to complete, so wait until it finishes and the window is ready to accept more input.  Once it completes, close the Command Prompt window (you can click the red X in the top corner).
+2. When this command completes, you will need to use the PuTTY program to log into your coding environment.
 
-**NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
+After this completes you will be taken to a coding environment inside your virtual machine, and the command will show `[ENV]`.
 
+3. Before starting any new projects it can be helpful to start fresh.
 
-Step 5: Log into your dev environment
------------
+If you notice any Ruby on Rails servers that are still running from either the install process or a different application, you should close them, to give you a fresh start.
 
-Launch the **Putty** application that was placed onto your Desktop by double clicking it.
+**To ensure that your server is not running** — if you visit the URL `localhost:3030` in your browser, you should not see a web page load.  You should ensure that your server is not running before starting new server windows.
 
-Open up putty
+**If you ever want to preview the application that is running within your coding environment** — visiting the `localhost:3030` within your environment will allow you to do this.
 
-* In the **Host Name** (or IP Address) enter: 127.0.0.1
-* In the **Port** to the right of the host name enter: 2222
-* Press the **Open** button.
-* _You may be prompted with a [PuTTY Security Alert](http://i.imgur.com/Nw2Th29.gif), asking if you trust the connection.  If this comes up press **Yes** to continue and stop prompting you with this warning._
-* You will be prompted for a user.  Enter: __vagrant__
-* You will be prompted for a password.  Enter: __vagrant__
+**Location of project files** — when using this vagrant environment, most people will store the code for their specific projects in the folder in the location `/vagrant/src` inside their coding environment.
 
-**NOTE:** If this comes back with an error message that says "network connection refused" see [this guide](https://workspace.thefirehoseproject.com/comments/45) about how to fix that.
+All the files within this folder inside the vagrant environment will be automatically synced outside the vagrant environment to folder inside the `coding-environment/src` folder that is located outside the virtual machine, usually on your _Desktop_.
 
-Step 6: Accounts
-------------
+### Cloud IDE — Important Things to Know!
 
-#### Generate SSH Key
+The following information will be important for you to know about the installation process you just finished if you are using a Cloud IDE setup.
 
- Inside the putty window run, _important note: the command has backticks (`) not single-quotes ('), either copy and paste the command or if you type it use the key to the left of the 1 to type the backtick in the first line_:
+**If you ever want to preview the application that is running within your coding environment** — you will need to...
 
- **Copy and Pasting**: If you want to paste something into the Putty, CTRL+C to put something on your clipboard, then move your mouse/cursor over the putty window and right-click.
+[STEPS HERE]
 
-```
-eval `ssh-agent -s`
-```
-```
-ssh-keygen -t rsa -C "Firehose Vagrant" -N '' -f ~/.ssh/id_rsa
-```
-```
-ssh-add ~/.ssh/id_rsa
-```
+_**If you ever see instructions that tell you to visit the URL `localhost:3030` and you are using a CloudIDE**_ — instead you should make sure to follow the steps above to preview the web application in your coding environment.
 
-#### Configure Heroku with SSH Keys
-First we need to update the `heroku-cli` with the following command:
+**Location of project files** — when using this coding environment, most people will store the code for their specific projects in the folder in the directly in the home folder of their environment.
 
-```
-wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+_**If you ever see instructions that suggest changing your directory or using the `/vagrant/src` folder, you should rather use the folder where your code lives instead.  This will usually involve changing the directory to the home folder, using the `cd ~` command, instead.
 
-```
+## Your environment setup process is now complete!
 
-Next, we will need to log into our heroku account in this coding environment.
-This will prompt you for your Heroku email and password.
-Run the following command to start to initiate the login process,
-then enter your email and password when you're prompted for it:
-
-```
-heroku login
-```
-Finally, we need to add our ssh key to our heroku account:
-
-```
-heroku keys:add
-```
-
-#### Configure Github with SSH Keys
-
-Then run this command.  Once this command runs it will prompt you for your GitHub username (note this is your username not your email address) and your password.  Enter these values and then press enter.  It should tell you "ok!".  If it gives you an error message you probably entered an invalid username and password (so try to run that command again).
-
-```
-curl https://gist.githubusercontent.com/kenmazaika/fa8ea7dfbae413638cfd111b974bc74a/raw/ecb5e91c044d92389d0cfd3c2229e57187384d6d/github_auth.rb  > ~/.firehose-github.rb && ruby ~/.firehose-github.rb
-```
-
-Once the dollar-sign returns, run these commands and provide your name and email address inside the double quotes instead of the dummy data:
-
-```
-git config --global user.email "you@example.com"
-```
-
-And then run:
-
-```
-git config --global user.name "Your Name"
-```
-
-##Amazon AWS services##
-
-_We need an amazon developer account for some image storage space on Amazons S3 service (this will cost you nothing)_
-
-* Sign-up and create an account for [Amazon Web Services](http://aws.amazon.com/). Anything we'll do over the weekend will cost you nothing, so don't worry about your credit card being charged.
-
-
-Step 7: Test
----------
-
- In the putty window run this, _important note: after you run `rails s` it won't give you the prompt to continue to enter commands. This is by design, so move onto the next step even if it looks like it's just hanging_:
-
-```
-cd /vagrant/src/firehose-test-app
-```
-```
-rails s -b 0.0.0.0 -p 3000
-```
-
-
-Open a web browser on your computer and go to: [http://127.0.0.1:3030](http://127.0.0.1:3030)
-
-
-Step 8: Stop your rails server
--------------
-
-Now return to a window where you can enter commands in web development terminal window.
-
-**Find your web development terminal where you ran the `rails server` (rails s) command and hold CTRL+C.**
-
-This stops the webpage from working, but will allow you to enter new commands.
-
-
-
-Step 9: Know your web development environment
----------------
-
-
-Knowing and understanding how to connect to your web development environment when you want to start coding is pretty important.
-
-**Go to our [FirehoseProject Vagrant Intro Guide](https://workspace.thefirehoseproject.com/cheat-sheets/vagrant-intro) and get comfortable with your web development environment.**
+Your coding environment is now setup and you have the context of what you need to use it.  You are now ready to begin building applications.
