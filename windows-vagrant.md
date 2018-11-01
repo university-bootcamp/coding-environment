@@ -162,19 +162,44 @@ To get the best answer, use the following template to ask for help.
 
 Then take a screenshot of the full output of the command you just ran in the terminal window and include it in your request for help.  We will get back to you about it, soon!
 
-----EDITTED-----
-
-
 
 ## Step 4: Log into your dev environment
 
 The previous steps installed, configured and turned on a virtual computer that you can use for web development.  The next steps will log you into your environment, so you can begin using it.
 
-After `vagrant up` finishes, enter the following command in the terminal window.
+After `vagrant up` finishes you will be able to connect to your environment using the `PuTTY` program you installed, earlier.
 
-```
-vagrant ssh
-```
+**First**, double-click the `putty.exe` program that is located on your _Desktop_.
+
+**Second**, enter the relevant information about the connection in the program.
+
+| **Field** | **Value** |
+|---|---|
+| Hostname  | `127.0.0.1`  |
+| Port  | `2222` |
+
+**Third**, press the `Open` button.
+
+> **Note**: _You may be prompted with a PuTTY Security Alert asking if you trust the connection.  
+> 
+> ![Security alert](http://i.imgur.com/Nw2Th29.gif)
+>
+> If this comes up press `Yes` to continue and stop prompting you with this warning.
+
+
+
+
+---EDITTED--
+
+* You will be prompted for a user.  Enter: __vagrant__
+* You will be prompted for a password.  Enter: __vagrant__
+
+**NOTE:** If this comes back with an error message that says "network connection refused" see [this guide](https://workspace.thefirehoseproject.com/comments/45) about how to fix that.
+
+
+
+
+
 
 This command will change your regular terminal window into a terminal window that you can use to run commands inside the virtual computer that was setup.
 
@@ -183,6 +208,12 @@ This command will change your regular terminal window into a terminal window tha
 > ![Vagrant SSH output](images/vagrant-ssh.png)
 > 
 > This brings you into your web dev environment ready to run commands.
+
+
+----EDITTED-----
+
+
+
 
 
 ## Step 5: Connecting your environment with your accounts
