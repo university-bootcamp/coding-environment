@@ -50,10 +50,6 @@ There are found programs you will need to install to setup your environment:  Su
 
 **Finally**, restart your computer if you're prompted to.
 
-
-
-
-
 ## Step 3: Starting Your Virtual Machine
 
 The previous steps installed all the programs that were needed to use a vagrant virtual machine.  The next step will run through the steps of turning the environment on for the first time.
@@ -81,34 +77,9 @@ Run the following command — and **after the command completes, read the next s
 vagrant up
 ```
 
-**NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](https://workspace.thefirehoseproject.com/comments/48) for details about how to fix this error message.
+**NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](faq/vagrant/run-vagrant-init.md) for details about how to fix this error message.
 
 
-## Step 3: Starting Your Virtual Machine
-
-The previous steps installed all the programs that were needed to use a vagrant virtual machine.  The next step will run through the steps of turning the environment on for the first time.
-
-Turning on your virtual environment will take a bit longer than usual on the first time.
-
-**Open the terminal** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window.
-
-You will need to run two commands in your terminal windows.
-
-**First**, run the following command to change your working directory, to make it so you're working with the web development environment you downloaded earlier.
-
-```
-cd ~/Desktop/coding-environment
-```
-
-**Second**, you will need to run the command to turn on your virtual computer environment.
-
-> **Note**:  this command will require you to download a file that is hundreds of megabytes long.  Make sure you are on a strong Internet connection before you run this command.
-
-Run the following command — and **after the command completes, read the next section before you run another command.**
-
-```
-vagrant up
-```
 
 ### IMPORTANT: Read this before running any additional commands.
 
@@ -180,7 +151,7 @@ After `vagrant up` finishes you will be able to connect to your environment usin
 
 > **Note:** after you press the `Open` button, you may see an error message appear that suggests the `Network Connection Refused`.
 >
-> If this happens, follow the instructions in [this guide](https://workspace.thefirehoseproject.com/comments/45) to fix this.
+> If this happens, follow the instructions in **[`PuTTY Connection Refused` FAQ answer](faq/vagrant/putty-network-connection-refused.md)** to fix this.
 
 **Fourth**, you will need to enter a login and password to log into your environment.  Enter the following values:
 
