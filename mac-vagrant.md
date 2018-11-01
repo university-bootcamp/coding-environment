@@ -248,31 +248,51 @@ After running these steps without error messages git will be setup and configure
 
 ## Step 6: Test
 
- In the web development terminal window,  where it says `[Web Dev]` in blue, run this, _important note: after you run `rails s` it won't give you the prompt to continue to enter commands. This is by design, so move onto the next step even if it looks like it's just hanging_:
+Now that your environment is properly installed, setup and configured you will now be able to test that the environment is able to run a ruby on rails project.  
+
+**First**, within your coding environment change your directory to the folder where the Ruby on Rails test application's source code is.
 
 ```
-cd /vagrant/src/firehose-test-app
+cd /vagrant/src/rails-test-app
 ```
+
+**Second**, run the following command to start a Ruby on Rails server.  This command will start running and prevent you from running additional commands, but will allow you to interact with your application within a web browser.
+
 ```
 rails s -b 0.0.0.0 -p 3000
 ```
 
+> **Important**: When the server finishes starting up, it may appear that it is hanging.  The result will look like this:
+>
+> ![server](images/rails-server-running)
 
-Open a web browser on your computer and go to: [http://127.0.0.1:3030](http://127.0.0.1:3030).  You should see the welcome aboard page come up.
+After your server finishes spinning up and the text that says `User Ctrl-C to stop` appears it means your server is running.
 
+**Third**, open a web browser on your computer and go to: [http://127.0.0.1:3030](http://127.0.0.1:3030).  You will be able to preview the application in your web browser and it will look like this.
+
+![preview](images/preview.png)
+
+If you see this, it means you've finished setting up your application and can preview an application that is running.
 
 ## Step 7: Stop your rails server
 
-Now return to a window where you can enter commands in web development terminal window.
+The command you ran above started running a server that can be previewed in a web browser.  Before we finish, we should close the program we just opened.
 
 **Find your web development terminal where you ran the `rails server` (rails s) command and hold CTRL+C.**
 
-This stops the webpage from working, but will allow you to enter new commands.
+After you press hold `CTRL+C` on your keyboard, your terminal will give you a message that indicates your server has closed and return the prompt so new commands can be entered.
 
+> ^C- Gracefully stopping, waiting for requests to finish
+> === puma shutdown: 2018-10-31 23:35:32 +0000 ===
+> - Goodbye!
+> Exiting
 
-## Step 8: Know your web development environment
+This will prevent the webpage from loading in the future, but will allow you to enter new commands.
 
+## Step 8: Learn about your vagrant coding environment
 
-Knowing and understanding how to connect to your web development environment when you want to start coding is pretty important.
+By following these instructions in this guide you've setup a virtual machine with vagrant on your computer.  This will be your coding environment that you will be able to use for the remainder of the course.
 
-**Go to our [FirehoseProject Vagrant Intro Guide](http://workspace.thefirehoseproject.com/cheat-sheets/vagrant-intro) and get comfortable with your web development environment.**
+Since you will be using this coding environment extensively in the future, understanding it will be important.
+
+**_[Visit the the Introduction to Vagrant](https://online.bootcampspot.com/cheat-sheets/vagrant-windows)_** to learn more about how to use this development environment that you just setup.
