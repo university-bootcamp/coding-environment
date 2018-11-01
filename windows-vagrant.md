@@ -155,7 +155,6 @@ To get the best answer, use the following template to ask for help.
 
 Then take a screenshot of the full output of the command you just ran in the terminal window and include it in your request for help.  We will get back to you about it, soon!
 
-
 ## Step 4: Log into your dev environment
 
 The previous steps installed, configured and turned on a virtual computer that you can use for web development.  The next steps will log you into your environment, so you can begin using it.
@@ -197,7 +196,7 @@ This command will change your regular terminal window into a terminal window tha
 
 When you are logged into your virtual computer and it is ready for you to run commands inside this virtual machine.
 
-This brings you into your web dev environment ready to run commands.
+This brings you into your web dev environment ready to run commands.  This `PuTTY` window with the green `[ENV]` text is a terminal window that is running inside your vagrant virtual computer.  We will refer to as _your coding environment_ from now on.
 
 
 ## Step 5: Connecting your environment with your accounts
@@ -214,7 +213,7 @@ An `SSH key` is a password file that exists on your computer.  First, we will ne
 
 This first command will run the command to turn on the SSH program in your environment.
 
-*First*, run the following command in your virtual computer environment, the terminal window with the green `[ENV]` in the prompt.
+*First*, run the following command in your coding environment's terminal prompt.
 
 ```
 eval `ssh-agent -s`
@@ -222,7 +221,7 @@ eval `ssh-agent -s`
 
 After the SSH agent begins running, run the following command to generate an SSH key (a password file) inside your coding environment.
 
-**Next**, copy and paste the following command into the `[ENV]` terminal window.
+**Next**, copy and paste the following command into your coding environment's terminal prompt.
 
 
 ```
@@ -231,7 +230,7 @@ ssh-keygen -t rsa -C "Firehose Vagrant" -N '' -f ~/.ssh/id_rsa
 
 This file that was created needs to be registered on your computer.
 
-**Finally**, copy and paste the following command into the `[ENV]` terminal window.
+**Finally**, copy and paste the following command into your coding environment's terminal prompt.
 
 ```
 ssh-add ~/.ssh/id_rsa

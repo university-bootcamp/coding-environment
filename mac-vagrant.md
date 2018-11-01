@@ -45,6 +45,14 @@ There are three programs you will need to install to setup your environment:  Su
 
 **Second**, Open the dmg file that downloads, then double click on VirtualBox.pkg that pops up and follow the instructions (you're clicking continue most of the time).  Once you go through that step close out the "VirtualBox" window.
 
+> **Note**: if you see an error message that indicates that you are not allowed to install programs from unidentified developers you will need to adjust your privacy settings to allow this.
+>
+> Open the _Launchpad_ and open the _Systems Preferences_.  When this launched open the _Security and Privacy_ pane.
+>
+> From there, scroll down and find the section that says: _System software from developer "Oracle America, Inc." was blocked from loading._ and click the `Allow` button to the right of this to finish the installation process of VirtualBox.
+>
+> ![Allow blocked](images/mac-allow-blocked.png)
+
 ### Program 3 — Vagrant
 
 **First**, visit the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), click Find the Mac OS X section and click "Universal (32 and 64-bit)".  Run the file you downloaded and follow the instructions (you're clicking next most of the time)
@@ -137,8 +145,7 @@ This command will change your regular terminal window into a terminal window tha
 > 
 > ![Vagrant SSH output](images/vagrant-ssh.png)
 > 
-> This brings you into your web dev environment ready to run commands.
-
+> This brings you into your web dev environment ready to run commands.  This terminal window with the green `[ENV]` text is a terminal window that is running inside your vagrant virtual computer.  We will refer to as _your coding environment_ from now on.
 
 ## Step 5: Connecting your environment with your accounts
 
@@ -154,7 +161,7 @@ An `SSH key` is a password file that exists on your computer.  First, we will ne
 
 This first command will run the command to turn on the SSH program in your environment.
 
-*First*, run the following command in your virtual computer environment, the terminal window with the green `[ENV]` in the prompt.
+*First*, run the following command in your coding enviroment in the prompt.
 
 ```
 eval `ssh-agent -s`
@@ -162,7 +169,7 @@ eval `ssh-agent -s`
 
 After the SSH agent begins running, run the following command to generate an SSH key (a password file) inside your coding environment.
 
-**Next**, copy and paste the following command into the `[ENV]` terminal window.
+**Next**, copy and paste the following command into your coding environment.
 
 
 ```
@@ -171,7 +178,7 @@ ssh-keygen -t rsa -C "Firehose Vagrant" -N '' -f ~/.ssh/id_rsa
 
 This file that was created needs to be registered on your computer.
 
-**Finally**, copy and paste the following command into the `[ENV]` terminal window.
+**Finally**, copy and paste the following command into your coding environment.
 
 ```
 ssh-add ~/.ssh/id_rsa
