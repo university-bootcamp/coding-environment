@@ -1,5 +1,49 @@
 # Vagrant on Microsoft Windows Computers
 
+## Explore Terminal Navigation in Vagrant
+
+In order to understand how to use your vagrant environment, explore how to use the terminal a bit more by reviewing some of the commands you just used to set up your web development environment. The `cd` command means _change directory._ It puts you in the directory you type after it; in the following example, it puts you in the `/vagrant` directory.
+
+```
+$ cd /vagrant
+```
+
+The `ls` command means _list._ It lists all the files and folders in the current directory
+
+```
+$ ls
+```
+
+When you type `ls` and press **Enter**, the terminal shows a list of all the folders and files in the `/vagrant` folder. This is equivalent to opening the `/vagrant` folder in Mac Finder and viewing its contents, as you can see in the following image:
+
+![Files and Folders are Linked](/images/vagrant-files-and-folders-are-linked.png)
+
+Right now, you're in the `/vagrant` directory. If you want to change the directory (i.e., move into a different folder), you can again use `cd`. Let's move into the `/src` directory:
+
+```
+$ cd src
+```
+
+Now run the `ls` command to see everything inside `/src`:
+
+```
+$ ls
+```
+
+You should see one directory listed out named `/rails-test-app`. The `/rails-test-app` directory contains an app that was setup during the installation process to test that your system is working properly. 
+
+If you ever get lost in the terminal, look between the `[ENV]`: and the `$` to see which directory you are in. Right now, because you changed the directory to `/src`, you should see the following:
+
+![Path is shown in the prompt](/images/vagrant-path-shown.png)
+
+To navigate back to the directory above the one you're currently in (i.e., its parent directory), run the following command:
+
+```
+$ cd ..
+```
+
+In this case, if you type `cd ..` and press the **Enter** key, you can type `ls` again to see that you're now outside of the `/src` folder.
+
 ## Controlling Your Environment
 
 You control your vagrant environment using the Windows Command Prompt. First you'll need to launch the Command Prompt by going into your Start Menu.
