@@ -24,7 +24,7 @@ $ vagrant up
 
 This will take a few moments to complete, it may give you a yellow warning about guest additions (but it won't give an error messages). Once you're ready it should look like this:
 
-![screenshot](images/vagrant-up-success-mac.png)
+![screenshot](/images/vagrant-up-success-mac.png)
 
 Once you turn on your environment it will be running until you shut it down (or restart your machine).
 
