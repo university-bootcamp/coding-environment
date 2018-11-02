@@ -10,7 +10,7 @@ Next you should navigate into your vagrant folder by running the following comma
 $ cd ~/Desktop/coding-environment
 ```
 
-> **Note**: make sure that your vagrant folder is actually on your desktop, otherwise this won't work.
+> **Note**: make sure that the `coding-environment` folder is actually on your desktop, otherwise this won't work.
 
 Now you're ready to run commands and control your environment (without doing this step none of the other steps in this guide will work).
 
@@ -24,7 +24,7 @@ $ vagrant up
 
 This will take a few moments to complete, it may give you a yellow warning about guest additions (but it won't give an error messages). Once you're ready it should look like this:
 
-![screenshot](https://online.bootcampspot.com/assets/vagrant-up-77f3d72e31e09a89ee193e6040555cdb602b474d0b4978208afb0750030a7fc2.png)
+![screenshot](images/vagrant-up-success-mac.png)
 
 Once you turn on your environment it will be running until you shut it down (or restart your machine).
 
@@ -63,9 +63,9 @@ $ vagrant halt
 
 If this happened and you can restart your virtual computer by running through the following steps (see above):
 
-* [Shutting Down Your Environment](#)
-* [Turning on your Environment](#)
-* [Connecting to your Environment](#)
+* [Shutting Down Your Environment](https://github.com/university-bootcamp/coding-environment/blob/master/cheat-sheets/vagrant-intro-mac.md#shutting-down-your-environment)
+* [Turning on your Environment](https://github.com/university-bootcamp/coding-environment/blob/master/cheat-sheets/vagrant-intro-mac.md#turning-on-your-environment)
+* [Connecting to your Environment](https://github.com/university-bootcamp/coding-environment/blob/master/cheat-sheets/vagrant-intro-mac.md#connecting-to-your-environment)
 
 **Failing to Start Your Ruby Server** — if you can't start or shut down your ruby server you may see an error that looks like the following:
 
