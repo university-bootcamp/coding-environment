@@ -302,4 +302,4 @@ By following these instructions in this guide you've setup a virtual machine wit
 
 Since you will be using this coding environment extensively in the future, understanding it will be important.
 
-**_[Visit the the Introduction to Vagrant](https://online.bootcampspot.com/cheat-sheets/vagrant-windows)_** to learn more about how to use this development environment that you just setup.
+**_[Visit the the Introduction to Vagrant](cheat-sheets/vagrant-intro-mac.md)_** to learn more about how to use this development environment that you just setup.
