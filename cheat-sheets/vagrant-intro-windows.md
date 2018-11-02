@@ -67,9 +67,9 @@ $ vagrant halt
 
 If this happened and you can restart your virtual computer by running through the following steps (see above):
 
-* [Shutting Down Your Environment](#)
-* [Turning on your Environment](#)
-* [Connecting to your Environment](#)
+* [Shutting Down Your Environment](https://github.com/university-bootcamp/coding-environment/blob/master/cheat-sheets/vagrant-intro-windows.md#shutting-down-your-environment)
+* [Turning on your Environment](https://github.com/university-bootcamp/coding-environment/blob/master/cheat-sheets/vagrant-intro-windows.md#turning-on-your-environment)
+* [Connecting to your Environment](https://github.com/university-bootcamp/coding-environment/blob/master/cheat-sheets/vagrant-intro-windows.md#connecting-to-your-environment)
 
 **Failing to Start Your Ruby Server** — if you can't start or shut down your ruby server you may see an error that looks like the following:
 
