@@ -56,10 +56,10 @@ The previous steps installed all the programs that were needed to use a vagrant 
 
 Turning on your virtual environment will take a bit longer than usual on the first time.
 
-**Windows Command Prompt** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window.
+**Windows Command Prompt** on your computer.  To do this, hit the `Windows` key to open the search bar.  Then type `cmd.exe` and press the enter key.  This will open a command prompt window.
 
 
-You will need to run two commands in your terminal windows.
+You will need to run two commands in your window.
 
 **First**, run the following command to change your working directory, to make it so you're working with the web development environment you downloaded earlier.
 
