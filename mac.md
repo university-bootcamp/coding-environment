@@ -93,7 +93,9 @@ The following information will be important for you to know about the installati
 
 **If you ever want to preview the application that is running within your coding environment** — you will need to...
 
-[STEPS HERE]
+  - Use the `Run` button provided in the browser environment. The IDE will provide you with a URL you can use to view your application:
+
+    <img width="500" alt="Confirmation Screen" src="images/codenvy/run.png" />
 
 _**If you ever see instructions that tell you to visit the URL `localhost:3030` and you are using a CloudIDE**_ — instead you should make sure to follow the steps above to preview the web application in your coding environment.
 
