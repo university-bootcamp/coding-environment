@@ -164,7 +164,7 @@ _Running the above command may prompt you with the question `Would you like to u
 
 This step will finalize the connection between your coding environment and the heroku service.
 
-### Step 5C: Configure GitHub with SSH key
+### Step 3C: Configure GitHub with SSH key
 
 Connecting GitHub is a little trickier than Heroku. To start, we need to be able to access our SSH key, which is basically a password file. Run this command to display the SSH key to the terminal window.
 
@@ -203,105 +203,89 @@ After running these steps without error messages git will be setup and configure
 
 
 
+## Step 4: Test
 
+<!-- TODO: formatting for this section is off.  fix this-->
 
+Now that your environment is properly installed, setup and configured you will now be able to test that the environment is able to run a ruby on rails project.  
 
+**First**, within your coding environment change your directory to the folder where the Ruby on Rails test application's source code is.
 
+```
+cd ~/environment
+```
 
+**Second**, run the following command to create a new blank ruby on rails test application.
 
-### ACCOUNTS
+```
+rails new rails-test-app -d postgresql
+```
 
+**Third**, change your directory to your newly created project.
 
+```
+cd rails-test-app
+```
 
+**Fourth**, open the file `config/database.yml` inside the `rails-test-app` project folder.  Add fields indented underneath `default` for `username`, `password` and `host`.
 
-
-### TEST
-
-rails new myapp -d postgresql
-
-This builds a ton of files and gives us what is like a “blank” rails app. This means we won’t have to start fresh with a blank slate. Instead, we can start with the standard starting files that this generates.
-
-The rails new indicates we’re building a new rails app. myapp is the name of the app, and -d postgresql sets the app up to connect to the Postgres database we built earlier.
-
-Then, so you’re running commands on the app you just built, run this command:
-
-cd myapp
-
-Open up the file named config/database.yml. This file tells our web application how we can talk to the database. You’ll need to make a couple quick adjustments to the file. Add these three lines of code to the file:
-
-https://gist.github.com/kenmazaika/077bb791e6218d566fdb#file-database-yml-L22-L24
+```
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: password
+  host: localhost
+```
 
 Then save the file. Be careful about indentation here. Each line needs to be indented exactly the same number of spaces as the line above it.
 
-Create the database
+### Create the database
+
 Run this command to create the database:
 
+```
 rake db:create
+```
+
+**Second**, run the following command to start a Ruby on Rails server.  This command will start running and prevent you from running additional commands, but will allow you to interact with your application within a web browser.
 
 The moment of truth: running the app
 Finally, we are ready to start our application. In Cloud9, the following command allows us to start our web application:
 
+```
 rails s -b $IP -p $PORT
+```
 
 The terminal window where you just ran the rails server command will look like it runs for forever. That’s a good thing, since we want our server to be running all the time so we can see our web application in our browser all the time.
 
 One thing you’ll notice is that the rails server command basically eats our dollar sign, so we can no longer run commands or do anything with this “web dev” terminal window.
 
-Open a new terminal tab
-Since we can’t use our original terminal window anymore, let’s always make sure to have a second, separate terminal window open. Press the plus button to create a new terminal window. You’ll want to have two terminal windows: one for the server, and one for running commands.
+> **Important**: When the server finishes starting up, it may appear that it is hanging.  The result will look like this:
+>
+> ![server](bad image)
 
-New Cloud9 Terminal Tab
+After your server finishes spinning up and the text that says `User Ctrl-C to stop` appears it means your server is running.
 
-Then, in the new terminal tab that opened up, we can go to our application by running this command:
 
-cd myapp
+In the menu find the `Preview` in the top right corner of the application.  From this menu click the `Preview Running Application` option.
 
-Preview your application
-In the menu, click “Preview” in the top right to see your app running:
+Press the button to preview the application in a new browser window.
 
-Preview App
-
-Or, go to:
-
-https://your-workspace-name.c9users.io/
-
-And make sure to replace your-workspace-name, with your project’s real workspace name.
-
-And then you’ll see your app running:
-
-Running App in Cloud9
+## Running App in Cloud9
 
 Things that are important to know about your environment.
+
 That setup will work for you regardless of your computer setup. There are a couple of small adjustments you’ll need to make in the process of building the applications that the most tutorials will suggest. Here’s what you need to know:
 
-If you use this setup you will use Cloud9’s IDE setup instead of a native text editor on your computer like sublime text.
-If instructions ever tell you to run a command that starts with rails server, you’ll always need to run the command: rails s -b $IP -p $PORT, instead.
-Instead of visiting your app using localhost, you will use the trick this article suggests to preview your app.
-Everytime you open Cloud9, you will need to start the postgres server with: sudo service postgresql start
-After using Cloud9 for a long period of time, you may run out of disk space, and it may prompt you to upgrade. You will not need to upgrade. To reclaim the disk space, run the following command:
-sudo rm -rf /home/ubuntu/.local/share/heroku/tmp
+* If you use this setup you will use Cloud9’s IDE setup instead of a native text editor on your computer like sublime text.
+* If instructions ever tell you to run a command that starts with `rails server`, you’ll always need to run the command: `rails s -b $IP -p $PORT`, instead.
+* Instead of visiting your app using localhost, you will use the trick this article suggests to preview your app.
+* Everytime you open Cloud9, you will need to start the postgres server with: sudo `/etc/initi.d/postgres start`.
+* After using Cloud9 for a long period of time, you may run out of disk space, and it may prompt you to upgrade. You will not need to upgrade. To reclaim the disk space, run the following command:
+  > sudo rm -rf /home/ubuntu/.local/share/heroku/tmp
 
 Overall, Cloud9 is a really great development environment, and in a lot of cases using that is a lot smoother than working with other alternative installation setups.
-
-
-
-
-
-
-$$$ NOTES
-
-
-
-
-
-
-
-
-http://blog.thefirehoseproject.com/posts/setting-up-a-cloud9-development-environment/
-
-
-
-
-https://medium.com/@floodfx/setting-up-postgres-on-cloud9-ide-720e5b879154
-
-Need to click the extender button to preview in browser.  Local Cloud9 browser env doesn't work
