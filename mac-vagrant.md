@@ -157,7 +157,7 @@ An `SSH key` is a password file that exists on your computer.  First, we will ne
 
 > **Note:** The command that we are suggesting to run includes the backtick character, ```.  This is a different character than the single quote character, `'`.
 > 
-> Wither copy and paste the command below, or if you type it use the correct backtick character.  Usually, you can find this character on your keyboard on the key to the left of the 1 button.
+> Either copy and paste the command below, or if you type it use the correct backtick character.  Usually, you can find this character on your keyboard on the key to the left of the 1 button.
 
 This first command will run the command to turn on the SSH program in your environment.
 
@@ -173,7 +173,7 @@ After the SSH agent begins running, run the following command to generate an SSH
 
 
 ```
-ssh-keygen -t rsa -C "Firehose Vagrant" -N '' -f ~/.ssh/id_rsa
+ssh-keygen -t rsa -C "Vagrant" -N '' -f ~/.ssh/id_rsa
 ```
 
 This file that was created needs to be registered on your computer.

@@ -44,6 +44,14 @@ When the page finishes loading it will take you to your Cloud9 IDE.  Now that yo
 
 Your Cloud9 Environment will be up and running, but you will need to install a few programs in the environment to get it to work.
 
+### Update Node
+
+Run the following command to update your NodeJS programming environment.
+
+```
+nvm install node
+```
+
 ### Install Heroku
 
 Run the following command in your Cloud9 terminal to install the heroku command line interface.
@@ -51,6 +59,8 @@ Run the following command in your Cloud9 terminal to install the heroku command 
 ```
 npm install -g heroku
 ```
+
+
 
 ### Install and Configure Your Postgres Database
 
@@ -85,6 +95,116 @@ curl https://gist.githubusercontent.com/kenmazaika/07614a1a926351b2cc9f215202524
 
 
 
+### Step 3A: Generate SSH Key
+
+An `SSH key` is a password file that exists on your computer.  First, we will need to generate a password file for our environment to use and we will do that in this section.  In the next part, we'll use this password file with our accounts.
+
+> **Note:** The command that we are suggesting to run includes the backtick character, ```.  This is a different character than the single quote character, `'`.
+> 
+> Either copy and paste the command below, or if you type it use the correct backtick character.  Usually, you can find this character on your keyboard on the key to the left of the 1 button.
+
+This first command will run the command to turn on the SSH program in your environment.
+
+*First*, run the following command in your coding environment's terminal prompt.
+
+```
+eval `ssh-agent -s`
+```
+
+After the SSH agent begins running, run the following command to generate an SSH key (a password file) inside your coding environment.
+
+**Next**, copy and paste the following command into your coding environment's terminal prompt.
+
+
+```
+ssh-keygen -t rsa -C "Vagrant" -N '' -f ~/.ssh/id_rsa
+```
+
+This file that was created needs to be registered on your computer.
+
+**Finally**, copy and paste the following command into your coding environment's terminal prompt.
+
+```
+ssh-add ~/.ssh/id_rsa
+```
+
+This is everything you need to do to generate new SSH keys and have them setup in your coding environment.  Now we can use these SSH keys with the accounts you created.
+
+
+
+
+UNTESTED
+
+
+
+
+
+### Step 3B: Configure heroku with SSH key
+
+First, you will need to log into our heroku account in this coding environment.
+
+> The next command will prompt you for the email address and password that you used when setting up your heroku account.
+
+**Next**, run the following command and enter your email address and heroku password when prompted for it.
+
+```
+heroku login
+```
+
+This step logs your computer into your heroku account.  Connecting your heroku account with your SSH keys will make it so you won't have to manually log into heroku in the future when using it.
+
+**Finally**, add your ssh key to your heroku account by running the following command in your coding enviroment.
+
+```
+heroku keys:add
+```
+
+_Running the above command may prompt you with the question `Would you like to upload it to Heroku`.  If it does, enter `Y`.
+
+
+This step will finalize the connection between your coding environment and the heroku service.
+
+### Step 5C: Configure GitHub with SSH key
+
+Connecting GitHub is a little trickier than Heroku. To start, we need to be able to access our SSH key, which is basically a password file. Run this command to display the SSH key to the terminal window.
+
+```
+cat ~/.ssh/id_rsa.pub
+```
+
+Copy the entire output (starts with “ssh-rsa” and ends with your email address) to your clipboard. For me on my environment, it looks like:
+
+> ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5AAIZsdUmNnY6AgJzgCT8…
+omglolhahaha@thefirehoseproject.com
+
+We need to tell GitHub this is what our password file looks like. To do so, log in to GitHub and follow [GitHub's instructions](https://help.github.com/articles/generating-ssh-keys/#step-4-add-your-ssh-key-to-your-account) (note: we don’t need to use pbcopy like GitHub tells us to because we manually copied the password file to our clipboard in the previous step).
+
+![github SSH key settings](images/github_ssh_settings.png)
+
+Your environment will need to connect it's SSH key to the GitHub service, too.  We have written a script to help with this process.
+
+#### Configure the git program
+
+The above steps set git and GitHub to use your SSH key as a way to connect to your account.  There are also two configuration options you will need to provide git.
+
+**Enter the following command in your web development environment**, and also be sure to adjust the email address in the command you execute to be your actual email address instead of the `you@example.com` address.
+
+```
+git config --global user.email "you@example.com"
+```
+
+**Enter the following command in your web development environment**, and also be sure to adjust the email address in the command you execute to be your name instead of the `Your Name` value.
+
+```
+git config --global user.name "Your Name"
+```
+
+After running these steps without error messages git will be setup and configured as expected in your coding environment.
+
+
+
+
+
 
 
 
@@ -92,53 +212,6 @@ curl https://gist.githubusercontent.com/kenmazaika/07614a1a926351b2cc9f215202524
 ### ACCOUNTS
 
 
-
-
-Connecting our accounts (GitHub and Heroku)
-Remember how we had you create a couple of accounts earlier? Now we need to make it so our coding environment is able to access our accounts on these sites. Don’t worry too much about what this is doing right now, but make sure these steps run without any error messages.
-
-Connect Heroku
-
-Next, we will need to log into our heroku account in this coding environment. This will prompt you for your Heroku email and password. Run the following command to start to initiate the login process, then enter your email and password when you’re prompted for it.
-
-heroku login
-
-Then run:
-
-heroku keys:add
-
-Cool. Heroku is connected.
-
-Connect GitHub
-
-Connecting GitHub is a little trickier than Heroku. To start, we need to be able to access our SSH key, which is basically a password file. Run this command to display the SSH key to the terminal window.
-
-cat ~/.ssh/id_rsa.pub
-
-Copy the entire output (starts with “ssh-rsa” and ends with your email address) to your clipboard. For me on my environment, it looks like:
-
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5AAIZsdUmNnY6AgJzgCT8…
-omglolhahaha@thefirehoseproject.com
-
-We need to tell GitHub this is what our password file looks like. To do so, log in to GitHub and follow GitHub’s instructions (note: we don’t need to use pbcopy like GitHub tells us to because we manually copied the password file to our clipboard in the previous step).
-
-SSH Key
-
-The last step for setting up git and GitHub is to tell git what our name and email address are. Run these commands, but make sure to provide your real name and email address inside the double quotes instead of the dummy data that we have here:
-
-git config --global user.email "you@example.com"
-
-And then run:
-
-git config --global user.name "Your Name"
-
-
-
-Create a new rails application
-First, we’ll need to install the ruby on rails gem.  Do that, by running this command:
-
-gem install rails -v 5.0.1
-Let’s test things out by creating a new rails application. To do so, run this command:
 
 
 
