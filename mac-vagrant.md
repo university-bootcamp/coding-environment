@@ -217,7 +217,7 @@ heroku keys:add
 
 This step will finalize the connection between your coding environment and the heroku service.
 
-### Step 5C: Configure heroku with SSH key
+### Step 5C: Configure GitHub with SSH key
 
 Your environment will need to connect it's SSH key to the GitHub service, too.  We have written a script to help with this process.
 

@@ -40,28 +40,64 @@ Then click the orange **Next step** button.
 
 When the page finishes loading it will take you to your Cloud9 IDE.  Now that your environment is created you will be able to configure your coding environment.
 
+## Step 2 — Update Your Cloud9 Environment
+
+Your Cloud9 Environment will be up and running, but you will need to install a few programs in the environment to get it to work.
+
+### Install Heroku
+
+Run the following command in your Cloud9 terminal to install the heroku command line interface.
+
+```
+npm install -g heroku
+```
+
+### Install and Configure Your Postgres Database
+
+If you’re learning how to build web applications, the most common way to get it "live on the internet"— for example, to get a link so you can share it with other people— is to do it through heroku.com. Most likely, you’ll be using Heroku for your first apps, too.
+
+Heroku uses a the _postgres_ database. Because of this, getting Postgres installed and running in our environment is a good idea.
+
+Running the same database as Heroku in our coding environment is generally considered a good idea. Many tutorials will have you use a different database when you’re coding on your own machine versus when it’s live on the internet. This is generally because it’s a bit easier to set up, but it’s a bad idea in the long run.
+
+Using the same database across both generally makes it easier to do and this is called parity with a dev environment. Developers generally agree that it’s a good thing. Even though it can be kind of a pain now, let’s be responsible and set up Postgres to save us pain in the future.
+
+**First**, run the following command to install the Postgres program inside your Cloud9 environment.  To do this, run the following command in your terminal window.
+
+```
+sudo yum install postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs
+```
+
+You might be prompted if you want to continue in the installation process.  If this happens click `Y` to continue the install process for these programs.
+
+**Second**, run the following command to initialize your postgres database.
+
+```
+sudo service postgresql initdb
+```
+
+**Third**, run the following command.  This command will download and execute a small script that will configure your postgres database to work as expected.
+
+```
+curl https://gist.githubusercontent.com/kenmazaika/07614a1a926351b2cc9f215202524067/raw/e89543ea9fe94f00bdf3ae219b5f3218b323f279/cloud9-postgres-setup.sh | sh
+```
 
 
-#### BLOG POST REWRITE
 
 
 
-Cloud9 Coding Environment
 
-The terminal section at the bottom is a bit special. It allows us to run programs directly by running commands. The terminal window can also output text. For example, if you click on the blue box at the bottom and type “date” and press enter, your environment will tell you the current date.
 
-Cloud9 Terminal
 
-Cool! We’re set up and all our programs are installed!
+### ACCOUNTS
+
+
+
 
 Connecting our accounts (GitHub and Heroku)
 Remember how we had you create a couple of accounts earlier? Now we need to make it so our coding environment is able to access our accounts on these sites. Don’t worry too much about what this is doing right now, but make sure these steps run without any error messages.
 
 Connect Heroku
-
-Our coding environment has a program to allow us to connect to heroku, but by default it’s a little out of date. To update this, run the following command in the terminal window:
-
-wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 Next, we will need to log into our heroku account in this coding environment. This will prompt you for your Heroku email and password. Run the following command to start to initiate the login process, then enter your email and password when you’re prompted for it.
 
@@ -96,46 +132,17 @@ And then run:
 
 git config --global user.name "Your Name"
 
-Set up the Postgres database
-If you’re learning how to build web applications, the most common way to get it “live on the internet”— for example, to get a link so you can share it with other people— is to do it through heroku.com. Most likely, you’ll be using Heroku for your first apps, too.
 
-Heroku uses a database called “postgres.” Because of this, getting Postgres installed and running in our environment is a good idea.
-
-Running the same database as Heroku in our coding environment is generally considered a good idea. Many tutorials will have you use a different database when you’re coding on your own machine versus when it’s live on the internet. This is generally because it’s a bit easier to set up, but it’s a bad idea in the long run.
-
-Using the same database across both generally makes it easier to do and this is called parity with a dev environment. Developers generally agree that it’s a good thing. Even though it can be kind of a pain now, let’s be responsible and set up Postgres to save us pain in the future.
-
-Start the server up by running this command:
-
-sudo service postgresql start
-
-Sadly, our Postgres database is configured in a weird way.
-
-Here are a bunch of black-magic commands that are super confusing. Don’t worry about the details of what they’re actually doing.
-
-Run this command to jump into the back end of your database to run the commands:
-
-sudo sudo -u postgres psql
-
-Then, copy and paste this super bizarre stuff. Basically in a nutshell, this sets up our database and the password, and makes it so it’s storing data in the database in unicode, which is the most flexible character encoding, which Ruby on Rails will need it to be. Confused by this? That’s okay. Just copy this, and paste it in the terminal.
-
-ALTER USER postgres WITH PASSWORD 'password';
-UPDATE pg_database SET datistemplate = FALSE WHERE datname = 'template1';
-DROP DATABASE template1;
-CREATE DATABASE template1 WITH TEMPLATE = template0 ENCODING = 'UNICODE';
-UPDATE pg_database SET datistemplate = TRUE WHERE datname = 'template1';
-\c template1
-VACUUM FREEZE;
-
-Then press CTRL+D.
-
-Awesome! We just set up our Postgres database.
 
 Create a new rails application
 First, we’ll need to install the ruby on rails gem.  Do that, by running this command:
 
 gem install rails -v 5.0.1
 Let’s test things out by creating a new rails application. To do so, run this command:
+
+
+
+### TEST
 
 rails new myapp -d postgresql
 
@@ -219,11 +226,7 @@ $$$ NOTES
 
 http://blog.thefirehoseproject.com/posts/setting-up-a-cloud9-development-environment/
 
-npm install -g heroku
 
-sudo yum install postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs
-
-CLICK Y
 
 
 https://medium.com/@floodfx/setting-up-postgres-on-cloud9-ide-720e5b879154
