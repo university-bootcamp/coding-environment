@@ -10,11 +10,11 @@ Sign in to your [AWS account](https://aws.amazon.com/) and visit the [AWS Manage
 
 **First**, in the AWS management console, scroll down and find the option for **Cloud9**, listed under **Developer Tools**.  Click this link.
 
-![cloud9](images/0-choose-cloud9.png)
+![cloud9](/images/0-choose-cloud9.png)
 
 **Second**, in the page that opens, click the orange button that suggest **Create Environment**.
 
-![cloud9](images/1-create-environment.png)
+![cloud9](/images/1-create-environment.png)
 
 **Third**, in the options that are shown enter a name.
 
@@ -24,19 +24,19 @@ Sign in to your [AWS account](https://aws.amazon.com/) and visit the [AWS Manage
 
 Then click the orange **Next step** button.
 
-![cloud9](images/2-env-setup.png)
+![cloud9](/images/2-env-setup.png)
 
 **Fourth**, leave the default fields selected and click the orange **Next step** button.
 
-![cloud9](images/3-create.png)
+![cloud9](/images/3-create.png)
 
 **Fifth**, Amazon will show you the prompts of what is being created for you to confirm that it works.  Scroll to the bottom and click the orange **Create environment** button.
 
-![confirm](images/4-create-again.png)
+![confirm](/images/4-create-again.png)
 
 **Sixth**, wait for your environment to finish being created.  You will be prompted to wait for the process to finish.
 
-![wait](images/5-wait.png)
+![wait](/images/5-wait.png)
 
 When the page finishes loading it will take you to your Cloud9 IDE.  Now that your environment is created you will be able to configure your coding environment.
 
@@ -132,13 +132,6 @@ This is everything you need to do to generate new SSH keys and have them setup i
 
 
 
-
-UNTESTED
-
-
-
-
-
 ### Step 3B: Configure heroku with SSH key
 
 First, you will need to log into our heroku account in this coding environment.
@@ -174,8 +167,8 @@ cat ~/.ssh/id_rsa.pub
 
 Copy the entire output (starts with “ssh-rsa” and ends with your email address) to your clipboard. For me on my environment, it looks like:
 
-> ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5AAIZsdUmNnY6AgJzgCT8…
-omglolhahaha@thefirehoseproject.com
+> ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5AAIZsdUmNnY6AgJzgCT8...
+email@example.com
 
 We need to tell GitHub this is what our password file looks like. To do so, log in to GitHub and follow [GitHub's instructions](https://help.github.com/articles/generating-ssh-keys/#step-4-add-your-ssh-key-to-your-account) (note: we don’t need to use pbcopy like GitHub tells us to because we manually copied the password file to our clipboard in the previous step).
 
@@ -266,7 +259,7 @@ One thing you’ll notice is that the rails server command basically eats our do
 
 > **Important**: When the server finishes starting up, it may appear that it is hanging.  The result will look like this:
 >
-> ![server](bad image)
+> ![server](/images/cloud9-server-hanging.png)
 
 After your server finishes spinning up and the text that says `User Ctrl-C to stop` appears it means your server is running.
 
