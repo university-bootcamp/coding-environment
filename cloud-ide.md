@@ -35,7 +35,7 @@ To get set up on Codenvy, we'll need to do three things: set up our account, cre
 
 4. Click the **Verify Email** button in the email sent to the address you entered in step 2.
 
-    <img width="350" alt="Email Verification" src="images/codenvy/4.png" />
+   <img width="350" alt="Email Verification" src="images/codenvy/4.png" />
 
 5. Finish setting up your account by entering the requested information. Click **Get Started**.
 
