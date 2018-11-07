@@ -2,7 +2,7 @@
 
 Instead of installing the programs on our personal computers, we can use a (Cloud IDE). 
 
-While there are many options, we recommend starting with _; it has much of what is needed set up already. These services allow us to run a full-fledged coding environment inside our web browser. The setup is quick and straightforward, which makes using a cloud IDE a no-brainer at this stage of the game.
+While there are many options, we recommend starting with Codenvy; it has much of what is needed set up already. Cloud IDEs allow us to run a full-fledged coding environment inside our web browser. The setup is quick and straightforward, which makes using a cloud IDE a no-brainer at this stage of the game.
 
 1. [Setting up Codenvy](#setting-up-codenvy)
 2. [Using Codenvy](#using-codenvy)
@@ -14,8 +14,8 @@ While there are many options, we recommend starting with _; it has much of what 
 Codenvy has two main concepts we'll be using: stacks and workspaces.
 
 - <span id="stacks">**Stacks**</span> define what programming languages, programs, and commands should be available on the "machine" your workspace is running on. Setting up a stack is the equivalent of making a list of software you need to install on your laptop.
-- <span id="workspaces">**Workspaces**</span> are created from stacks and are where your projects live and run. You can think of them as an instantiation (manifestation) of a stack - a folder and work area where all of your needed programs are installed and set up, in which you can create files, run projects, and more.
 
+- <span id="workspaces">**Workspaces**</span> are created from stacks and are where your projects live and run. You can think of them as an instantiation (manifestation) of a stack - a folder and work area where all of your needed programs are installed and set up, in which you can create files, run projects, and more.
 
 ## Setting up Codenvy
 
