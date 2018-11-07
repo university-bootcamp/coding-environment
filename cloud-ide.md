@@ -1,6 +1,6 @@
 # Cloud IDE
 
-Instead of installing the programs on our personal computers, we can use a (Cloud IDE). 
+Instead of installing the programs on our personal computers, we can use a Cloud IDE. 
 
 While there are many options, we recommend starting with Codenvy; it has much of what is needed set up already. Cloud IDEs allow us to run a full-fledged coding environment inside our web browser. The setup is quick and straightforward, which makes using a cloud IDE a no-brainer at this stage of the game.
 
