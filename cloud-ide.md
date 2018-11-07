@@ -60,15 +60,12 @@ To get set up on Codenvy, we'll need to do three things: set up our account, cre
    <img width="450" alt="Workspace Creation Step 1" src="images/codenvy/9.png" />
 
 10. Scroll down and select **bootcamp** (this is what we named our stack in the earlier step). Then click **Create**.
-
    <img width="600" alt="Workspace Creation Step 2 - select rails" src="images/codenvy/10.png" />
 
 11. The application should redirect you to a loading page; it will take a couple to load the workspace and set it up. 
-
    <img width="600" alt="Workspace Creation Step 4 - loading" src="images/codenvy/11.png" />
 
 12. When the loading is complete, you should see the editor environment:
-
    <img width="600" alt="Workspace Creation Complete" src="images/codenvy/12.png" />
 
 The coding environment is ready for you to start working!
