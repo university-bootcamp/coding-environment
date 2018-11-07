@@ -196,11 +196,11 @@ After running these steps without error messages git will be setup and configure
 
 
 
-## Step 4: Test
+## Step 4: Build & Configure a Test Application
 
-<!-- TODO: formatting for this section is off.  fix this-->
+Now that your environment is setup and connected to the accounts you've created the next step will involve previewing a working Ruby on Rails web application in this environment.
 
-Now that your environment is properly installed, setup and configured you will now be able to test that the environment is able to run a ruby on rails project.  
+To do this, you will need to create a new blank Ruby on Rails application and run the commands to setup your database for the project.
 
 **First**, within your coding environment change your directory to the folder where the Ruby on Rails test application's source code is.
 
@@ -236,26 +236,32 @@ default: &default
 
 Then save the file. Be careful about indentation here. Each line needs to be indented exactly the same number of spaces as the line above it.
 
-### Create the database
-
-Run this command to create the database:
+**Finally**, you will need to create the database.  To do this, run this command to create the database:
 
 ```
 rake db:create
 ```
 
-**Second**, run the following command to start a Ruby on Rails server.  This command will start running and prevent you from running additional commands, but will allow you to interact with your application within a web browser.
+> **Note**: If this command shows an error message, it indicates there were problems with the instructions you followed in the previous step:
+> 
+> _**Fourth**, open the file `config/database.yml`..._
+> 
+> If this happens, scroll up to that instruction and try again.
 
-The moment of truth: running the app
-Finally, we are ready to start our application. In Cloud9, the following command allows us to start our web application:
+The above command will complete without showing an error and that means your project has been setup successfully and you are now ready to preview it in a web browser.
 
+## Step 5: Preview Web Application in Browser
+
+Since your project is setup correctly in your coding environment, it will be easy to preview the application in a web browser.
+
+**First**, run the following command to start a Ruby on Rails server.  This command will start running and prevent you from running additional commands, but will allow you to interact with your application within a web browser.
 ```
 rails s -b $IP -p $PORT
 ```
 
 The terminal window where you just ran the rails server command will look like it runs for forever. That’s a good thing, since we want our server to be running all the time so we can see our web application in our browser all the time.
 
-One thing you’ll notice is that the rails server command basically eats our dollar sign, so we can no longer run commands or do anything with this “web dev” terminal window.
+One thing you’ll notice is that the rails server command basically eats our dollar sign, so we can no longer run commands or do anything with this terminal window.
 
 > **Important**: When the server finishes starting up, it may appear that it is hanging.  The result will look like this:
 >
@@ -263,22 +269,37 @@ One thing you’ll notice is that the rails server command basically eats our do
 
 After your server finishes spinning up and the text that says `User Ctrl-C to stop` appears it means your server is running.
 
+**Second**, now that your server is running you can preview the application.
 
 In the menu find the `Preview` in the top right corner of the application.  From this menu click the `Preview Running Application` option.
 
-Press the button to preview the application in a new browser window.
+![preview](/images/cloud9/cloud9-preview.png)
 
-## Running App in Cloud9
+Press the button to preview the application in a new browser window.  This will open a new web browser tab and you will be able to preview the application in your web browser and it will look like this.
 
-Things that are important to know about your environment.
+![preview](images/preview.png)
 
-That setup will work for you regardless of your computer setup. There are a couple of small adjustments you’ll need to make in the process of building the applications that the most tutorials will suggest. Here’s what you need to know:
+If you see this, it means you've finished setting up your application and can preview an application that is running.
 
-* If you use this setup you will use Cloud9’s IDE setup instead of a native text editor on your computer like sublime text.
-* If instructions ever tell you to run a command that starts with `rails server`, you’ll always need to run the command: `rails s -b $IP -p $PORT`, instead.
-* Instead of visiting your app using localhost, you will use the trick this article suggests to preview your app.
-* Everytime you open Cloud9, you will need to start the postgres server with: sudo `/etc/initi.d/postgres start`.
-* After using Cloud9 for a long period of time, you may run out of disk space, and it may prompt you to upgrade. You will not need to upgrade. To reclaim the disk space, run the following command:
-  > sudo rm -rf /home/ubuntu/.local/share/heroku/tmp
+## Step 6: Stop your rails server
 
-Overall, Cloud9 is a really great development environment, and in a lot of cases using that is a lot smoother than working with other alternative installation setups.
+The command you ran above started running a server that can be previewed in a web browser.  Before we finish, we should close the program we just opened.
+
+**Find your web development terminal where you ran the `rails server` (rails s) command and hold CTRL+C.**
+
+After you press hold `CTRL+C` on your keyboard, your terminal will give you a message that indicates your server has closed and return the prompt so new commands can be entered.
+
+> ^C- Gracefully stopping, waiting for requests to finish
+> === puma shutdown: 2018-10-31 23:35:32 +0000 ===
+> - Goodbye!
+> Exiting
+
+This will prevent the webpage from loading in the future, but will allow you to enter new commands.
+
+## Step 7: Learn about your Cloud9 coding environment
+
+By following these instructions in this guide you've setup a cloud IDE with Cloud9 on the Internet.  This will be your coding environment that you will be able to use for the remainder of the course.
+
+Since you will be using this coding environment extensively in the future, understanding it will be important.
+
+**_[Visit the the Introduction to Cloud9](cheat-sheets/cloud9-intro.md)_** to learn more about how to use this development environment that you just setup.
