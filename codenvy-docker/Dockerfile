@@ -22,6 +22,7 @@ RUN sudo apt-get update -qq \
 # setup db
 RUN /etc/init.d/postgresql start && sudo -u postgres sh -c 'createuser root & createdb root'
 
+RUN service postgresql start
 EXPOSE 5432
 
 CMD tail -f /dev/null
