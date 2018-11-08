@@ -2,16 +2,36 @@
 
 This file is used to generate the image/environment on which your codenvy projects will be set up.
 
-## Docker Hub Repo
+- [Building the Image](#building-the-image)
+- [Running Commands](#running-commands)
+- [Pushing to Docker Hub](#pushing-to-docker-hub)
+- [Running with Codenvy](#running-with-codenvy)
 
-Currently this image is publicly available on docker hub here: <https://hub.docker.com/r/tteltrab/rr-pg-for-codenvy/> .
+## Building the Image
 
-To build and push this image, the following commands were used:
+To build the image:
 
 ```sh
 docker build . -t tteltrab/rr-pg-for-codenvy &&
+```
+
+## Running Commands
+
+To run commands interactively in a new container using the image:
+
+```sh
+docker run -i -t tteltrab/rr-pg-for-codenvy /bin/bash
+```
+
+## Pushing to Docker Hub
+
+Once the image has been built, push the image:
+
+```sh
 docker push tteltrab/rr-pg-for-codenvy
 ```
+
+Currently this image is publicly available on docker hub here: <https://hub.docker.com/r/tteltrab/rr-pg-for-codenvy/> .
 
 ## Running with Codenvy
 

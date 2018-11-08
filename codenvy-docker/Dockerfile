@@ -20,9 +20,8 @@ RUN sudo apt-get update -qq \
   && sudo apt-get install -y --no-install-recommends nodejs
 
 # setup db
-RUN /etc/init.d/postgresql start && sudo -u postgres sh -c 'createuser root & createdb root'
+RUN /etc/init.d/postgresql start && sudo -u postgres sh -c 'createuser root & createdb root' && sudo -u postgres psql -U postgres -d postgres -c "alter user postgres with password 'password';"
 
-RUN service postgresql start
 EXPOSE 5432
 
 CMD tail -f /dev/null

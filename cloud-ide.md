@@ -4,12 +4,13 @@ Instead of installing the programs on our personal computers, we can use a Cloud
 
 While there are many options, we recommend starting with Codenvy; it has much of what is needed set up already. Cloud IDEs allow us to run a full-fledged coding environment inside our web browser. The setup is quick and straightforward, which makes using a cloud IDE a no-brainer at this stage of the game.
 
-1. [Setting up Codenvy](#setting-up-codenvy)
-2. [Using Codenvy](#using-codenvy)
-   - [The Terminal](#the-terminal)
-   - [File Explorer Pane](#file-explorer-pane)
-   - [Edit File Pane](#edit-file-pane)
-3. [Alternatives](#alternatives)
+- [Setting up Codenvy](#setting-up-codenvy)
+- [Using Codenvy](#using-codenvy)
+  - [The Terminal](#the-terminal)
+  - [File Explorer Pane](#file-explorer-pane)
+  - [Edit File Pane](#edit-file-pane)
+- [Setting Up Projects](#setting-up-projects)
+- [Alternatives](#alternatives)
 
 Codenvy has two main concepts we'll be using: stacks and workspaces.
 
@@ -68,11 +69,11 @@ To get set up on Codenvy, we'll need to do three things: set up our account, cre
 12. When the loading is complete, you should see the editor environment:
    <img width="600" alt="Workspace Creation Complete" src="images/codenvy/12.png" />
 
-The coding environment is ready for you to start working!
+The coding environment is ready for you to start working! The next section breaks down the UI, and the section after that gets you up and running with your first application!
 
 ## Using Codenvy
 
-Now that you have your environment set up let's talk about how it works.
+Now that you have your workspace set up let's talk about the capabilities of the UI.
 
 The coding environment has three primary components: the terminal, the File Explorer pane, and the Edit File pane. These different parts are connected and work together.
 
@@ -125,6 +126,35 @@ The Edit File pane shows the contents of a file and allows you to edit it. Chang
 By clicking in the Edit File pane, you can adjust the contents of a file. To save the changes, you can hold **command+S** (**CTRL+S** for Windows), or go to the top menu and click **File > Save**.
 
 We'll be using this coding environment extensively. In the next lesson, we'll cover how to interact with the coding environment as well as some of the most important commands within the coding environment. 
+
+## Setting Up Projects
+
+In this section, we'll walk through setting up the first example application we'll be building - _splurty_. These concepts apply to all projects we will be creating.
+
+We'll need to use the editor and terminal to set up the project:
+
+1. For us to be able to see the code in the editor, we'll need to be in projects folder. In the terminal, type the following: 
+   - `cd projects`
+
+2. We can create a new rails app by using the following commands:
+   - `rails new splurty`
+   - `cd splurty`
+ 
+3. Next, we need to update the database configuration, run postgres, and create the databases for the application.
+   - Open up the `config/database.yml` file in your editor.
+     - copy from splurty example - TODO
+   - Ensure postgres is running!
+     - `service postgresql start`
+   - set up the application database
+     - `rake db:create`
+
+   - Note: Data persistance in the workspace - how does it work/not work (TODO)
+
+4. Finally, we should be able to run the application. You can do this via the terminal:
+
+   - `rails server`
+
+   - Note: You can set up the environment to run the project when you click the run button by TODO
 
 ## Alternatives 
 
