@@ -4,23 +4,33 @@ Instead of installing the programs on our personal computers, we can use a Cloud
 
 While there are many options, we recommend starting with Codenvy; it has much of what is needed set up already. Cloud IDEs allow us to run a full-fledged coding environment inside our web browser. The setup is quick and straightforward, which makes using a cloud IDE a no-brainer at this stage of the game.
 
-1. [Setting up Codenvy](#setting-up-codenvy)
-2. [Using Codenvy](#using-codenvy)
-   - [The Terminal](#the-terminal)
-   - [File Explorer Pane](#file-explorer-pane)
-   - [Edit File Pane](#edit-file-pane)
-3. [Setting Up Projects](#setting-up-projects)
-4. [Alternatives](#alternatives)
+- [Setting up Codenvy](#setting-up-codenvy)
+  - [Step 1: Setting up your Account](#step-1-setting-up-your-account)
+  - [Step 2: Creating the "Stack"](#step-2-creating-the-stack)
+  - [Step 3: Creating the "Workspace"](#step-3-creating-the-workspace)
+- [Using Codenvy](#using-codenvy)
+  - [The Terminal](#the-terminal)
+  - [File Explorer Pane](#file-explorer-pane)
+  - [Edit File Pane](#edit-file-pane)
+- [Setting Up Projects](#setting-up-projects)
+  - [Step 1: Creating the App](#step-1-creating-the-app)
+  - [Step 2: Setting up the Database (Postgres)](#step-2-setting-up-the-database-postgres)
+  - [Step 3: Setting up the Run Command](#step-3-setting-up-the-run-command)
+- [Alternatives](#alternatives)
 
-Codenvy has two main concepts we'll be using: stacks and workspaces.
+The important terms we'll be using with Codenvy to understand before we get started: 
 
-- <span id="stacks">**Stacks**</span> define what programming languages, programs, and commands should be available on the "machine" your workspace is running on. Setting up a stack is the equivalent of making a list of software you need to install on your laptop.
-
-- <span id="workspaces">**Workspaces**</span> are created from stacks and are where your projects live and run. You can think of them as an instantiation (manifestation) of a stack - a folder and work area where all of your needed programs are installed and set up, in which you can create files, run projects, and more.
+ - **stacks** define your environment requirements (e.g. you will need ruby)
+ - **workspaces** are your environment (e.g. a created machine with ruby installed)
+ - **projects** are folders of code, the applications themselves (e.g. a ruby on rails web application you've built)
 
 ## Setting up Codenvy
 
-To get set up on Codenvy, we'll need to do three things: set up our account, create a <a href="#stacks">stack</a> with all of the software we'll need, and then create a <a href="#workspaces">workspace</a>. Follow the following steps to get set up:
+To get your coding environment set up on Codenvy, we'll need to do three things: set up our account, create a <a href="#stacks">stack</a> with all of the software we'll need, and then create a <a href="#workspaces">workspace</a>. Once the environment is set up, you'll want to [set up a project](#setting-up-projects).
+
+Follow the following steps to get the environment set up.
+
+### Step 1: Setting up your Account
 
 1. Navigate to <https://codenvy.io/site/login>  and click **Create One** to set up an account. 
 
@@ -42,36 +52,52 @@ To get set up on Codenvy, we'll need to do three things: set up our account, cre
 
    <img width="350" alt="Account Setup" src="images/codenvy/account-setup/5.png" />
 
-6. Click **Stacks** in the left navigation, and then click **Build Stack From Recipe**.
+### Step 2: Creating the "Stack"
+
+<span id="stacks">**Stacks**</span> define what programming languages, programs, and commands should be available on the "machine" your workspace is running on. Setting up a stack is the equivalent of making a list of software you need to install on your laptop.
+
+Follow these steps to set up the stack we'll be using:
+
+1. Click **Stacks** in the left navigation, and then click **Build Stack From Recipe**.
 
    <img width="350" alt="Create Stack Step 1" src="images/codenvy/account-setup/6.png" />
 
-7. Paste `FROM tteltrab/rr-pg-for-codenvy` into the box, and click **OK**.
+2. Paste `FROM tteltrab/rr-pg-for-codenvy` into the box, and click **OK**.
 
    <img width="350" alt="Create Stack Step 2" src="images/codenvy/account-setup/7.png" />
 
-8. Name your stack `bootcamp`, give it a description, and click **Save**
+3. Name your stack `bootcamp`, give it a description, and click **Save**
 
    <img width="350" alt="Create Stack Step 3" src="images/codenvy/account-setup/8.png" />
 
-   - This stack includes setup for ruby, rails, postgres, and  node.js
+   - Example description: 
 
-9. Next, click **Workspaces** in the left navigation, and click **Add Workspace**.
+     > This stack includes setup for ruby, rails, postgres, and  node.js
+
+### Step 3: Creating the "Workspace"
+
+<span id="workspaces">**Workspaces**</span> are created from stacks and are where your projects live and run. You can think of them as an instantiation (manifestation) of a stack - a folder and work area where all of your needed programs are installed and set up, in which you can create files, run projects, and more.
+
+Follow these steps to set up your workspace:
+
+1. Next, click **Workspaces** in the left navigation, and click **Add Workspace**.
 
    <img width="450" alt="Workspace Creation Step 1" src="images/codenvy/account-setup/9.png" />
 
-10. Scroll down and select **bootcamp** (this is what we named our stack in the earlier step). Then click **Create**.
+2.  Scroll down and select **bootcamp** (this is what we named our stack in the earlier step). Then click **Create**.
    <img width="600" alt="Workspace Creation Step 2 - select rails" src="images/codenvy/account-setup/10.png" />
 
-11. The application should redirect you to a loading page; it will take a couple to load the workspace and set it up. 
+3. The application should redirect you to a loading page; it will take a couple to load the workspace and set it up. 
    <img width="600" alt="Workspace Creation Step 4 - loading" src="images/codenvy/account-setup/11.png" />
 
-12. When the loading is complete, you should see the editor environment:
+4. When the loading is complete, you should see the editor environment:
    <img width="600" alt="Workspace Creation Complete" src="images/codenvy/account-setup/12.png" />
 
 The coding environment is ready for you to start working! The next section breaks down the UI, and the section after that gets you up and running with your first application!
 
-As a final step, follow the [account setup guide](account-setup.md) to hook up your environment to your GitHub and heroku accounts.
+As a final step, follow the [account setup guide](account-setup.md) to hook up your workspace to your GitHub and heroku accounts.
+
+> <span id="workspace-note">Note</span>: Codenvy takes a snapshot of your workspace when it stops, and starts it back up at the state in which you left it so that your work doesn't get lost. However, you _will_ need to run the postgres service when starting your workspace if it has been stopped (using `service postgresql start`).
 
 ## Using Codenvy
 
@@ -139,6 +165,10 @@ In this section, we'll walk through setting up the first example application we'
 
 Follow these steps to set up the project, using [the terminal](#the-terminal) and the [the edit file pane](#edit-file-pane) provided in the browser:
 
+### Step 1: Creating the App
+
+We can use `rails new` to create the new app, though we'll need to make sure we create the app in the right folder.
+
 1. For us to be able to see the code in the editor, we'll need to be in projects folder any time we create a project. In the terminal, type the following: 
     ```sh
     cd projects
@@ -150,80 +180,85 @@ Follow these steps to set up the project, using [the terminal](#the-terminal) an
    cd test2
    ```
  
-3. Next, we need to set up our application to use postgres correctly:
-   1. Ensure postgres is running:
+### Step 2: Setting up the Database (Postgres)
+
+Next, we need to set up our application to use postgres:
+
+1. Ensure postgres is running:
+    ```sh
+    service postgresql start
+    ```
+2. Open up the `config/database.yml` file in your editor and change it so that it looks exactly like the below: 
+    ```yml
+    default: &default
+      adapter: postgresql
+      encoding: unicode
+      pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+      username: postgres
+      password: password
+      host: localhost
+
+    development:
+      <<: *default
+      database: splurty_development
+
+    test:
+      <<: *default
+      database: splurty_test
+
+    production:
+      <<: *default
+      database: splurty_production
+      # username: splurty
+      # password: <%= ENV['SPLURTY_DATABASE_PASSWORD'] %>
+    ```
+3. Add the `pg` gem and install it for the project by typing in the terminal:
+    ```sh
+    bundle add pg
+    ```
+4. Set up the application database:
+    ```sh
+    rake db:create
+    ```
+
+### Step 3: Setting up the Run Command
+
+Finally, we need to create a new run command so that we can run the application and preview the live URL. We can do this through the UI:
+
+1. Create a new run command by selecting the commands tab or by clicking the play icon in the top right:
+
+   <img width="700" alt="codenvy create run command" src="images/codenvy/project-setup/1-create-command.png" />
+
+2. Enter the following configuration information for the run command you're creating:
+
+   - Name: `rails`
+   - Command Line:
       ```sh
-      service postgresql start
+      cd ${current.project.path} && rails server -b 0.0.0.0
       ```
-   2. Open up the `config/database.yml` file in your editor and change it so that it looks exactly like the below: 
-      ```yml
-      default: &default
-        adapter: postgresql
-        encoding: unicode
-        pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-        username: postgres
-        password: password
-        host: localhost
+   - Preview URL: `http://${server.port.3000}`
+  
+     <img width="700" alt="codenvy run command config" src="images/codenvy/project-setup/2-command-info.png" />
 
-      development:
-        <<: *default
-        database: splurty_development
+3. Click the **Save** button.
 
-      test:
-        <<: *default
-        database: splurty_test
+4. Run the process by clicking the play button in the top area:
 
-      production:
-        <<: *default
-        database: splurty_production
-        # username: splurty
-        # password: <%= ENV['SPLURTY_DATABASE_PASSWORD'] %>
-      ```
-   3. Add the `pg` gem and install it for the project by typing in the terminal:
-      ```sh
-      bundle add pg
-      ```
-   4. Set up the application database:
-      ```sh
-      rake db:create
-      ```
+   <img width="700" alt="codenvy run process" src="images/codenvy/project-setup/3-run.png" />
 
-4. Finally, we need to set up a command so that we can run the application and preview the live URL. We can do this through the UI:
+5. Find the live URL in the process pane:
 
-   1. Create a new run command by selecting the commands tab or by clicking the play icon in the top right:
+   <img width="700" alt="codenvy find hosted link" src="images/codenvy/project-setup/4-find-link.png" />
 
-      <img width="700" alt="codenvy create run command" src="images/codenvy/project-setup/1-create-command.png" />
+6. Click the link to see the resulting application!
 
-   2. Enter the following configuration information for the run command you're creating:
-
-      - Name: `rails`
-      - Command Line:
-          ```sh
-          cd ${current.project.path} && rails server -b 0.0.0.0
-          ```
-      - Preview URL: `http://${server.port.3000}`
-      
-        <img width="700" alt="codenvy run command config" src="images/codenvy/project-setup/2-command-info.png" />
-
-   3. Click the **Save** button.
-
-   4. Run the process by clicking the play button in the top area:
-   
-      <img width="700" alt="codenvy run process" src="images/codenvy/project-setup/3-run.png" />
-
-   5. Find the live URL in the process pane:
-
-      <img width="700" alt="codenvy find hosted link" src="images/codenvy/project-setup/4-find-link.png" />
-
-   6. Click the link to see the resulting application!
-
-      <img width="700" alt="codenvy resulting app" src="images/codenvy/project-setup/5-result.png" />
+   <img width="700" alt="codenvy resulting app" src="images/codenvy/project-setup/5-result.png" />
 
 Congratulations, your application is now up and running!
 
 If you want to stop your running application, simply close the rails process in the terminal/process pane.
 
-> Note: Codenvy takes a snapshot of your workspace and starts it back up at the state in which you left it, so your work doesn't get lost. However, you _will_ need to run the postgres service when starting your workspace if it has been stopped (using `service postgresql start`). Also remember to navigate into your project using `cd projects/splurty`.
+> Note: Remember <a href="workspace-note">this note regarding how your workspace will reset after it has been stopped</a>. Also remember to re-navigate into your project using `cd projects/splurty`.
 
 ## Alternatives 
 
