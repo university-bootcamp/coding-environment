@@ -2,10 +2,10 @@
 
 This file is used to generate the image/environment on which your codenvy projects will be set up.
 
-- [Building the Image](#building-the-image)
-- [Running Commands](#running-commands)
-- [Pushing to Docker Hub](#pushing-to-docker-hub)
-- [Running with Codenvy](#running-with-codenvy)
+1. [Building the Image](#building-the-image)
+2. [Running Commands](#running-commands)
+3. [Pushing to Docker Hub](#pushing-to-docker-hub)
+4. [Running with Codenvy](#running-with-codenvy)
 
 ## Building the Image
 
@@ -35,7 +35,7 @@ Currently this image is publicly available on docker hub here: <https://hub.dock
 
 ## Running with Codenvy
 
-To run this on codenvy, simply create a new stack with the following recipe:
+To run this on Codenvy, simply create a new stack with the following recipe:
 
 ```docker
 FROM tteltrab/rr-pg-for-codenvy

@@ -4,13 +4,13 @@ Instead of installing the programs on our personal computers, we can use a Cloud
 
 While there are many options, we recommend starting with Codenvy; it has much of what is needed set up already. Cloud IDEs allow us to run a full-fledged coding environment inside our web browser. The setup is quick and straightforward, which makes using a cloud IDE a no-brainer at this stage of the game.
 
-- [Setting up Codenvy](#setting-up-codenvy)
-- [Using Codenvy](#using-codenvy)
-  - [The Terminal](#the-terminal)
-  - [File Explorer Pane](#file-explorer-pane)
-  - [Edit File Pane](#edit-file-pane)
-- [Setting Up Projects](#setting-up-projects)
-- [Alternatives](#alternatives)
+1. [Setting up Codenvy](#setting-up-codenvy)
+2. [Using Codenvy](#using-codenvy)
+   - [The Terminal](#the-terminal)
+   - [File Explorer Pane](#file-explorer-pane)
+   - [Edit File Pane](#edit-file-pane)
+3. [Setting Up Projects](#setting-up-projects)
+4. [Alternatives](#alternatives)
 
 Codenvy has two main concepts we'll be using: stacks and workspaces.
 
@@ -24,50 +24,50 @@ To get set up on Codenvy, we'll need to do three things: set up our account, cre
 
 1. Navigate to <https://codenvy.io/site/login>  and click **Create One** to set up an account. 
 
-   <img width="350" alt="Login Screen" src="images/codenvy/1.png" />
+   <img width="350" alt="Login Screen" src="images/codenvy/account-setup/1.png" />
 
 2. Enter your email address and a username, and then click **Create Account**.
 
-   <img width="350" alt="Create Account Screen" src="images/codenvy/2.png" />
+   <img width="350" alt="Create Account Screen" src="images/codenvy/account-setup/2.png" />
 
 3. Close the confirmation page.
 
-   <img width="350" alt="Confirmation Screen" src="images/codenvy/3.png" />
+   <img width="350" alt="Confirmation Screen" src="images/codenvy/account-setup/3.png" />
 
 4. Click the **Verify Email** button in the email sent to the address you entered in step 2.
 
-   <img width="350" alt="Email Verification" src="images/codenvy/4.png" />
+   <img width="350" alt="Email Verification" src="images/codenvy/account-setup/4.png" />
 
 5. Finish setting up your account by entering the requested information. Click **Get Started**.
 
-   <img width="350" alt="Account Setup" src="images/codenvy/5.png" />
+   <img width="350" alt="Account Setup" src="images/codenvy/account-setup/5.png" />
 
 6. Click **Stacks** in the left navigation, and then click **Build Stack From Recipe**.
 
-   <img width="350" alt="Create Stack Step 1" src="images/codenvy/6.png" />
+   <img width="350" alt="Create Stack Step 1" src="images/codenvy/account-setup/6.png" />
 
 7. Paste `FROM tteltrab/rr-pg-for-codenvy` into the box, and click **OK**.
 
-   <img width="350" alt="Create Stack Step 2" src="images/codenvy/7.png" />
+   <img width="350" alt="Create Stack Step 2" src="images/codenvy/account-setup/7.png" />
 
 8. Name your stack `bootcamp`, give it a description, and click **Save**
 
-   <img width="350" alt="Create Stack Step 3" src="images/codenvy/8.png" />
+   <img width="350" alt="Create Stack Step 3" src="images/codenvy/account-setup/8.png" />
 
    - This stack includes setup for ruby, rails, postgres, and  node.js
 
 9. Next, click **Workspaces** in the left navigation, and click **Add Workspace**.
 
-   <img width="450" alt="Workspace Creation Step 1" src="images/codenvy/9.png" />
+   <img width="450" alt="Workspace Creation Step 1" src="images/codenvy/account-setup/9.png" />
 
 10. Scroll down and select **bootcamp** (this is what we named our stack in the earlier step). Then click **Create**.
-   <img width="600" alt="Workspace Creation Step 2 - select rails" src="images/codenvy/10.png" />
+   <img width="600" alt="Workspace Creation Step 2 - select rails" src="images/codenvy/account-setup/10.png" />
 
 11. The application should redirect you to a loading page; it will take a couple to load the workspace and set it up. 
-   <img width="600" alt="Workspace Creation Step 4 - loading" src="images/codenvy/11.png" />
+   <img width="600" alt="Workspace Creation Step 4 - loading" src="images/codenvy/account-setup/11.png" />
 
 12. When the loading is complete, you should see the editor environment:
-   <img width="600" alt="Workspace Creation Complete" src="images/codenvy/12.png" />
+   <img width="600" alt="Workspace Creation Complete" src="images/codenvy/account-setup/12.png" />
 
 The coding environment is ready for you to start working! The next section breaks down the UI, and the section after that gets you up and running with your first application!
 
@@ -93,35 +93,37 @@ $ date
 
 The date will be displayed to you. The new dollar sign that is displayed indicates that the terminal is ready for more commands:
 
-<img width="400" alt="Running commands in the terminal" src="images/codenvy/the_date.png" />
+<img width="400" alt="Running commands in the terminal" src="images/codenvy/ui-breakdown/the_date.png" />
+
+This pane will also show running processes (e.g. your running rails process).
 
 ### File Explorer Pane
 
 On the left-hand side of the IDE, you'll see the File Explorer pane. This pane allows you to view the structure of the various folders and files in your coding environment. 
 
-<img width="600" alt="codenvy file pane" src="images/codenvy/the_file.png" />
+<img width="600" alt="codenvy file pane" src="images/codenvy/ui-breakdown/the_file.png" />
 
 You can import existing projects, create your own from scratch, or use a template. If you have no files, you can create them manually or use a template. 
 
 - To use a template, click **Create Project...**, select the **web-rails-simple** example, name your project, and click **Create**:
 
-  <img width="600" alt="codenvy example creation" src="images/codenvy/create-example.png" />
+  <img width="600" alt="codenvy example creation" src="images/codenvy/ui-breakdown/create-example.png" />
 
 The folder icon indicates andy type of folder, while extension-specific icons represent individual files.
 
 - Double-click on a folder:
 
-  <img width="500" alt="codenvy folder click" src="images/codenvy/the_folder.png" />
+  <img width="500" alt="codenvy folder click" src="images/codenvy/ui-breakdown/the_folder.png" />
 
 - The contents of the file will populate the pane to the right:
 
-  <img width="500" alt="codenvy file pane" src="images/codenvy/the_click.png" />
+  <img width="500" alt="codenvy file pane" src="images/codenvy/ui-breakdown/the_click.png" />
 
 ### Edit File Pane
 
 The Edit File pane shows the contents of a file and allows you to edit it. Changes to files are saved automatically. See the description of the coding environment below.
 
-  <img width="600" alt="codenvy file pane" src="images/codenvy/the_edit.png" />
+  <img width="600" alt="codenvy file pane" src="images/codenvy/ui-breakdown/the_edit.png" />
 
 By clicking in the Edit File pane, you can adjust the contents of a file. To save the changes, you can hold **command+S** (**CTRL+S** for Windows), or go to the top menu and click **File > Save**.
 
@@ -129,32 +131,97 @@ We'll be using this coding environment extensively. In the next lesson, we'll co
 
 ## Setting Up Projects
 
-In this section, we'll walk through setting up the first example application we'll be building - _splurty_. These concepts apply to all projects we will be creating.
+In this section, we'll walk through setting up the first example application we'll be building - _splurty_. 
 
-We'll need to use the editor and terminal to set up the project:
+> Note: These concepts apply to all projects we will be creating (and almost all of this you would have to do as part of the project setup even if you _weren't_ using a cloud IDE).
 
-1. For us to be able to see the code in the editor, we'll need to be in projects folder. In the terminal, type the following: 
-   - `cd projects`
+Follow these steps to set up the project, using [the terminal](#the-terminal) and the [the edit file pane](#edit-file-pane) provided in the browser:
 
-2. We can create a new rails app by using the following commands:
-   - `rails new splurty`
-   - `cd splurty`
+1. For us to be able to see the code in the editor, we'll need to be in projects folder any time we create a project. In the terminal, type the following: 
+    ```sh
+    cd projects
+    ```
+
+2. We can create a new rails app, install dependencies (done as part of `rails new`), and move into our new project folder using the following commands:
+   ```sh
+   rails new test2
+   cd test2
+   ```
  
-3. Next, we need to update the database configuration, run postgres, and create the databases for the application.
-   - Open up the `config/database.yml` file in your editor.
-     - copy from splurty example - TODO
-   - Ensure postgres is running!
-     - `service postgresql start`
-   - set up the application database
-     - `rake db:create`
+3. Next, we need to set up our application to use postgres correctly:
+   1. Ensure postgres is running:
+      ```sh
+      service postgresql start
+      ```
+   2. Open up the `config/database.yml` file in your editor and change it so that it looks exactly like the below: 
+      ```yml
+      default: &default
+        adapter: postgresql
+        encoding: unicode
+        pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+        username: postgres
+        password: password
+        host: localhost
 
-   - Note: Data persistance in the workspace - how does it work/not work (TODO)
+      development:
+        <<: *default
+        database: splurty_development
 
-4. Finally, we should be able to run the application. You can do this via the terminal:
+      test:
+        <<: *default
+        database: splurty_test
 
-   - `rails server`
+      production:
+        <<: *default
+        database: splurty_production
+        # username: splurty
+        # password: <%= ENV['SPLURTY_DATABASE_PASSWORD'] %>
+      ```
+   3. Add the `pg` gem and install it for the project by typing in the terminal:
+      ```sh
+      bundle add pg
+      ```
+   4. Set up the application database:
+      ```sh
+      rake db:create
+      ```
 
-   - Note: You can set up the environment to run the project when you click the run button by TODO
+4. Finally, we need to set up a command so that we can run the application and preview the live URL. We can do this through the UI:
+
+   1. Create a new run command by selecting the commands tab or by clicking the play icon in the top right:
+
+      <img width="700" alt="codenvy create run command" src="images/codenvy/project-setup/1-create-command.png" />
+
+   2. Enter the following configuration information for the run command you're creating:
+
+      - Name: `rails`
+      - Command Line:
+          ```sh
+          cd ${current.project.path} && rails server -b 0.0.0.0
+          ```
+      - Preview URL: `http://${server.port.3000}`
+      
+        <img width="700" alt="codenvy run command config" src="images/codenvy/project-setup/2-command-info.png" />
+
+   3. Click the **Save** button.
+
+   4. Run the process by clicking the play button in the top area:
+   
+      <img width="700" alt="codenvy run process" src="images/codenvy/project-setup/3-run.png" />
+
+   5. Find the live URL in the process pane:
+
+      <img width="700" alt="codenvy find hosted link" src="images/codenvy/project-setup/4-find-link.png" />
+
+   6. Click the link to see the resulting application!
+
+      <img width="700" alt="codenvy resulting app" src="images/codenvy/project-setup/5-result.png" />
+
+Congratulations, your application is now up and running!
+
+If you want to stop your running application, simply close the rails process in the terminal/process pane.
+
+> Note: Codenvy takes a snapshot of your workspace and starts it back up at the state in which you left it, so your work doesn't get lost. However, you _will_ need to run the postgres service when starting your workspace if it has been stopped (using `service postgresql start`). Also remember to navigate into your project using `cd projects/splurty`.
 
 ## Alternatives 
 
