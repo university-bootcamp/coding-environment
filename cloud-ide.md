@@ -28,11 +28,11 @@ The important terms we'll be using with Codenvy to understand before we get star
 
 To get your coding environment set up on Codenvy, we'll need to do three things: set up our account, create a <a href="#stacks">stack</a> with all of the software we'll need, and then create a <a href="#workspaces">workspace</a>. Once the environment is set up, you'll want to [set up a project](#setting-up-projects).
 
-Follow the following steps to get the environment set up.
+Follow these steps to get the environment set up.
 
 ### Step 1: Setting up your Account
 
-1. Navigate to <https://codenvy.io/site/login>  and click **Create One** to set up an account. 
+1. Navigate to <https://codenvy.io/site/login> and click **Create One** to set up an account. 
 
    <img width="350" alt="Login Screen" src="images/codenvy/account-setup/1.png" />
 
@@ -72,7 +72,7 @@ Follow these steps to set up the stack we'll be using:
 
    - Example description: 
 
-     > This stack includes setup for ruby, rails, postgres, and  node.js
+     > This stack includes setup for ruby, rails, postgres, and node.js
 
 ### Step 3: Creating the "Workspace"
 
@@ -97,7 +97,7 @@ The coding environment is ready for you to start working! The next section break
 
 As a final step, follow the [account setup guide](account-setup.md) to hook up your workspace to your GitHub and heroku accounts.
 
-> <span id="workspace-note">Note</span>: Codenvy takes a snapshot of your workspace when it stops, and starts it back up at the state in which you left it so that your work doesn't get lost. However, you _will_ need to run the postgres service when starting your workspace if it has been stopped (using `service postgresql start`).
+> <span id="workspace-note">Note</span>: Codenvy takes a "snapshot" of your workspace when it stops, and when you return starts it back up at the state in which you left it. This keeps your work from getting lost, but doesn't preserve any running services. Thus, you will need to run the postgres service when starting your workspace ( `service postgresql start`).
 
 ## Using Codenvy
 
@@ -258,7 +258,7 @@ Congratulations, your application is now up and running!
 
 If you want to stop your running application, simply close the rails process in the terminal/process pane.
 
-> Note: Remember <a href="workspace-note">this note regarding how your workspace will reset after it has been stopped</a>. Also remember to re-navigate into your project using `cd projects/splurty`.
+> Note: Remember <a href="#workspace-note">this note regarding how your workspace will reset after it has been stopped</a>. Also remember to re-navigate into your project using `cd projects/splurty`.
 
 ## Alternatives 
 
