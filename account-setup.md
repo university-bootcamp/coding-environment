@@ -2,10 +2,10 @@
 
 For your GitHub.com and heroku.com accounts to work correctly, you will need to connect your coding environment with these accounts. This guide walks through that process.
 
-- [Step 1: Generate SSH Key](#step-1-generate-ssh-key)
-- [Step 2: Configure heroku with SSH key](#step-2-configure-heroku-with-ssh-key)
-- [Step 3: Configure GitHub with SSH key](#step-3-configure-github-with-ssh-key)
-    - [Configure the git program](#configure-the-git-program)
+1. [Generate SSH Key](#step-1-generate-ssh-key)
+2. [Configure Heroku with SSH key](#step-2-configure-heroku-with-ssh-key)
+3. [Configure GitHub with SSH key](#step-3-configure-github-with-ssh-key)
+   - [Configure the git program](#configure-the-git-program)
 
 ## Step 1: Generate SSH Key
 
@@ -42,7 +42,7 @@ ssh-add ~/.ssh/id_rsa
 
 This is everything you need to do to generate new SSH keys and have them setup in your coding environment.  Now we can use these SSH keys with the accounts you created.
 
-## Step 2: Configure heroku with SSH key
+## Step 2: Configure Heroku with SSH key
 
 Your environment will need a heroku command line tool, the heroku `cli`, which will need to be installed.
 
