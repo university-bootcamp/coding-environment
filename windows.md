@@ -95,7 +95,7 @@ The following information will be important for you to know about the installati
 
   - Use the `Run` button provided in the browser environment. The IDE will provide you with a URL you can use to view your application:
 
-    <img width="600" alt="Confirmation Screen" src="images/codenvy/run.png" />
+    <img width="600" alt="codenvy run button" src="images/codenvy/run.png" />
 
     - Note: you'll need to follow [the instructions for setting up the run command](cloud-ide.md##step-3-setting-up-the-run-command) first.
 
