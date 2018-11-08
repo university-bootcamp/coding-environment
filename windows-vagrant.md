@@ -294,7 +294,7 @@ rails s -b 0.0.0.0 -p 3000
 
 > **Important**: When the server finishes starting up, it may appear that it is hanging.  The result will look like this:
 >
-> ![server](images/rails-server-running)
+> ![server](images/rails-server-running.png)
 
 After your server finishes spinning up and the text that says `User Ctrl-C to stop` appears it means your server is running.
 
