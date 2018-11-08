@@ -1,6 +1,10 @@
-## Running App in Cloud9
+## Using the Cloud9 Coding Environment
 
-Things that are important to know about your environment.
+This Cloud9 coding environment will work regardless of your computer's operating system, configuration or any other property of your machine assuming you have a working web browser and Internet connection.  This makes a Cloud9 coding environment a highly reliable coding environment that is a great option to begin your coding journey with.
+
+There are a few things that you should make a note of when you use a Cloud9 coding environment through the coursework.
+
+There are a few small notes that you will want to make sure to know before jumping into coding with this environment, however.
 
 That setup will work for you regardless of your computer setup. There are a couple of small adjustments you’ll need to make in the process of building the applications that the most tutorials will suggest. Here’s what you need to know:
 
