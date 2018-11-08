@@ -7,7 +7,7 @@ RUN gem install pg
 
 EXPOSE 3000
 
-# install node/npm, pg, and other necessary packages for codenvy
+# install pg and other necessary packages for codenvy
 RUN apt-get update -qq \
   && apt-get install -y --no-install-recommends postgresql postgresql-contrib postgresql-client sudo bash build-essential libpq-dev \
   && apt-get clean \

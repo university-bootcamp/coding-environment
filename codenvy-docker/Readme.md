@@ -1,11 +1,18 @@
 # Codenvy Docker
 
-This file is used to generate the image/environment on which your codenvy projects will be set up.
+This file is used to generate the image/environment on which your Codenvy projects will be set up.
 
 1. [Building the Image](#building-the-image)
 2. [Running Commands](#running-commands)
 3. [Pushing to Docker Hub](#pushing-to-docker-hub)
 4. [Running with Codenvy](#running-with-codenvy)
+
+This docker image installs and sets up the following:
+- Ruby
+- Rails
+- Postgres
+- Node.js
+- Codenvy necessities
 
 ## Building the Image
 
