@@ -2,6 +2,24 @@
 
 In this step, we will install, configure and test your vagrant web development environment.  At the end of this process, you will see a web application that is running from within this environment active inside your web browser.
 
+- [Step 1: Get the files](#step-1-get-the-files)
+- [Step 2: Install four programs](#step-2-install-four-programs)
+  - [Program 1 — Sublime Text Editor](#program-1--sublime-text-editor)
+  - [Program 2 — VirtualBox](#program-2--virtualbox)
+  - [Program 3 — PuTTY](#program-3--putty)
+  - [Program 4 — Vagrant](#program-4--vagrant)
+- [Step 3: Starting Your Virtual Machine](#step-3-starting-your-virtual-machine)
+  - [IMPORTANT: Read this before running any additional commands.](#important-read-this-before-running-any-additional-commands)
+- [Step 4: Log into your dev environment](#step-4-log-into-your-dev-environment)
+- [Step 5: Connecting your environment with your accounts](#step-5-connecting-your-environment-with-your-accounts)
+  - [Step 5A: Generate SSH Key](#step-5a-generate-ssh-key)
+  - [Step 5B: Configure heroku with SSH key](#step-5b-configure-heroku-with-ssh-key)
+  - [Step 5C: Configure heroku with SSH key](#step-5c-configure-heroku-with-ssh-key)
+    - [Configure the git program](#configure-the-git-program)
+- [Step 6: Test](#step-6-test)
+- [Step 7: Stop your rails server](#step-7-stop-your-rails-server)
+- [Step 8: Learn about your vagrant coding environment](#step-8-learn-about-your-vagrant-coding-environment)
+
 > **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
 
 Follow the following steps to install and use your vagrant environment.
@@ -136,10 +154,10 @@ After `vagrant up` finishes you will be able to connect to your environment usin
 
 **Second**, enter the relevant information about the connection in the program.
 
-| **Field** | **Value** |
-|---|---|
-| Hostname  | `127.0.0.1`  |
-| Port  | `2222` |
+| **Field** | **Value**   |
+| --------- | ----------- |
+| Hostname  | `127.0.0.1` |
+| Port      | `2222`      |
 
 **Third**, press the `Open` button.
 
@@ -156,8 +174,8 @@ After `vagrant up` finishes you will be able to connect to your environment usin
 **Fourth**, you will need to enter a login and password to log into your environment.  Enter the following values:
 
 | **Field** | **Value** |
-|---|---|
-| Username  | `vagrant`  |
+| --------- | --------- |
+| Username  | `vagrant` |
 | Password  | `vagrant` |
 
 
@@ -196,7 +214,7 @@ After the SSH agent begins running, run the following command to generate an SSH
 
 
 ```
-ssh-keygen -t rsa -C "Firehose Vagrant" -N '' -f ~/.ssh/id_rsa
+ssh-keygen -t rsa -C "Bootcamp" -N '' -f ~/.ssh/id_rsa
 ```
 
 This file that was created needs to be registered on your computer.
@@ -232,7 +250,7 @@ heroku login
 
 This step logs your computer into your heroku account.  Connecting your heroku account with your SSH keys will make it so you won't have to manually log into heroku in the future when using it.
 
-**Finally**, add your ssh key to your heroku account by running the following command in your coding enviroment.
+**Finally**, add your ssh key to your heroku account by running the following command in your coding environment.
 
 ```
 heroku keys:add
@@ -248,10 +266,10 @@ Your environment will need to connect it's SSH key to the GitHub service, too.  
 > 
 > In this process, the program will prompt you for your GitHub username.  Keep in mind, this is your `username` for GitHub.com not your email address.
 
-**Next**, copy and paste the following command in your coding enviroment.  After running this command, enter your GitHub username and password to connect your account.
+**Next**, copy and paste the following command in your coding environment.  After running this command, enter your GitHub username and password to connect your account.
 
 ```
-curl https://gist.githubusercontent.com/kenmazaika/fa8ea7dfbae413638cfd111b974bc74a/raw/ecb5e91c044d92389d0cfd3c2229e57187384d6d/github_auth.rb  > ~/.firehose-github.rb && ruby ~/.firehose-github.rb
+curl https://raw.githubusercontent.com/university-bootcamp/coding-environment/43fa86ad1191cc2a7bdfa438ecfbeb8314c29319/github_auth.rb > ~/.bootcamp-github.rb && ruby ~/.bootcamp-github.rb
 ```
 
 > **Important**:  After running the above command the command should display the text `ok!` in the terminal window.

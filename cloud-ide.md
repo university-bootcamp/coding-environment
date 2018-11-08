@@ -71,6 +71,8 @@ To get set up on Codenvy, we'll need to do three things: set up our account, cre
 
 The coding environment is ready for you to start working! The next section breaks down the UI, and the section after that gets you up and running with your first application!
 
+As a final step, [set up Heroku and Github with your auth keys following these steps](mac-vagrant.md#step-5-connecting-your-environment-with-your-accounts).
+
 ## Using Codenvy
 
 Now that you have your workspace set up let's talk about the capabilities of the UI.
