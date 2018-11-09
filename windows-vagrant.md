@@ -2,6 +2,20 @@
 
 In this step, we will install, configure and test your vagrant web development environment.  At the end of this process, you will see a web application that is running from within this environment active inside your web browser.
 
+- [Step 1: Get the files](#step-1-get-the-files)
+- [Step 2: Install four programs](#step-2-install-four-programs)
+  - [Program 1 — Sublime Text Editor](#program-1--sublime-text-editor)
+  - [Program 2 — VirtualBox](#program-2--virtualbox)
+  - [Program 3 — PuTTY](#program-3--putty)
+  - [Program 4 — Vagrant](#program-4--vagrant)
+- [Step 3: Starting Your Virtual Machine](#step-3-starting-your-virtual-machine)
+  - [IMPORTANT: Read this before running any additional commands.](#important-read-this-before-running-any-additional-commands)
+- [Step 4: Log into your dev environment](#step-4-log-into-your-dev-environment)
+- [Step 5: Connecting your environment with your accounts](#step-5-connecting-your-environment-with-your-accounts)
+- [Step 6: Test](#step-6-test)
+- [Step 7: Stop your rails server](#step-7-stop-your-rails-server)
+- [Step 8: Learn about your vagrant coding environment](#step-8-learn-about-your-vagrant-coding-environment)
+
 > **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
 
 Follow the following steps to install and use your vagrant environment.
@@ -136,10 +150,10 @@ After `vagrant up` finishes you will be able to connect to your environment usin
 
 **Second**, enter the relevant information about the connection in the program.
 
-| **Field** | **Value** |
-|---|---|
-| Hostname  | `127.0.0.1`  |
-| Port  | `2222` |
+| **Field** | **Value**   |
+| --------- | ----------- |
+| Hostname  | `127.0.0.1` |
+| Port      | `2222`      |
 
 **Third**, press the `Open` button.
 
@@ -156,8 +170,8 @@ After `vagrant up` finishes you will be able to connect to your environment usin
 **Fourth**, you will need to enter a login and password to log into your environment.  Enter the following values:
 
 | **Field** | **Value** |
-|---|---|
-| Username  | `vagrant`  |
+| --------- | --------- |
+| Username  | `vagrant` |
 | Password  | `vagrant` |
 
 
@@ -174,107 +188,7 @@ This brings you into your web dev environment ready to run commands.  This `PuTT
 
 In the previous steps you setup accounts on GitHub.com and heroku.com.  For these accounts to work correctly, you will need to connect your coding environment with these accounts.
 
-### Step 5A: Generate SSH Key
-
-An `SSH key` is a password file that exists on your computer.  First, we will need to generate a password file for our environment to use and we will do that in this section.  In the next part, we'll use this password file with our accounts.
-
-> **Note:** The command that we are suggesting to run includes the backtick character, ```.  This is a different character than the single quote character, `'`.
-> 
-> Wither copy and paste the command below, or if you type it use the correct backtick character.  Usually, you can find this character on your keyboard on the key to the left of the 1 button.
-
-This first command will run the command to turn on the SSH program in your environment.
-
-*First*, run the following command in your coding environment's terminal prompt.
-
-```
-eval `ssh-agent -s`
-```
-
-After the SSH agent begins running, run the following command to generate an SSH key (a password file) inside your coding environment.
-
-**Next**, copy and paste the following command into your coding environment's terminal prompt.
-
-
-```
-ssh-keygen -t rsa -C "Firehose Vagrant" -N '' -f ~/.ssh/id_rsa
-```
-
-This file that was created needs to be registered on your computer.
-
-**Finally**, copy and paste the following command into your coding environment's terminal prompt.
-
-```
-ssh-add ~/.ssh/id_rsa
-```
-
-This is everything you need to do to generate new SSH keys and have them setup in your coding environment.  Now we can use these SSH keys with the accounts you created.
-
-### Step 5B: Configure heroku with SSH key
-
-Your environment will need a heroku command line tool, the heroku `cli`, which will need to be installed.
-
-**First**, copy and paste the following command to install this program into your coding environment.
-
-```
-wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-
-```
-
-Next, we will need to log into our heroku account in this coding environment.
-
-> The next command will prompt you for the email address and password that you used when setting up your heroku account.
-
-**Next**, run the following command and enter your email address and heroku password when prompted for it.
-
-```
-heroku login
-```
-
-This step logs your computer into your heroku account.  Connecting your heroku account with your SSH keys will make it so you won't have to manually log into heroku in the future when using it.
-
-**Finally**, add your ssh key to your heroku account by running the following command in your coding enviroment.
-
-```
-heroku keys:add
-```
-
-This step will finalize the connection between your coding environment and the heroku service.
-
-### Step 5C: Configure heroku with SSH key
-
-Your environment will need to connect it's SSH key to the GitHub service, too.  We have written a script to help with this process.
-
-> The command below will execute a script that we've written to automatically connect your GitHub account wit your SSH key.  
-> 
-> In this process, the program will prompt you for your GitHub username.  Keep in mind, this is your `username` for GitHub.com not your email address.
-
-**Next**, copy and paste the following command in your coding enviroment.  After running this command, enter your GitHub username and password to connect your account.
-
-```
-curl https://gist.githubusercontent.com/kenmazaika/fa8ea7dfbae413638cfd111b974bc74a/raw/ecb5e91c044d92389d0cfd3c2229e57187384d6d/github_auth.rb  > ~/.firehose-github.rb && ruby ~/.firehose-github.rb
-```
-
-> **Important**:  After running the above command the command should display the text `ok!` in the terminal window.
->
-> If it gives an error message, this usually indicates that you had problems when entering your username or password.  If this happens, try the above command again and enter your credentials another time.
-
-#### Configure the git program
-
-The above steps set git and GitHub to use your SSH key as a way to connect to your account.  There are also two configuration options you will need to provide git.
-
-**Enter the following command in your web development environment**, and also be sure to adjust the email address in the command you execute to be your actual email address instead of the `you@example.com` address.
-
-```
-git config --global user.email "you@example.com"
-```
-
-**Enter the following command in your web development environment**, and also be sure to adjust the email address in the command you execute to be your name instead of the `Your Name` value.
-
-```
-git config --global user.name "Your Name"
-```
-
-After running these steps without error messages git will be setup and configured as expected in your coding environment.
+Follow the steps in the [account setup guide](account-setup.md) to hook up your environment to these accounts.
 
 ## Step 6: Test
 
