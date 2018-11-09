@@ -44,7 +44,7 @@ Follow these steps to get the environment set up.
 
    <img width="350" alt="Confirmation Screen" src="images/codenvy/account-setup/3.png" />
 
-4. Click the **Verify Email** button in the email sent to the address you entered in step 2.
+4. Click the **Verify Email** button in the email sent to the address you entered above.
 
    <img width="350" alt="Email Verification" src="images/codenvy/account-setup/4.png" />
 
@@ -225,24 +225,32 @@ Next, we need to set up our application to use postgres:
 
 Finally, we need to create a new run command so that we can run the application and preview the live URL. We can do this through the UI:
 
-1. Create a new run command by selecting the commands tab or by clicking the play icon in the top right:
+1. Create a new run command by selecting the **Commands** tab, clicking the **+** icon next to **RUN**, and double-clicking **Custom**:
 
-   <img width="700" alt="codenvy create run command" src="images/codenvy/project-setup/1-create-command.png" />
+   <img width="400" alt="codenvy create run command" src="images/codenvy/project-setup/1-1-create-command.png" />
+
+   <img width="400" alt="codenvy create run command select custom" src="images/codenvy/project-setup/1-2-create-command.png" />
 
 2. Enter the following configuration information for the run command you're creating:
 
-   - Name: `rails`
+   - Name: 
+      ```
+      rails-custom
+      ```
    - Command Line:
       ```sh
       cd ${current.project.path} && rails server -b 0.0.0.0
       ```
-   - Preview URL: `http://${server.port.3000}`
+   - Preview URL:
+      ```
+      http://${server.port.3000}
+      ```
   
-     <img width="700" alt="codenvy run command config" src="images/codenvy/project-setup/2-command-info.png" />
+   <img width="700" alt="codenvy run command config" src="images/codenvy/project-setup/2-command-info.png" />
 
 3. Click the **Save** button.
 
-4. Run the process by clicking the play button in the top area:
+4. Run the process by clicking the down-arrow next to the play button and choosing the desired configuration:
 
    <img width="700" alt="codenvy run process" src="images/codenvy/project-setup/3-run.png" />
 

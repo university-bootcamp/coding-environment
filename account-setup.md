@@ -70,7 +70,7 @@ This step logs your computer into your heroku account.  Connecting your heroku a
 heroku keys:add
 ```
 
-This step will finalize the connection between your coding environment and the heroku service.
+Enter `Yes` when prompted to upload to Heroku. This step will finalize the connection between your coding environment and the heroku service.
 
 ## Step 3: Configure GitHub with SSH key
 
@@ -89,6 +89,8 @@ curl https://raw.githubusercontent.com/university-bootcamp/coding-environment/cl
 > **Important**:  After running the above command the command should display the text `ok!` in the terminal window.
 >
 > If it gives an error message, this usually indicates that you had problems when entering your username or password.  If this happens, try the above command again and enter your credentials another time.
+>
+> If you have two-factor authentication enabled, the above script won't work. Either disable 2FA, or follow the steps here <https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/>
 
 #### Configure the git program
 
