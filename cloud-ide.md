@@ -72,15 +72,13 @@ Follow these steps to set up the stack we'll be using:
 
    <img width="350" alt="Create Stack Step 2" src="images/codenvy/account-setup/7.png" />
 
-3. Name your stack `bootcamp`, give it a description, and click **Save**
+3. Enter a name for your stack, but keep in mind that it needs to be unique. Our suggestion is to use the format of `bootcamp-YOUR-NAME` and replace `YOUR-NAME` with your name, but you can give it any name so long as you reference this name you've chosen in the next step. Then enter a description, and click **Save**.
 
    <img width="350" alt="Create Stack Step 3" src="images/codenvy/account-setup/8.png" />
 
    - Example description: 
 
      `This stack includes setup for ruby, rails, postgres, and node.js`
-
-   > Note: The name for your stack should be unique.
 
 ### Step 3: Creating the "Workspace"
 
@@ -92,7 +90,7 @@ Follow these steps to set up your workspace:
 
    <img width="450" alt="Workspace Creation Step 1" src="images/codenvy/account-setup/9.png" />
 
-2.  Scroll down and select **bootcamp** (this is what we named our stack in the earlier step). Then click **Create**.
+2.  Scroll down and select **bootcamp-YOUR-NAME** (this is what we named our stack in the earlier step). Then click **Create**.
    <img width="600" alt="Workspace Creation Step 2 - select rails" src="images/codenvy/account-setup/10.png" />
 
 3. The application should redirect you to a loading page; it will take a couple to load the workspace and set it up. 
