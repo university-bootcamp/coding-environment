@@ -62,7 +62,13 @@ Follow these steps to set up the stack we'll be using:
 
    <img width="350" alt="Create Stack Step 1" src="images/codenvy/account-setup/6.png" />
 
-2. Paste `FROM tteltrab/rr-pg-for-codenvy` into the box, and click **OK**.
+2. In the text field enter the following code:
+  
+    ```docker
+    FROM tteltrab/rr-pg-for-codenvy
+    ``` 
+    
+   Then click the **OK** button:
 
    <img width="350" alt="Create Stack Step 2" src="images/codenvy/account-setup/7.png" />
 
@@ -72,7 +78,9 @@ Follow these steps to set up the stack we'll be using:
 
    - Example description: 
 
-     > This stack includes setup for ruby, rails, postgres, and node.js
+     `This stack includes setup for ruby, rails, postgres, and node.js`
+
+   > Note: The name for your stack should be unique.
 
 ### Step 3: Creating the "Workspace"
 
@@ -159,7 +167,7 @@ We'll be using this coding environment extensively. In the next lesson, we'll co
 
 ## Setting Up Projects
 
-In this section, we'll walk through setting up the first example application we'll be building - _splurty_. 
+In this section, we'll walk through setting up an example application.
 
 > Note: These concepts apply to all projects we will be creating (and almost all of this you would have to do as part of the project setup even if you _weren't_ using a cloud IDE).
 
@@ -176,8 +184,8 @@ We can use `rails new` to create the new app, though we'll need to make sure we 
 
 2. We can create a new rails app, install dependencies (done as part of `rails new`), and move into our new project folder using the following commands:
    ```sh
-   rails new test2
-   cd test2
+   rails new rails-test-app -d postgresql
+   cd rails-test-app
    ```
  
 ### Step 2: Setting up the Database (Postgres)
@@ -200,23 +208,21 @@ Next, we need to set up our application to use postgres:
 
     development:
       <<: *default
-      database: splurty_development
+      database: test_development
 
     test:
       <<: *default
-      database: splurty_test
+      database: test_test
 
     production:
       <<: *default
-      database: splurty_production
-      # username: splurty
-      # password: <%= ENV['SPLURTY_DATABASE_PASSWORD'] %>
+      database: test_production
+      # username: test
+      # password: <%= ENV['TEST_DATABASE_PASSWORD'] %>
     ```
-3. Add the `pg` gem and install it for the project by typing in the terminal:
-    ```sh
-    bundle add pg
-    ```
-4. Set up the application database:
+    > Note: These files are whitespace-sensitive; be sure the file has the same amount of whitespace as the above text.
+
+3. Set up the application database:
     ```sh
     rake db:create
     ```
@@ -266,7 +272,7 @@ Congratulations, your application is now up and running!
 
 If you want to stop your running application, simply close the rails process in the terminal/process pane.
 
-> Note: Remember <a href="#workspace-note">this note regarding how your workspace will reset after it has been stopped</a>. Also remember to re-navigate into your project using `cd projects/splurty`.
+> Note: Remember <a href="#workspace-note">this note regarding how your workspace will reset after it has been stopped</a>. Also remember to re-navigate into your project using `cd projects/<your-project-folder>`, where `<your-project-folder>` should be replaced by the name of your project folder.
 
 ## Alternatives 
 
