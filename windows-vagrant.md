@@ -1,4 +1,4 @@
-# Vagrant Web Development Setup for Apple Macintosh Computers
+# Vagrant Web Development Setup for Microsoft Windows Computers
 
 In this step, we will install, configure and test your vagrant web development environment.  At the end of this process, you will see a web application that is running from within this environment active inside your web browser.
 
