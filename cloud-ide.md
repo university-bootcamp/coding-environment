@@ -101,7 +101,7 @@ Follow these steps to set up your workspace:
 
 The coding environment is ready for you to start working! The next section breaks down the UI, and the section after that gets you up and running with your first application!
 
-As a final step, follow the [account setup guide](account-setup.md) to hook up your workspace to your GitHub and heroku accounts.
+**As a final step, follow the [account setup guide](account-setup.md) to hook up your workspace to your GitHub and heroku accounts.**
 
 > <span id="workspace-note">Note</span>: Codenvy takes a "snapshot" of your workspace when it stops, and when you return starts it back up at the state in which you left it. This keeps your work from getting lost, but doesn't preserve any running services. Thus, you will need to run the postgres service when starting your workspace ( `service postgresql start`).
 
