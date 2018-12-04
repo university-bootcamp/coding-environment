@@ -1,218 +1,251 @@
-# Vagrant Web Development Setup for Apple Macintosh Computers
+# Vagrant Web Development Setup for Macs
 
-In this step, we will install, configure and test your vagrant web development environment.  At the end of this process, you will see a web application that is running from within this environment active inside your web browser.
+We will install, configure, and test your Vagrant web development environment. When you have completed this process, you will see a web application that is running from within this environment active inside your web browser.
 
-- [Step 1: Get the files](#step-1-get-the-files)
-- [Step 2: Install three programs](#step-2-install-three-programs)
-  - [Program 1 — Sublime Text Editor](#program-1--sublime-text-editor)
-  - [Program 2 — VirtualBox](#program-2--virtualbox)
-  - [Program 3 — Vagrant](#program-3--vagrant)
-- [Step 3: Starting Your Virtual Machine](#step-3-starting-your-virtual-machine)
-  - [IMPORTANT: Read this before running any additional commands.](#important-read-this-before-running-any-additional-commands)
-- [Step 4: Log into your dev environment](#step-4-log-into-your-dev-environment)
-- [Step 5: Connecting your environment with your accounts](#step-5-connecting-your-environment-with-your-accounts)
-- [Step 6: Test](#step-6-test)
-- [Step 7: Stop your rails server](#step-7-stop-your-rails-server)
-- [Step 8: Learn about your vagrant coding environment](#step-8-learn-about-your-vagrant-coding-environment)
+Complete the following steps to install and use your Vagrant coding environment:
 
-> **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
+* [1. Get the files](#step-one-get-the-files)
 
-Follow the following steps to install and use your vagrant environment.
+* [2. Install Three Programs](#step-two-install-three-programs):
 
-## Step 1: Get the files
+    * [Program 1: Sublime Text Editor](#program-one-sublime-text-editor)
 
-Your vagrant virtual machine will need a variety of files to set this up.
+    * [Program 2: VirtualBox](#program-two-virtualbox)
 
-* **Download and unzip** [coding-environment.zip](https://github.com/university-bootcamp/coding-environment/raw/master/tools/coding-environment.zip) to your `Desktop` folder.
+    * [Program 3: Vagrant](#program-three-vagrant)
 
-**Note:** _This folder will become the folder where your web development environment and source code will be used._
+* [3. Starting your virtual machine](#step-three-starting-your-virtual-machine)
 
-## Step 2: Install three programs
+    * [**Important**: Read this before running any additional commands](#important-read-this-before-running-any-additional-commands)
 
-There are three programs you will need to install to setup your environment:  Sublime text, VirtualBox and vagrant.
+* [4. Log in to your dev environment](#step-four-log-into-your-dev-environment)
 
-### Program 1 — Sublime Text Editor
+* [5. Connecting your environment with your accounts](#step-five-connecting-your-environment-with-your-accounts)
 
-> You may have already installed this program, but if you haven't follow these steps.
+* [6. Test](#step-six-test)
 
-**First**, visit the [Sublime Text Editor Website](http://sublimetext.com/) and click "Download for Mac".  
+* [7. Stop your rails server](#step-seven-stop-your-rails-server)
 
-**Second**, open the file and [drag the Sublime Text program into the Applications folder](http://i.imgur.com/pgjF3WL.png), then launch the program by going into your _Launch Pad_ and finding "Sublime Text".  
+* [8. Learn about your Vagrant coding environment](#step-eight-learn-about-your-vagrant-coding-environment)
 
-> **Note:** When you follow this step, you may be presented with an error because this program wasn't installed from the App Store.  The error may [look like this](http://i.imgur.com/FNTYmyL.png).
-> 
-> If this happens do the following:
-> * open Launch Pad 
-> * navigate to `System Preferences > Security & Privacy`
-> * Click the [Open Anyway](http://i.imgur.com/XPVpfRf.png) option.
-> 
-> If you see an error that _"Sublime Text" is an application downloaded from the internet. Are you sure you want to open it?_ [(screenshot)](http://i.imgur.com/bjtmqkw.png), press the **Open** button.  
-> 
-> This will launch the Sublime Text editor, and you'll be good.  
-> 
-> If you need more help check out [this Sublime Text install video](https://vimeo.com/88292868) that shows how to do this.
+**Note:** Make sure to close other virtualization environments you have running. If you are running Parallels, VirtualBox, or VMWare you will need to close them.
 
-### Program 2 — VirtualBox
+## Step One: Get The Files
 
-**First**, visit the [VirtualBox Website](https://www.virtualbox.org/wiki/Downloads), click the link to Download "OS X hosts".  
+You will need a variety of files to set up your Vagrant virtual machine. Download and unzip [coding-environment.zip](tools/coding-environment.zip) to your Desktop folder.
 
-**Second**, Open the dmg file that downloads, then double click on VirtualBox.pkg that pops up and follow the instructions (you're clicking continue most of the time).  Once you go through that step close out the "VirtualBox" window.
+The coding-environment folder will be the folder where your web development environment and source code will be used.
 
-> **Note**: if you see an error message that indicates that you are not allowed to install programs from unidentified developers you will need to adjust your privacy settings to allow this.
->
-> Open the _Launchpad_ and open the _Systems Preferences_.  When this launched open the _Security and Privacy_ pane.
->
-> From there, scroll down and find the section that says: _System software from developer "Oracle America, Inc." was blocked from loading._ and click the `Allow` button to the right of this to finish the installation process of VirtualBox.
->
-> ![Allow blocked](images/mac-allow-blocked.png)
+## Step Two: Install Three Programs
 
-### Program 3 — Vagrant
+You will need to install Sublime Text, VirtualBox, and Vagrant to set up your coding environment.
 
-**First**, visit the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), click Find the Mac OS X section and click "Universal (32 and 64-bit)".  Run the file you downloaded and follow the instructions (you're clicking next most of the time)
+### Program One: Sublime Text Editor
 
-**Finally**, restart your computer if you're prompted to.
+You might have Sublime already installed, but if you haven't installed it yet, complete the following steps:
 
-## Step 3: Starting Your Virtual Machine
+1. Go to the [Sublime Text Editor website](http://sublimetext.com/) and click the Download for Mac button.
 
-The previous steps installed all the programs that were needed to use a vagrant virtual machine.  The next step will run through the steps of turning the environment on for the first time.
+2. Double-click the downloaded file.
 
-Turning on your virtual environment will take a bit longer than usual on the first time.
+3. Drag the item into the *Applications* folder to install it. 
 
-**Open the terminal** on your computer.  To do this, hold the `Command+Spacebar` keys to open the spotlight.  Then type `Terminal` and press the enter key.  This will open a terminal window.
+   ![Drag to Applications](images/mac-vagrant-image_0.gif)
 
-You will need to run two commands in your terminal windows.
+4. Open Sublime from your *Applications* folder.
 
-**First**, run the following command to change your working directory, to make it so you're working with the web development environment you downloaded earlier.
+   ![Open From Applications](images/mac-vagrant-image_1.png)
 
-```
-cd ~/Desktop/coding-environment
-```
+**Note:** If you get an error because this program wasn't installed from the App Store (the error might [look like this](images/mac-vagrant-image_2.png)), do the following:
 
-**Second**, you will need to run the command to turn on your virtual computer environment.
+* Open Launchpad and go to System Preferences > Security & Privacy.
 
-> **Note**:  this command will require you to download a file that is hundreds of megabytes long.  Make sure you are on a strong Internet connection before you run this command.
+The Security & Privacy dialog opens.
 
-Run the following command — and **after the command completes, read the next section before you run another command.**
+* Click the [Open Anyway](images/mac-vagrant-image_3.png) button.
 
-```
-vagrant up
-```
+5. Go back to your *Applications* folder and reopen Sublime Text.
 
-### IMPORTANT: Read this before running any additional commands.
+If you get a "Sublime Text is an application downloaded from the internet. Are you sure you want to open it?" warning message, click the "Open" button to open Sublime.
 
-The previous command may complete with a variety of messages.  **It also may instruct you to run commands that will cause problems in your environment**: so make sure to read this section before doing anything.
+If you need more help installing Sublime, review the [Sublime Text install video](https://vimeo.com/88292868).
 
-**[SUCCESS] — Everything is successful.**
+### Program Two VirtualBox
+
+1. Go to the [VirtualBox website](https://www.virtualbox.org/wiki/Downloads), click the OS X hosts link.
+
+2. Open the .dmg file that downloads, then double-click the VirtualBox.pkg icon that opens. The Install Oracle VM Virtual dialog opens.
+
+3. Complete the steps in the dialogs to install VirtualBox.
+
+4. When you have completed the installation, close the VirtualBox window.
+
+**Note**: If you see an error message that says that you are not allowed to install programs from unidentified developers you will need to adjust your privacy settings to allow this.
+
+To adjust your privacy settings, open *Launchpad* and select *Systems Preferences* > *Security & Privacy*.
+
+Scroll down in the Security & Privacy dialog and find the section that says: *System software from developer "Oracle America, Inc." was blocked from loading *and click the Allow button finish the installation process of VirtualBox.
+
+  ![Allow Oracle America](images/mac-vagrant-image_4.png)
+
+### Program Three: Vagrant
+
+1. Go to the [Download Vagrant page](http://www.vagrantup.com/downloads.html), click Find the Mac OS X section and click Universal (32-bit and 64-bit).
+
+2. Open the .dmg file you downloaded and complete the steps in the dialogs to install Vagrant.
+
+3. Restart your computer if you're prompted to.
+
+## Step Three: Starting Your Virtual Machine
+
+The previous steps installed the three programs that are needed to use a Vagrant virtual machine. Now you are ready to turn the virtual environment.
+
+Turning on your virtual environment for the first time will take a bit longer than usual.
+
+Complete the following steps:
+
+1. **Open the terminal** on your computer by pressing the Command+Spacebar keys to open Spotlight.
+
+2. Type Terminal and press Enter.
+The terminal window opens.
+
+3. Run the following two commands in your terminal window:
+
+   * Run the following command to change your working directory, to make it so you're working with the web development environment you downloaded earlier.
+
+   `cd ~/Desktop/coding-environment`
+
+Before running the next command to turn on your virtual computer environment, understand that the command will require you to download a file that is hundreds of MBs long. Make sure you are on a strong internet connection before you run this command.
+
+Run the following command **after the command completes, read the next section before you run another command.**
+
+`vagrant up`
+
+### Important: Read This Before Running Any Additional Commands
+
+The previous command may complete with a variety of messages. **It also may instruct you to run commands that will cause problems in your environment**: so make sure to read this section before running anymore commands.
+
+**SUCCESS! Everything is successful.**
 
 If everything is successful you will see output that looks like the following.
 
-![Screenshot](images/success-vagrant-mac.png)
+![image alt text](images/mac-vagrant-image_5.png)
 
-If you see this, continue to **Step 4**: vagrant has been installed and started as expected.  If this isn't what your screen looks like, continue below and find the message that matches the output you're seeing.
+If your terminal shows something similar to the above then you can continue to **Step 4**. This means Vagrant has been installed and started as expected.
 
-**[ERROR] — `Vagrant environment or target machine` error message shown.**
+If this isn't what your screen looks like, continue with the instructions below.
+
+The first thing you should do, is review the [ERROR] and [SOMETHING ELSE] messages to find the error that matches the error message you're seeing.
+
+**[ERROR] — Vagrant environment or target machine error message shown.**
 
 The error message will look like this:
 
-![Screenshot](images/vagrant-init.png)
+![Error Message](images/mac-vagrant-image_6.png)
 
-The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command**.
+The command may come back with an error message suggesting that you run the vagrant init command. **IMPORTANT!** **Do not run this command**.
 
-**If you see this error**, _**[click here to understand and fix the problem so the `vagrant up` command works](faq/vagrant/run-vagrant-init.md)**_.
+**If you see this error**, [click here to understand and fix the problem so the vagrant up command works](faq/vagrant/run-vagrant-init.md)
 
-**[ERROR] — `vagrant up` timeouts.**
+**[ERROR] — vagrant up timeouts.**
 
 Error messages indicating that:
 
-> Timed out while waiting for the machine to boot.  This means Vagrant was unable to communicate with the guest machine within th e configured ("config.vm.boot_timeout" value) time period.
+Timed out while waiting for the machine to boot. This means Vagrant was unable to communicate with the guest machine within the configured ("config.vm.boot_timeout" value) time period.
 
-This error message indicates that your computer was unable to connect to the vagrant environment.  This can happen if your computer is incompatible with vagrant.
+This error message indicates that your computer was unable to connect to the Vagrant environment. This can happen if your computer is incompatible with Vagrant.
 
-When this error message happens it's often best to try to run the command an additional time to see if the command executes successfully the next time.
+If you see this error message, try running the command an additional time to see if the command executes successfully the next time.
 
-**Typically, we suggest switching to use a Cloud IDE if this problem persists.** **_[Click here to use a CloudIDE to use your coding environment](cloud-ide.md)_**.
+If you keep getting this error message, we recommend using a Cloud IDE. **[Click here to set up a Cloud IDE to use for your coding environment](cloud-ide.md)**.
 
 **[SOMETHING ELSE] — the output produces something else and does not indicate that everything worked as expected.**
 
-If you encountered an output that is different than the above actions your environment is in a state that is slightly different than these instructions expect.  Because of this, you should ask for help for a TA.
+If you encountered an output that is different than the above actions your environment is in a state that is slightly different than these instructions expect. Because of this, you should ask your TA for help.
 
-To get the best answer, use the following template to ask for help.
+Use the following template when asking for help:
 
-> Hello.  I'm setting up my web development environment using vagrant and when running the `vagrant up` command I encountered an unusual problem.  Attached is a screenshot of the error.
+Hello. I'm setting up my web development environment using Vagrant and when running the vagrant up command I encountered an unusual problem. Attached is a screenshot of the error.
 
-Then take a screenshot of the full output of the command you just ran in the terminal window and include it in your request for help.  We will get back to you about it, soon!
+Then take a screenshot of the full output of the command you just ran in the terminal window and include it in your request for help. We will respond to your request for help as soon as possible!
 
-## Step 4: Log into your dev environment
+## Step Four: Log Into Your Dev Environment
 
-The previous steps installed, configured and turned on a virtual computer that you can use for web development.  The next steps will log you into your environment, so you can begin using it.
+You have now installed, configured, and turned on a virtual computer to use for web development. The next step will log you in to your dev environment, so you can begin using it.
 
-After `vagrant up` finishes, enter the following command in the terminal window.
+After vagrant up finishes running, do the following:
+
+1. Enter the following command in your terminal window:
+
+`vagrant ssh`
+
+This command changes your regular terminal window into a terminal window that you can use to run commands inside the virtual computer that you have set up.
+
+When you are logged into your virtual computer and it is ready for you to run commands inside this virtual machine your terminal will look like the following:
+
+![image alt text](images/mac-vagrant-image_7.png)
+
+This logs you in to your web dev environment. You are now ready to run commands.
+
+The terminal window with the green [ENV] text is a terminal window that is running inside your Vagrant virtual computer. We will refer to it as *your coding environment* from now on.
+
+## Step Five: Connecting Your Environment With Your Accounts
+
+In the previous steps, you set up GitHub and Heroku accounts. For these accounts to work correctly, you will need to connect your coding environment with these accounts.
+
+Complete the steps in the [account setup guide](account-setup.md) to connect your environment to these accounts.
+
+## Step Six: Test
+
+Now that your environment is successfully installed, set up, and configured you can test that the environment is able to run a Ruby on Rails project.
+
+To test your environment, complete the following steps:
+
+1. Within your coding environment change your directory to the folder where the Ruby on Rails test application's source code is.
+
+`cd /vagrant/src/rails-test-app`
+
+2. Run the following command to start a Ruby on Rails server:
+
+`rails s -b 0.0.0.0 -p 3000`
+
+This command will start running and prevent you from running additional commands, but will allow you to interact with your application within a web browser.
+
+**Note**: When the server finishes starting up, it may appear that it is hanging. The result will look like the following:
+
+![image alt text](images/mac-vagrant-image_8.png)
+
+After your server finishes spinning up and the text that says User Ctrl-C to stop appears it means your server is running.
+
+3. Open a web browser on your computer and go to: [http://127.0.0.1:3030](http://127.0.0.1:3030/).
+
+You will be able to preview the application in your web browser and it will look like the following:
+
+![image alt text](images/mac-vagrant-image_5.png)
+
+If you see this page, it means you've finished setting up your application and can preview an application that is running.
+
+## Step Seven: Stop Your Rails Server
+
+The command you ran above started running a server that can be previewed in a web browser. Before we finish, we should close the program we just opened.
+
+To stop your rails server, complete the following:
+
+1. Find your web development terminal where you ran the rails server (`rails s`) command and hold CTRL+C.
+
+2. After you press CTRL+C on your keyboard, your terminal will give you a message that indicates your server has closed and return the following prompt so new commands can be entered:
 
 ```
-vagrant ssh
+^C- Gracefully stopping, waiting for requests to finish === puma shutdown: 2018-10-31 23:35:32 +0000 === 
+Goodbye! Exiting
 ```
 
-This command will change your regular terminal window into a terminal window that you can use to run commands inside the virtual computer that was setup.
+Running this command will prevent the webpage from loading in the future, but it will allow you to enter new commands.
 
-> When you are logged into your virtual computer and it is ready for you to run commands inside this virtual machine your terminal will look like this.
-> 
-> ![Vagrant SSH output](images/vagrant-ssh.png)
-> 
-> This brings you into your web dev environment ready to run commands.  This terminal window with the green `[ENV]` text is a terminal window that is running inside your vagrant virtual computer.  We will refer to as _your coding environment_ from now on.
+## Step Eight: Learn About Your Vagrant Coding Environment
 
-## Step 5: Connecting your environment with your accounts
+You have now set up a virtual machine with Vagrant on your computer. This will be your coding environment that you will be able to use for the remainder of the course.
 
-In the previous steps you setup accounts on GitHub.com and heroku.com.  For these accounts to work correctly, you will need to connect your coding environment with these accounts.
+Since you will be using this coding environment extensively in the future, understanding the environment is important.
 
-Follow the steps in the [account setup guide](account-setup.md) to hook up your environment to these accounts.
-
-## Step 6: Test
-
-Now that your environment is properly installed, setup and configured you will now be able to test that the environment is able to run a ruby on rails project.  
-
-**First**, within your coding environment change your directory to the folder where the Ruby on Rails test application's source code is.
-
-```
-cd /vagrant/src/rails-test-app
-```
-
-**Second**, run the following command to start a Ruby on Rails server.  This command will start running and prevent you from running additional commands, but will allow you to interact with your application within a web browser.
-
-```
-rails s -b 0.0.0.0 -p 3000
-```
-
-> **Important**: When the server finishes starting up, it may appear that it is hanging.  The result will look like this:
->
-> ![server](images/rails-server-running.png)
-
-After your server finishes spinning up and the text that says `User Ctrl-C to stop` appears it means your server is running.
-
-**Third**, open a web browser on your computer and go to: [http://127.0.0.1:3030](http://127.0.0.1:3030).  You will be able to preview the application in your web browser and it will look like this.
-
-![preview](images/preview.png)
-
-If you see this, it means you've finished setting up your application and can preview an application that is running.
-
-## Step 7: Stop your rails server
-
-The command you ran above started running a server that can be previewed in a web browser.  Before we finish, we should close the program we just opened.
-
-**Find your web development terminal where you ran the `rails server` (rails s) command and hold CTRL+C.**
-
-After you press hold `CTRL+C` on your keyboard, your terminal will give you a message that indicates your server has closed and return the prompt so new commands can be entered.
-
-> ^C- Gracefully stopping, waiting for requests to finish
-> === puma shutdown: 2018-10-31 23:35:32 +0000 ===
-> - Goodbye!
-> Exiting
-
-This will prevent the webpage from loading in the future, but will allow you to enter new commands.
-
-## Step 8: Learn about your vagrant coding environment
-
-By following these instructions in this guide you've setup a virtual machine with vagrant on your computer.  This will be your coding environment that you will be able to use for the remainder of the course.
-
-Since you will be using this coding environment extensively in the future, understanding it will be important.
-
-**_[Visit the the Introduction to Vagrant](cheat-sheets/vagrant-intro-mac.md)_** to learn more about how to use this development environment that you just setup.
+[Visit the Introduction to Vagrant](cheat-sheets/vagrant-intro-mac.md) page to learn more about how to use this coding environment that you just set up.

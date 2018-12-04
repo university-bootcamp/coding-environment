@@ -12,5 +12,5 @@ Starting vagrant up and using all the web development tools inside of it is a sl
 
 ## Choose your operating system
 
-* [Apple Macintosh](cheat-sheets/vagrant-intro-mac.md)
-* [Windows](cheat-sheets/vagrant-intro-windows.md)
+* [Apple Macintosh](vagrant-intro-mac.md)
+* [Windows](vagrant-intro-windows.md)
