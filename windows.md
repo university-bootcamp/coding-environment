@@ -1,106 +1,111 @@
-# Microsoft Windows Development Environment setup
+# Development Environment Setup (Windows)
 
-These instructions will install a web development coding environment on your machine and set up all the required accounts that you will need on your Microsoft Windows computer.
+A development environment refers to the set of processes and tools used to write computer software. This can encompass everything from the physical computer you’re working on to any software you have installed and configured to support development such as your code editor, Ruby, Rails, etc.
 
-## Step 1: Create web development accounts
+These instructions will guide you through configuring a web development environment on your machine as well as set up all the required accounts that you will need later in the course.
 
-You will need to use three different services in the process: GitHub, Heroku & Amazon Web Services (AWS).
+## Step One: Create Web Development Accounts
 
-> **Note:** You may be prompted if you want to install programs on your machine when setting up GitHub and Heroku account — you will not need to install these programs yet.
+For now, you will need to create free accounts for the following services:
 
 ### GitHub
 
-GitHub is a service that will allow you to collaborate and back-up your code.  You will need to create an account on this site.
+GitHub is a platform for hosting and sharing code. You’ll use GitHub to back up and showcase code you’ve worked on as well as collaborate on projects with other developers.
 
-**First**,  _**[visit GitHub.com](http://github.com)**_ and create an account.
+Go to [https://github.com/join](https://github.com/join) and sign up for a free account.
 
 ### Heroku
 
-Heroku is a service that will allow you to put your project live on the Internet.  You will need to create an account on this site.
+Heroku is a service that allows you to host your projects live on the internet.
 
-**Second**, _**[visit Heroku.com](http://Heroku.com)**_ and create an account.
-
+Go to [https://signup.heroku.com/](https://signup.heroku.com/) and sign up for a free account.
 
 ### Amazon Web Services
 
-Amazon Web Services provides web services that can plug into the web applications that you use.  In this course, we will be using the `Amazon S3` storage service for storage space for image and video uploading.
+Amazon Web Services provides web services that can plug into the web applications that you’re building. In this course, we will be using the **Amazon S3** storage service uploading and hosting images and videos.
 
-**Third**, [create an account on Amazon Web Services](http://aws.amazon.com/).  Although you will need to enter your credit card information to verify your account, AWS provides a free tier of the services that we will use in throughout the course.
+Go to [https://portal.aws.amazon.com/billing/signup](https://portal.aws.amazon.com/billing/signup) and sign up for a free account.
 
-The free tier on AWS will be more than enough for all the needs in this course.
+You will need to enter a credit card to sign up, but AWS provides a free tier of services you’ll use throughout the course.
 
-## Step 2: [Suggested] Setup vagrant
+## Step Two: Set Up Vagrant
 
-Vagrant is a program that will allow you to run a virtual machine on your computer — and within this virtual machine you can run your web application projects.
+Vagrant is a program for building and managing virtual machine environments.
 
-This next step is the suggested install process.  Some computers do not work well with vagrant — if this happens using an alternative could be helpful.
+A virtual machine is a computer file that behaves like an actual computer. Functionally, a virtual machine is a self-contained operating system with its own file system and programs, but it runs inside a self-contained window, similar to other applications.
 
-**Next**, _**[click here to setup your vagrant environment on your Windows machine](windows-vagrant.md)**_.
+You’ll run many of the tools and applications needed for web development from within a Vagrant virtual machine. You’ll be provided a [Vagrant Box](https://www.vagrantup.com/intro/getting-started/boxes.html), or configuration file, that can be used to quickly set up your virtual environment.
 
-## Step 2: [Alternative] Setup a Cloud IDE
+You could potentially install and configure all the required tools yourself locally without using a virtual machine, but some of these installations can be tricky to get working properly and can vary from one machine to another. To save time and ensure a stress-free and consistent experience, we recommend using Vagrant.
 
-> **If you setup an environment with vagrant successfully, you can skip this step.**
+Click [here](windows-vagrant.md) to find the instructions for setting up Vagrant.
 
-Sometimes, when trying to set up virtual computers on your machine problems will arise.  At these times, it is often the best solution to use a Cloud IDE solution.
+## Step Two: Set Up a Cloud IDE (Alternative)
 
-Cloud IDEs will give you a professional coding environment all within your web browser.  There are a number of reasons to use Cloud IDEs.
+**If you have set up Vagrant successfully, skip this step. If you were unable to set Vagrant up on your machine, follow this step as a fallback.**
+
+Sometimes, when trying to set up virtual computers on your machine problems will arise. At these times, it is often the best solution to use a cloud IDE.
+
+Cloud IDEs give you a professional coding environment all within your web browser. There are a number of reasons to use cloud IDEs as follows:
 
 * They can work regardless of the computer you're using if you can visit sites inside your web browser.
-* They provide the flexibility to log into your environment from different computers.
-* Since everything will be access through a browser, they often can work with unusual Internet, firewall or restrictions from your ISP & router.
 
-Since these Cloud IDEs will give you the full power of a linux virtual machine that is accessible within a web browser, this is a great option to set up a coding environment with, also.
+* They provide the flexibility to log in to your environment from different computers.
 
-**Alternatively**, **_[click here to use a CloudIDE to use your coding environment](cloud-ide.md)_**.
+* Since everything will be accessed through a browser, they often can work with unusual internet, firewall, or restrictions from your ISP and router.
 
-## Step 3:  Understand your environment
+Because cloud IDEs give you the full power of a Linux virtual machine that is accessible within a web browser, they are a great option to set up a coding environment with too.
 
-By following these steps you have installed a coding environment and tested that it is working as expected.  Since there are different options to choose for a coding environment some of the steps you need to use the environment may have slight changes you need when following the instructions.
+Click [here](cloud-ide.md) to use a cloud IDE as your development environment.
 
-Since the different coding environments are each a little different depending on the choices you've made in the previous steps, following the instructions could be a little different.
+## Step Three: Understand Your Environment
+
+By following the previous steps you should have installed a coding environment and verified that it’s working correctly. Since the different coding environments are each a little different depending on the choices you've made in the previous steps, following the lesson instructions could be a little different.
 
 Here are the details that you will need to know about how to use the different coding environments when following through web development instruction materials.
 
 ### Vagrant
 
-The following information will be important for you to know about the installation process you just finished if you are using the vagrant setup before beginning to use it.
+The following information is important for you to know about the installation process you just finished if you are using the Vagrant setup.
 
-1. Between each of the coding sessions you do, especially if you restart your machine, you will need to run the command to start your vagrant environment prior to connecting.
+Between each of the coding sessions you do, especially if you restart your machine, you will need to run the following command to start your vagrant environment prior to connecting:
 
-```
-vagrant up
-```
+`vagrant up`
 
-2. When this command completes, you will need to use the PuTTY program to log into your coding environment.
+When this command completes, run the vagrant ssh command to log in to Vagrant.
 
-After this completes you will be taken to a coding environment inside your virtual machine, and the command will show `[ENV]`.
+After this completes, you will be taken to a coding environment inside your virtual machine, and your terminal should contain the green [ENV].
 
-3. Before starting any new projects it can be helpful to start fresh.
+![Vagrant CLI](images/windows-dev-setup-image_0.png)
 
-If you notice any Ruby on Rails servers that are still running from either the install process or a different application, you should close them, to give you a fresh start.
+Before starting any new projects it can be helpful to restart Vagrant.
 
-**To ensure that your server is not running** — if you visit the URL `localhost:3030` in your browser, you should not see a web page load.  You should ensure that your server is not running before starting new server windows.
+If you notice any Ruby on Rails servers that are still running in another copy or window of terminal, you should quit those as you’ll get an error about multiple Rails instances attempting to use the same port.
 
-**If you ever want to preview the application that is running within your coding environment** — visiting the `localhost:3030` within your environment will allow you to do this.
+Running the `killall ruby` command in your terminal should quit all running Rails servers if you’re unsure.
 
-**Location of project files** — when using this vagrant environment, most people will store the code for their specific projects in the folder in the location `/vagrant/src` inside their coding environment.
+**To ensure that your server is not running** -— If you visit the URL [http://localhost:3030](http://localhost:3030) in your browser, you should not see a web page load. You should ensure that your server is not running before starting new server windows.
 
-All the files within this folder inside the vagrant environment will be automatically synced outside the vagrant environment to folder inside the `coding-environment/src` folder that is located outside the virtual machine, usually on your _Desktop_.
+**If you want to preview the application that is running within your coding environment**—Visiting the [http://localhost:3030](http://localhost:3030) from your web browser will allow you to do this.
 
-### Cloud IDE — Important Things to Know!
+**Location of project files**—When using this vagrant environment, most people will store the code for their specific projects in the folder in the location `/vagrant/src` inside their coding environment.
 
-The following information will be important for you to know about the installation process you just finished if you are using a Cloud IDE setup.
+All the files within this folder inside the Vagrant environment will be automatically synced outside the Vagrant environment to folder inside the `coding-environment/src` folder that is located outside the virtual machine, usually on your Desktop.
 
-**If you ever want to preview the application that is running within your coding environment** — you will need to use the `Run` button provided in the browser environment. The IDE will provide you with a URL you can use to view your application.
+### Cloud IDE: Important Things to Know!
 
-  > Note: you'll need to follow [the instructions for setting up the run command](cloud-ide.md##step-3-setting-up-the-run-command) first.
+The following information will be important for you to know if you are using a cloud IDE setup.
 
-_**If you ever see instructions that tell you to visit the URL `localhost:3030` and you are using a CloudIDE**_ — instead you should make sure to follow the steps above to preview the web application in your coding environment.
+**If you want to preview the application that is running within your coding environment** -— You will need to use the Run button provided in the browser environment. The IDE will provide you with a URL you can use to view your application.
 
-**Location of project files** — when using this coding environment, most people will store the code for their specific projects in the folder in the directly in the home folder of their environment.
+**Note**: You'll need to follow [the instructions for setting up the run command](cloud-ide.md#step-3-setting-up-the-run-command) first.
 
-_**If you ever see instructions that suggest changing your directory or using the `/vagrant/src` folder**_ — you should rather use the folder where your code lives instead.  This will usually involve changing the directory to the home folder, using the `cd ~` command, instead.
+**If you see instructions that tell you to visit the URL `localhost:3030` and you are using a cloud IDE** -— Instead you should make sure to follow the steps above to preview the web application in your coding environment.
 
-## Your environment setup process is now complete!
+**Location of project files** -— When using this coding environment, most people will store the code for their specific projects in the folder in the directly in the home folder of their environment.
 
-Your coding environment is now setup and you have the context of what you need to use it.  You are now ready to begin building applications.
+**If you ever see instructions that suggest changing your directory or using the `/vagrant/src` folder** —- You should use the folder where your code lives instead. This will usually involve changing the directory to the home folder, using the cd ~ command.
+
+## Your Environment Setup Process Is Now Complete!
+
+Your coding environment is now set up and you have the context of what you need to use it. You are now ready to begin building applications.

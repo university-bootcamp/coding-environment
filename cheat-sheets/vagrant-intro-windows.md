@@ -16,7 +16,7 @@ $ ls
 
 When you type `ls` and press **Enter**, the terminal shows a list of all the folders and files in the `/vagrant` folder. This is equivalent to opening the `/vagrant` folder in Mac Finder and viewing its contents, as you can see in the following image:
 
-![Files and Folders are Linked](/images/vagrant-files-and-folders-are-linked.png)
+![Files and Folders are Linked](../images/vagrant-files-and-folders-are-linked.png)
 
 Right now, you're in the `/vagrant` directory. If you want to change the directory (i.e., move into a different folder), you can again use `cd`. Let's move into the `/src` directory:
 
@@ -34,7 +34,7 @@ You should see one directory listed out named `/rails-test-app`. The `/rails-tes
 
 If you ever get lost in the terminal, look between the `[ENV]`: and the `$` to see which directory you are in. Right now, because you changed the directory to `/src`, you should see the following:
 
-![Path is shown in the prompt](/images/vagrant-path-shown.png)
+![Path is shown in the prompt](../images/vagrant-path-shown.png)
 
 To navigate back to the directory above the one you're currently in (i.e., its parent directory), run the following command:
 
