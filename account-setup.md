@@ -59,7 +59,7 @@ Next, we will need to log into our heroku account in this coding environment.
 **Next**, run the following command and enter your email address and heroku password when prompted for it.
 
 ```
-heroku login
+heroku login -i
 ```
 
 This step logs your computer into your heroku account.  Connecting your heroku account with your SSH keys will make it so you won't have to manually log into heroku in the future when using it.
