@@ -1,252 +1,296 @@
-# Vagrant Web Development Setup for Windows
+# Vagrant Web Development Setup for Microsoft Windows Computers
 
-We will install, configure, and test your Vagrant web development environment. When you have completed this process, you will see a web application that is running from within this environment active inside your web browser.
+In this step, we will install, configure and test your vagrant web development environment.  At the end of this process, you will see a web application that is running from within this environment active inside your web browser.
 
-Complete the following steps to install and use your Vagrant coding environment:
+- [Important Check: Virtualization](#important-check-virtualization)
+- [Step 1: Get the files](#step-1-get-the-files)
+- [Step 2: Install four programs](#step-2-install-four-programs)
+  - [Program 1 — Sublime Text Editor](#program-1--sublime-text-editor)
+  - [Program 2 — VirtualBox](#program-2--virtualbox)
+  - [Program 3 — PuTTY](#program-3--putty)
+  - [Program 4 — Vagrant](#program-4--vagrant)
+- [Step 3: Starting Your Virtual Machine](#step-3-starting-your-virtual-machine)
+  - [IMPORTANT: Read this before running any additional commands.](#important-read-this-before-running-any-additional-commands)
+- [Step 4: Log into your dev environment](#step-4-log-into-your-dev-environment)
+- [Step 5: Connecting your environment with your accounts](#step-5-connecting-your-environment-with-your-accounts)
+- [Step 6: Test](#step-6-test)
+- [Step 7: Stop your rails server](#step-7-stop-your-rails-server)
+- [Step 8: Learn about your vagrant coding environment](#step-8-learn-about-your-vagrant-coding-environment)
+- [Step 9: Enable Virtualization (optional)](#step-9-enable-virtualization-(optional))
 
-- [1. Get The Files](#step-one-get-the-files)
+> **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
 
-- [2. Install Four Programs](#step-two-install-four-programs):
+Follow the following steps to install and use your vagrant environment.
 
-  - [Program 1: Sublime Text Editor](#program-one-sublime-text-editor)
+## Important Check: Virtualization
 
-  - [Program 2: VirtualBox](#program-two-virtualbox)
+For vagrant to function on your windows machine, you will need to make sure a feature called `virtualization` is enabled.
 
-  - [Program 3: PuTTY](#program-three-putty)
+To find out if virtualization is enabled on your machine, please follow the steps below:
 
-  - [Program 4: Vagrant](#program-four-vagrant)
+**First**, open your task manager (**ctrl** + **alt** + **del**).
 
-- [3. Starting Your Virtual Machine](#step-three-starting-your-virtual-machine)
+**Second**, click on the **Performance** tab.
 
-  - [**Important**: Read This Before Running Any Additional Commands](#important-read-this-before-running-any-additional-commands)
+![Screenshot](images/virtualization-enabled.png)
 
-- [4. Log Into Your Dev Environment](#step-four-log-into-your-dev-environment)
+If virtualization is not *Enabled*, skip to [Step 9](#step-9-enable-virtualization-(optional)).
 
-- [5. Connecting Your Environment With Your Accounts](#step-five-connecting-your-environment-with-your-accounts)
+## Step 1: Get the files
 
-- [6. Test](#step-six-test)
+Your vagrant virtual machine will need a variety of files to set this up.
 
-- [7. Stop Your Rails Server](#step-seven-stop-your-rails-server)
+* **Download and unzip** [coding-environment.zip](https://github.com/university-bootcamp/coding-environment/raw/master/tools/coding-environment.zip) to your `Desktop` folder.
 
-- [8. Learn About Your Vagrant Coding Environment](#step-eight-learn-about-your-vagrant-coding-environment)
+**Note:** _This folder will become the folder where your web development environment and source code will be used._
 
-**Note:** Make sure to close other virtualization environments you have running. If you are running Parallels, VirtualBox, or VMWare you will need to close them.
+## Step 2: Install four programs
 
-## Step One: Get The Files
+There are found programs you will need to install to setup your environment:  Sublime text, VirtualBox PuTTY and vagrant.
 
-You will need a variety of files to set up your Vagrant virtual machine. Download and unzip [coding-environment.zip](tools/coding-environment.zip) to your Desktop folder.
+### Program 1 — Sublime Text Editor
 
-The coding-environment folder will be the folder where your web development environment and source code will be used.
+> You may have already installed this program, but if you haven't follow these steps.
 
-## Step Two Install Four Programs
+**First**, visit the [Sublime Text Editor Website](http://sublimetext.com/) and click "Download for Windows".  
 
-You will need to install Sublime Text, VirtualBox, PuTTY, and Vagrant to set up your coding environment.
+**Second**, once the program finishes downloading, find the file in the Windows Exporer.  Right-click the program and select the `Run as Administrator` option.  Once this launches the installer, you can continue by pressing `Next` until the installer finishes.
 
-### Program One: Sublime Text Editor
 
-You might have Sublime already installed, but if you haven't installed it yet, complete the following steps:
+### Program 2 — VirtualBox
 
-1. Go to the [Sublime Text Editor website](http://sublimetext.com/) and click the Download for Windows button.
 
-2. Go to your Downloads Folder, Right-click the file, and click `Run as Administrator`
+**First**, visit the [VirtualBox Website](https://www.virtualbox.org/wiki/Downloads),  click the link to Download "Windows hosts".
 
-3. Follow the installation prompt and click `Next` until it is finished.
+**Second**, find the `VirutalBox.exe` program you just downloaded.  Right-click the program and select the `Run as Administrator` option.  Once this launches the installer, you can continue by pressing `Next` until the installer finishes.
 
-If you need more help installing Sublime, review the [Sublime Text install video](https://vimeo.com/88292868).
+> **Note:** if you are using the Windows 10 operating system, or later upgrade your operating system to Windows 10 it will be important to update your VirtualBox program to the latest release.
 
-### Program Two: VirtualBox
+### Program 3 — PuTTY
 
-1. Go to the [VirtualBox website](https://www.virtualbox.org/wiki/Downloads), click the Windows hosts link.
+**First**, visit the website to download the [PuTTY SSH Client](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). After downloading the executable, copy the `putty.exe` file onto your Desktop.
 
-2. Find the `VirutalBox.exe` program you just downloaded. Right-click the program and select the Run as Administrator option. Once this launches the installer, you can continue by pressing Next until the installer finishes.
+### Program 4 — Vagrant
 
-3. Complete the steps in the dialogs to install VirtualBox.
+* Go to the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), click Find the Windows section and click "Universal (32 and 64-bit)".  Run the file you downloaded and follow the instructions (you're clicking next most of the time) and download the installer.
 
-4. When you have completed the installation, close the VirtualBox window.
+**First**, visit the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), find and click the Windows selection.  Choose the selection for `Universal (32 and 64-bit)` programs and download the installer.
 
-Note: if you are using the Windows 10 operating system, or later upgrade your operating system to Windows 10 it will be important to update your VirtualBox program to the latest release.
+**Second**, find program you just downloaded.  Right-click the program and select the `Run as Administrator` option.  Once this launches the installer, you can continue by pressing `Next` until the installer finishes.
 
-### Program Three: PuTTY
+**Finally**, restart your computer if you're prompted to.
 
-1. Go to the website to download the [PuTTY SSH Client](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+## Step 3: Starting Your Virtual Machine
 
-2. Copy the putty.exe file you download to your desktop
+The previous steps installed all the programs that were needed to use a vagrant virtual machine.  The next step will run through the steps of turning the environment on for the first time.
 
-## Program Four: Vagrant
+Turning on your virtual environment will take a bit longer than usual on the first time.
 
-1. Go to the [Download Vagrant page](http://www.vagrantup.com/downloads.html), click Find the Windows section and click Universal (32 and 64-bit)
+**Windows Command Prompt** on your computer.  To do this, hit the `Windows` key to open the search bar.  Then type `cmd.exe` and press the enter key.  This will open a command prompt window.
 
-2. find program you just downloaded. Right-click the program and select the _Run as Administrator_ option. Once this launches the installer, you can continue by pressing _Next_ until the installer finishes.
 
-3. Restart your computer if you're prompted to.
+You will need to run two commands in your window.
 
-## Step Three: Starting Your Virtual Machine
+**First**, run the following command to change your working directory, to make it so you're working with the web development environment you downloaded earlier.
 
-The previous steps installed the four programs that are needed to use a Vagrant virtual machine. Now you are ready to turn the virtual environment.
+```
+cd Desktop\coding-environment
+```
 
-Turning on your virtual environment for the first time will take a bit longer than usual.
+**Second**, you will need to run the command to turn on your virtual computer environment.
 
-Complete the following steps:
+> **Note**:  this command will require you to download a file that is hundreds of megabytes long.  Make sure you are on a strong Internet connection before you run this command.
 
-1. **Open Command Prompt** on your computer. To do this, hit the **_Windows_** key to open the search bar. Then type **_cmd.exe_** and press the enter key. This will open a command prompt window.
+Run the following command — and **after the command completes, read the next section before you run another command.**
 
-2. Run the following two commands in the Command Prompt:
+```
+vagrant up
+```
 
-   - Run the following command to change your working directory. This will make it so you're working with the web development environment you downloaded earlier.
+**NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](faq/vagrant/run-vagrant-init.md) for details about how to fix this error message.
 
-   `cd ~/Desktop/coding-environment`
 
-   - Before running the command to turn on your virtual computer environment, understand that the next command will require you to download a file that is hundreds of MBs long. Make sure you are on a strong internet connection before you run this command.
 
-Run the following command **after the previous command completes, read the next section before you run another command.**
+### IMPORTANT: Read this before running any additional commands.
 
-`vagrant up`
+The previous command may complete with a variety of messages.  **It also may instruct you to run commands that will cause problems in your environment**: so make sure to read this section before doing anything.
 
-### Important: Read This Before Running Any Additional Commands
-
-The previous command may complete with a variety of messages. **It also may instruct you to run commands that will cause problems in your environment**: so make sure to read this section before running anymore commands.
-
-**SUCCESS! Everything is successful.**
+**[SUCCESS] — Everything is successful.**
 
 If everything is successful you will see output that looks like the following.
 
-![image alt text](images/windows-vagrant-image_0.png)
+![Screenshot](images/success-vagrant-windows.png)
 
-If your Command Prompt shows something similar to the above then you can continue to **Step 4**. This means Vagrant has been installed and started as expected.
+If you see this, continue to **Step 4**: vagrant has been installed and started as expected.  If this isn't what your screen looks like, continue below and find the message that matches the output you're seeing.
 
-If this isn't what your screen looks like, continue with the instructions below.
-
-The first thing you should do, is review the [ERROR] and [SOMETHING ELSE] messages to find the error that matches the error message you're seeing.
-
-**[ERROR] — Vagrant Environment Or Target Machine Error Message Shown.**
+**[ERROR] — `Vagrant environment or target machine` error message shown.**
 
 The error message will look like this:
 
-![image alt text](images/windows-vagrant-image_1.png)
+![Screenshot](images/vagrant-init-windows.png)
 
-The command may come back with an error message suggesting that you run the **_vagrant init_** command. **IMPORTANT!** **Do not run this command**.
+The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command**.
 
-**If you see this error, [click here to understand and fix the problem so the `vagrant up` command works](faq/vagrant/run-vagrant-init.md).**
+**If you see this error**, _**[click here to understand and fix the problem so the `vagrant up` command works](faq/vagrant/run-vagrant-init.md)**_.
 
-**[ERROR] — vagrant up timeouts.**
+
+**[ERROR] — `vagrant up` timeouts.**
 
 Error messages indicating that:
 
-Timed out while waiting for the machine to boot. This means Vagrant was unable to communicate with the guest machine within the configured ("config.vm.boot_timeout" value) time period.
+> Timed out while waiting for the machine to boot.  This means Vagrant was unable to communicate with the guest machine within th e configured ("config.vm.boot_timeout" value) time period.
 
-This error message indicates that your computer was unable to connect to the Vagrant environment. This can happen if your computer is incompatible with Vagrant.
+This error message indicates that your computer was unable to connect to the vagrant environment.  This can happen if your computer is incompatible with vagrant.
 
-If you see this error message, try running the command an additional time to see if the command executes successfully the next time.
+When this error message happens it's often best to try to run the command an additional time to see if the command executes successfully the next time.
 
-If you keep getting this error message, we recommend using a Cloud IDE. [**Click here to set up a Cloud IDE to use for your coding environment**](cloud-ide.md).
+**Typically, we suggest switching to use a Cloud IDE if this problem persists.** **_[Click here to use a CloudIDE to use your coding environment](cloud-ide.md)_**.
 
 **[SOMETHING ELSE] — the output produces something else and does not indicate that everything worked as expected.**
 
-If you encountered an output that is different than the above actions your environment is in a state that is slightly different than these instructions expect. Because of this, you should ask your TA for help.
+If you encountered an output that is different than the above actions your environment is in a state that is slightly different than these instructions expect.  Because of this, you should ask for help for a TA.
 
-Use the following template when asking for help:
+To get the best answer, use the following template to ask for help.
 
-_Hello. I'm setting up my web development environment using Vagrant and when running the **vagrant up** command I encountered an unusual problem. Attached is a screenshot of the error._
+> Hello.  I'm setting up my web development environment using vagrant and when running the `vagrant up` command I encountered an unusual problem.  Attached is a screenshot of the error.
 
-Then take a screenshot of the full output of the command you just ran in terminal the terminal window and include it in your request for help. We will respond to your request for help as soon as possible!
+Then take a screenshot of the full output of the command you just ran in the terminal window and include it in your request for help.  We will get back to you about it, soon!
 
-## Step Four: Log Into Your Dev Environment
+## Step 4: Log into your dev environment
 
-You have now installed, configured, and turned on a virtual computer to use for web development. The next step will log you in to your dev environment, so you can begin using it.
+The previous steps installed, configured and turned on a virtual computer that you can use for web development.  The next steps will log you into your environment, so you can begin using it.
 
-After **vagrant up** finishes you will be able to connect to your environment using the PuTTY program you installed, earlier.
+After `vagrant up` finishes you will be able to connect to your environment using the `PuTTY` program you installed, earlier.
 
-1. Double-click the putty.exe program that is located on your Desktop.
+**First**, double-click the `putty.exe` program that is located on your _Desktop_.
 
-2. Enter the relevant information about the connection in the program.
+**Second**, enter the relevant information about the connection in the program.
 
-| Field    | Value     |
-| -------- | --------- |
-| Hostname | 127.0.0.1 |
-| Port     | 2222      |
+| **Field** | **Value**   |
+| --------- | ----------- |
+| Hostname  | `127.0.0.1` |
+| Port      | `2222`      |
 
-3. Press the "Open" button.
+**Third**, press the `Open` button.
 
-**Note**: _You may be prompted with a PuTTY Security Alert asking if you trust the connection._
+> **Note**: _You may be prompted with a PuTTY Security Alert asking if you trust the connection._
+>
+> ![Security alert](http://i.imgur.com/Nw2Th29.gif)
+>
+> If this comes up press `Yes` to continue and stop prompting you with this warning.
 
-![image alt text](images/windows-vagrant-image_2.gif)
+> **Note:** after you press the `Open` button, you may see an error message appear that suggests the `Network Connection Refused`.
+>
+> If this happens, follow the instructions in **[`PuTTY Connection Refused` FAQ answer](faq/vagrant/putty-network-connection-refused.md)** to fix this.
 
-If this comes up press Yes to continue and stop prompting you with this warning.
+**Fourth**, you will need to enter a login and password to log into your environment.  Enter the following values:
 
-Note: after you press the Open button, you may see an error message appear that suggests the Network Connection Refused.
+| **Field** | **Value** |
+| --------- | --------- |
+| Username  | `vagrant` |
+| Password  | `vagrant` |
 
-If this happens, follow the instructions in [PuTTY Connection Refused FAW Answer](faq/vagrant/putty-network-connection-refused.md) to fix this.
 
-4. You will need to enter a login and password to log into your environment. Enter the following values:
 
-| Field    | Value   |
-| -------- | ------- |
-| Username | vagrant |
-| Password | vagrant |
 
 This command will change your regular terminal window into a terminal window that you can use to run commands inside the virtual computer that was setup.
 
-When you are logged into your virtual computer, it is ready for you to run commands inside this virtual machine.
+When you are logged into your virtual computer and it is ready for you to run commands inside this virtual machine.
 
-This brings you into your web dev environment ready to run commands. This PuTTY window with the green [ENV] text is a terminal window that is running inside your vagrant virtual computer. We will refer to as _your coding environment_ from now on.
+This brings you into your web dev environment ready to run commands.  This `PuTTY` window with the green `[ENV]` text is a terminal window that is running inside your vagrant virtual computer.  We will refer to as _your coding environment_ from now on.
 
-## Step Five: Connecting Your Environment With Your Accounts
 
-In the previous steps, you set up GitHub and Heroku accounts. For these accounts to work correctly, you will need to connect your coding environment with these accounts.
+## Step 5: Connecting your environment with your accounts
 
-Complete the steps in the [account setup guide](account-setup.md) to connect your environment to these accounts.
+In the previous steps you setup accounts on GitHub.com and heroku.com.  For these accounts to work correctly, you will need to connect your coding environment with these accounts.
 
-## Step Six: Test
+Follow the steps in the [account setup guide](account-setup.md) to hook up your environment to these accounts.
 
-Now that your environment is successfully installed, set up, and configured you can test that the environment is able to run a Ruby on Rails project.
+## Step 6: Test
 
-To test your environment, complete the following steps:
+Now that your environment is properly installed, setup and configured you will now be able to test that the environment is able to run a ruby on rails project.  
 
-1. Within your coding environment change your directory to the folder where the Ruby on Rails test application's source code is.
-
-`cd /vagrant/src/rails-test-app`
-
-2. Run the following command to start a Ruby on Rails server:
-
-`rails s`
-
-This command will start running and prevent you from running additional commands, but will allow you to interact with your application within a web browser.
-
-**Note**: When the server finishes starting up, it may appear that it is hanging. The result will look like the following:
-
-![image alt text](images/windows-vagrant-image_3.png)
-
-After your server finishes spinning up and the text that says User Ctrl-C to stop appears it means your server is running.
-
-3. Open a web browser on your computer and go to: [http://127.0.0.1:3030](http://127.0.0.1:3030/).
-
-You will be able to preview the application in your web browser and it will look like the following:
-
-![image alt text](images/windows-vagrant-image_4.png)
-
-If you see this page, it means you've finished setting up your application and can preview an application that is running.
-
-## Step Seven: Stop Your Rails Server
-
-The command you ran above started running a server that can be previewed in a web browser. Before we finish, we should close the program we just opened.
-
-To stop your rails server, complete the following:
-
-1. Find your web development terminal where you ran the rails server (`rails s`) command and press **CTRL+C**.
-
-2. After you press **CTRL+C** on your keyboard, your terminal will give you a message that indicates your server has closed and return the following prompt so new commands can be entered:
+**First**, within your coding environment change your directory to the folder where the Ruby on Rails test application's source code is.
 
 ```
-^C- Gracefully stopping, waiting for requests to finish === puma shutdown: 2018-10-31 23:35:32 +0000 ===
-Goodbye! Exiting
+cd /vagrant/src/rails-test-app
 ```
 
-Running this command will prevent the webpage from loading in the future, but it will allow you to enter new commands.
+**Second**, run the following command to start a Ruby on Rails server.  This command will start running and prevent you from running additional commands, but will allow you to interact with your application within a web browser.
 
-## Step Eight: Learn About Your Vagrant Coding Environment
+```
+rails s -b 0.0.0.0 -p 3000
+```
 
-You have now set up a virtual machine with Vagrant on your computer. This will be your coding environment that you will be able to use for the remainder of the course.
+> **Important**: When the server finishes starting up, it may appear that it is hanging.  The result will look like this:
+>
+> ![server](images/rails-server-running.png)
 
-Since you will be using this coding environment extensively in the future, understanding the environment is important.
+After your server finishes spinning up and the text that says `User Ctrl-C to stop` appears it means your server is running.
 
-[**Visit the Introduction to Vagrant**](cheat-sheets/vagrant-intro-windows.md) page to learn more about how to use this coding environment that you just set up.
+**Third**, open a web browser on your computer and go to: [http://127.0.0.1:3030](http://127.0.0.1:3030).  You will be able to preview the application in your web browser and it will look like this.
+
+![preview](images/preview.png)
+
+If you see this, it means you've finished setting up your application and can preview an application that is running.
+
+## Step 7: Stop your rails server
+
+The command you ran above started running a server that can be previewed in a web browser.  Before we finish, we should close the program we just opened.
+
+**Find your web development terminal where you ran the `rails server` (rails s) command and hold CTRL+C.**
+
+After you press hold `CTRL+C` on your keyboard, your terminal will give you a message that indicates your server has closed and return the prompt so new commands can be entered.
+
+> ^C- Gracefully stopping, waiting for requests to finish
+> === puma shutdown: 2018-10-31 23:35:32 +0000 ===
+> - Goodbye!
+> Exiting
+
+This will prevent the webpage from loading in the future, but will allow you to enter new commands.
+
+## Step 8: Learn about your vagrant coding environment
+
+By following these instructions in this guide you've setup a virtual machine with vagrant on your computer.  This will be your coding environment that you will be able to use for the remainder of the course.
+
+Since you will be using this coding environment extensively in the future, understanding it will be important.
+
+**_[Visit the the Introduction to Vagrant](cheat-sheets/vagrant-intro-windows.md)_** to learn more about how to use this development environment that you just setup.
+
+## Step 9: Enable virtualization (optional)
+
+***Only complete this step if you have determined that virtualization is not enabled***.
+
+Virtualization settings are handled by your motherboards System BIOS. To enable virtualization you will need to enter your computers BIOS and manually enable the setting. Each motherboard can have a different way of entering its BIOS utility, so you'll need to look up instructions for your particular motherboard.
+
+If you don't know what kind of motherboard you have you can find out by following the steps below:
+
+If you're running Windows 8 or 10:
+
+* First go to the Desktop and press **Windows key** + **X**, which will open up the Power User Task Menu.
+
+* Next, click on **Run**.
+
+* In the text field, type **msinfo32** and hit enter.
+
+If you're running Windows 7 or earlier:
+
+* Open the Start menu.
+ 
+* Navigate to All Programs > Accessories > System Tools and select the System Information utility.
+
+> *Note that motherboards may also be refered to as BaseBoard. If the model number shown is **unavailable**, don't worry, you will most likely only need the manufacturer name.*
+
+* Now that we have your motherboard manufacturer, do a google search for "YOUR_MOTHERBOARD_MANUFACTURER bios key"
+
+    * Your results will most likely point to the **DELETE** key or **F2**.
+
+    * If the BIOS key still isn't clear, you can try rebooting your computer and checking the message at the top within the first few seconds of startup.
+
+* Make note of which key you'll need to press, then google "YOUR_MOTHERBOARD_MANUFACTURER enable virtualization"
+
+> *It is recommended that you either perform the search on your phone or take brief notes of the necessary steps, since you will have to reboot your computer in order to enter the BIOS.*
+
+* Next, walk through the steps yielded in your Google search to enable VT-x or AMD SVM. Remember that you won't be able to check Google on your machine while in the BIOS, so make sure to have the instructions pulled up on another screen or written down.
+
+* If everything is successful, continue with [Step 1](#step-1-get-the-files).
