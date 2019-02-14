@@ -131,7 +131,7 @@ The error message will look like this:
 
 The command may come back with an error message suggesting that you run the `vagrant init` command. **Do not run this command**.
 
-**If you see this error**, _**[click here to understand and fix the problem so the `vagrant up` command works](faq/vagrant/run-vagrant-init.md)**_.
+**Instead**, _**[click here to understand and fix the problem](faq/vagrant/run-vagrant-init.md)**_ so the `vagrant up` command works.
 
 
 **[ERROR] — `vagrant up` timeouts.**
