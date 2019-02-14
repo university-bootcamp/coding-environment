@@ -16,7 +16,7 @@ In this step, we will install, configure and test your vagrant web development e
 - [Step 6: Test](#step-6-test)
 - [Step 7: Stop your rails server](#step-7-stop-your-rails-server)
 - [Step 8: Learn about your vagrant coding environment](#step-8-learn-about-your-vagrant-coding-environment)
-- [Step 9: Enable Virtualization (optional)](#step-9-enable-virtualization-(optional))
+- [Step 9: Enable Virtualization (if necessary)](#step-9-enable-virtualization-(optional))
 
 > **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
 
@@ -46,7 +46,7 @@ Your vagrant virtual machine will need a variety of files to set this up.
 
 ## Step 2: Install four programs
 
-There are found programs you will need to install to setup your environment:  Sublime text, VirtualBox PuTTY and vagrant.
+There are four programs you will need to install to setup your environment: Sublime text, VirtualBox PuTTY and vagrant.
 
 ### Program 1 — Sublime Text Editor
 
@@ -54,7 +54,7 @@ There are found programs you will need to install to setup your environment:  Su
 
 **First**, visit the [Sublime Text Editor Website](http://sublimetext.com/) and click "Download for Windows".  
 
-**Second**, once the program finishes downloading, find the file in the Windows Exporer.  Right-click the program and select the `Run as Administrator` option.  Once this launches the installer, you can continue by pressing `Next` until the installer finishes.
+**Second**, once the program finishes downloading, find the file in the Windows Explorer.  Right-click the program and select the `Run as Administrator` option.  Once this launches the installer, you can continue by pressing `Next` until the installer finishes.
 
 
 ### Program 2 — VirtualBox
@@ -62,7 +62,7 @@ There are found programs you will need to install to setup your environment:  Su
 
 **First**, visit the [VirtualBox Website](https://www.virtualbox.org/wiki/Downloads),  click the link to Download "Windows hosts".
 
-**Second**, find the `VirutalBox.exe` program you just downloaded.  Right-click the program and select the `Run as Administrator` option.  Once this launches the installer, you can continue by pressing `Next` until the installer finishes.
+**Second**, find the `VirutalBox` program you just downloaded.  Right-click the program and select the `Run as Administrator` option.  Once this launches the installer, you can continue by pressing `Next` until the installer finishes.
 
 > **Note:** if you are using the Windows 10 operating system, or later upgrade your operating system to Windows 10 it will be important to update your VirtualBox program to the latest release.
 
@@ -171,7 +171,7 @@ After `vagrant up` finishes you will be able to connect to your environment usin
 | Hostname  | `127.0.0.1` |
 | Port      | `2222`      |
 
-**Third**, press the `Open` button.
+**Third**, press the Open button.
 
 > **Note**: _You may be prompted with a PuTTY Security Alert asking if you trust the connection._
 >
@@ -189,9 +189,6 @@ After `vagrant up` finishes you will be able to connect to your environment usin
 | --------- | --------- |
 | Username  | `vagrant` |
 | Password  | `vagrant` |
-
-
-
 
 This command will change your regular terminal window into a terminal window that you can use to run commands inside the virtual computer that was setup.
 
@@ -257,7 +254,7 @@ Since you will be using this coding environment extensively in the future, under
 
 **_[Visit the the Introduction to Vagrant](cheat-sheets/vagrant-intro-windows.md)_** to learn more about how to use this development environment that you just setup.
 
-## Step 9: Enable virtualization (optional)
+## Step 9: Enable virtualization (if necessary)
 
 ***Only complete this step if you have determined that virtualization is not enabled***.
 
@@ -279,7 +276,7 @@ If you're running Windows 7 or earlier:
  
 * Navigate to All Programs > Accessories > System Tools and select the System Information utility.
 
-> *Note that motherboards may also be refered to as BaseBoard. If the model number shown is **unavailable**, don't worry, you will most likely only need the manufacturer name.*
+> *Note that motherboards may also be referred to as BaseBoard. If the model number shown is **unavailable**, don't worry, you will most likely only need the manufacturer name.*
 
 * Now that we have your motherboard manufacturer, do a google search for "YOUR_MOTHERBOARD_MANUFACTURER bios key"
 
