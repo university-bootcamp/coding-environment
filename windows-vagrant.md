@@ -119,7 +119,7 @@ The previous command may complete with a variety of messages.  **It also may ins
 
 If everything is successful you will see output that looks like the following.
 
-![Screenshot](images/success-vagrant-windows.png)
+![Screenshot](images/windows-vagrant-image_1.png)
 
 If you see this, continue to **Step 4**: vagrant has been installed and started as expected.  If this isn't what your screen looks like, continue below and find the message that matches the output you're seeing.
 
@@ -221,7 +221,7 @@ rails s -b 0.0.0.0 -p 3000
 
 > **Important**: When the server finishes starting up, it may appear that it is hanging.  The result will look like this:
 >
-> ![server](images/rails-server-running.png)
+> ![server](images/windows-vagrant-image_3.png)
 
 After your server finishes spinning up and the text that says `User Ctrl-C to stop` appears it means your server is running.
 
