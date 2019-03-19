@@ -38,7 +38,7 @@ If virtualization is not *Enabled*, skip to [Step 9](#step-9-enable-virtualizati
 
 ## Step 1: Get the files
 
-Your vagrant virtual machine will need a variety of files to set this up.
+> Your vagrant virtual machine will need a variety of files to set this up.
 
 * **Download and unzip** [coding-environment.zip](https://github.com/university-bootcamp/coding-environment/raw/master/tools/coding-environment.zip) to your `Desktop` folder.
 
@@ -46,7 +46,7 @@ Your vagrant virtual machine will need a variety of files to set this up.
 
 ## Step 2: Install four programs
 
-There are four programs you will need to install to setup your environment: Sublime text, VirtualBox PuTTY and vagrant.
+There are four programs you will need to install to setup your environment: Sublime text, VirtualBox, PuTTY and Vagrant.
 
 ### Program 1 — Sublime Text Editor
 
@@ -56,9 +56,7 @@ There are four programs you will need to install to setup your environment: Subl
 
 **Second**, once the program finishes downloading, find the file in the Windows Explorer.  Right-click the program and select the `Run as Administrator` option.  Once this launches the installer, you can continue by pressing `Next` until the installer finishes.
 
-
 ### Program 2 — VirtualBox
-
 
 **First**, visit the [VirtualBox Website](https://www.virtualbox.org/wiki/Downloads),  click the link to Download "Windows hosts".
 
@@ -71,8 +69,6 @@ There are four programs you will need to install to setup your environment: Subl
 **First**, visit the website to download the [PuTTY SSH Client](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). After downloading the executable, copy the `putty.exe` file onto your Desktop.
 
 ### Program 4 — Vagrant
-
-* Go to the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), click Find the Windows section and click "Universal (32 and 64-bit)".  Run the file you downloaded and follow the instructions (you're clicking next most of the time) and download the installer.
 
 **First**, visit the [Vagrant Download Page](http://www.vagrantup.com/downloads.html), find and click the Windows selection.  Choose the selection for `Universal (32 and 64-bit)` programs and download the installer.
 
@@ -87,7 +83,6 @@ The previous steps installed all the programs that were needed to use a vagrant 
 Turning on your virtual environment will take a bit longer than usual on the first time.
 
 **Windows Command Prompt** on your computer.  To do this, hit the `Windows` key to open the search bar.  Then type `cmd.exe` and press the enter key.  This will open a command prompt window.
-
 
 You will need to run two commands in your window.
 
@@ -108,8 +103,6 @@ vagrant up
 ```
 
 **NOTE:** If this comes back with an error message telling you to run `vagrant init` DO NOT DO THAT.  See this post [here](faq/vagrant/run-vagrant-init.md) for details about how to fix this error message.
-
-
 
 ### IMPORTANT: Read this before running any additional commands.
 
@@ -138,7 +131,7 @@ The command may come back with an error message suggesting that you run the `vag
 
 Error messages indicating that:
 
-> Timed out while waiting for the machine to boot.  This means Vagrant was unable to communicate with the guest machine within th e configured ("config.vm.boot_timeout" value) time period.
+> Timed out while waiting for the machine to boot.  This means Vagrant was unable to communicate with the guest machine within the configured ("config.vm.boot_timeout" value) time period.
 
 This error message indicates that your computer was unable to connect to the vagrant environment.  This can happen if your computer is incompatible with vagrant.
 
@@ -148,7 +141,7 @@ When this error message happens it's often best to try to run the command an add
 
 **[SOMETHING ELSE] — the output produces something else and does not indicate that everything worked as expected.**
 
-If you encountered an output that is different than the above actions your environment is in a state that is slightly different than these instructions expect.  Because of this, you should ask for help for a TA.
+If you encountered an output that is different than the above actions your environment is in a state that is slightly different than these instructions expect.  Because of this, you should ask for help from a TA.
 
 To get the best answer, use the following template to ask for help.
 
