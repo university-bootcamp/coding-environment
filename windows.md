@@ -96,15 +96,13 @@ All the files within this folder inside the Vagrant environment will be automati
 
 The following information will be important for you to know if you are using a cloud IDE setup.
 
-**If you want to preview the application that is running within your coding environment** -— You will need to use the Run button provided in the browser environment. The IDE will provide you with a URL you can use to view your application.
-
-**Note**: You'll need to follow [the instructions for setting up the run command](cloud-ide.md#step-3-setting-up-the-run-command) first.
+**If you want to preview the application that is running within your coding environment** —- You will need to click the "Preview" tab from the menu bar, and then click "Preview Running Application" option from the dropdown.
 
 **If you see instructions that tell you to visit the URL `localhost:3030` and you are using a cloud IDE** -— Instead you should make sure to follow the steps above to preview the web application in your coding environment.
 
 **Location of project files** -— When using this coding environment, most people will store the code for their specific projects in the folder in the directly in the home folder of their environment.
 
-**If you ever see instructions that suggest changing your directory or using the `/vagrant/src` folder** —- You should use the folder where your code lives instead. This will usually involve changing the directory to the home folder, using the cd ~ command.
+**If you ever see instructions that suggest changing your directory or using the `/vagrant/src` folder** -— You should use the folder where your code lives instead. This will usually involve changing the directory to the home folder, using the `cd ~` command.
 
 ## Your Environment Setup Process Is Now Complete!
 
