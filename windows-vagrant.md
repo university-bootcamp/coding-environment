@@ -30,7 +30,31 @@ Complete the following steps to install and use your Vagrant coding environment:
 
 - [8. Learn About Your Vagrant Coding Environment](#step-eight-learn-about-your-vagrant-coding-environment)
 
-**Note:** Make sure to close other virtualization environments you have running. If you are running Parallels, VirtualBox, or VMWare you will need to close them.
+> **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
+
+Follow the following steps to install and use your vagrant environment.
+
+## Important Check: Virtualization
+
+For vagrant to function on your windows machine, you will need to make sure a feature called `virtualization` is enabled.
+
+To find out if virtualization is enabled on your machine, please follow the steps below:
+
+**First**, open your task manager (**ctrl** + **alt** + **del**).
+
+**Second**, click on the **Performance** tab.
+
+![Screenshot](images/virtualization-enabled.png)
+
+**If virtualization is not *Enabled*, you will not be able to use Vagrant on your machine and it's recommended that you use [Codenvy](windows.md#step-two-set-up-a-cloud-ide-alternative) as your development environment instead.**
+
+It may be possible to enable virtualization from your machine's BIOS settings, though we're unable to provide specific instructions to accomplish this as every motherboard comes with a different BIOS interface. Additionally there's a high potential for causing damage to your computer from changing settings in the BIOS -- even if you do everything correctly.
+
+Due to this, if virtualization is not enabled on your machine by default, we highly recommend that you use [Codenvy](windows.md#step-two-set-up-a-cloud-ide-alternative) instead. It's a great fully featured option that will allow you to access your development environment from any computer in the world with an internet connection.
+
+If you feel confident updating your BIOS settings to enable virtualization, do so at your own risk, or discuss the option with your mentor. It's still recommended to get setup with [Codenvy](windows.md#step-two-set-up-a-cloud-ide-alternative) in the meantime so that you can begin working through the material.
+
+**Do not proceed if virtualization is not enabled on your machine, use [Codenvy](windows.md#step-two-set-up-a-cloud-ide-alternative) instead.**
 
 ## Step One: Get The Files
 
