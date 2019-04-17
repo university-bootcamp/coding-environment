@@ -65,7 +65,7 @@ Follow these steps to set up the stack we'll be using:
 2. In the text field enter the following code:
   
     ```docker
-    FROM tteltrab/rr-pg-for-codenvy
+    FROM trilogyed/codenvy
     ``` 
     
    Then click the **OK** button:
