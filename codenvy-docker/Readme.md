@@ -19,7 +19,7 @@ This docker image installs and sets up the following:
 To build the image:
 
 ```sh
-docker build . -t tteltrab/rr-pg-for-codenvy &&
+docker build . -t trilogyed/codenvy
 ```
 
 ## Running Commands
@@ -27,25 +27,21 @@ docker build . -t tteltrab/rr-pg-for-codenvy &&
 To run commands interactively in a new container using the image:
 
 ```sh
-docker run -i -t tteltrab/rr-pg-for-codenvy /bin/bash
+docker run -i -t trilogyed/codenvy /bin/bash
 ```
 
 ## Pushing to Docker Hub
 
-Once the image has been built, push the image:
+Submit a PR with changes to <https://github.com/coding-boot-camp/codenvy-docker>
 
-```sh
-docker push tteltrab/rr-pg-for-codenvy
-```
-
-Currently this image is publicly available on docker hub here: <https://hub.docker.com/r/tteltrab/rr-pg-for-codenvy/> .
+Currently this image is publicly available on docker hub here: <https://hub.docker.com/r/trilogyed/codenvy/> .
 
 ## Running with Codenvy
 
 To run this on Codenvy, simply create a new stack with the following recipe:
 
 ```docker
-FROM tteltrab/rr-pg-for-codenvy
+FROM trilogyed/codenvy
 ```
 
 Then, when creating a new workspace, choose the stack with the name used in the creation above.

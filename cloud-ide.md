@@ -1,6 +1,6 @@
 # Cloud IDE
 
-Instead of installing the programs on our personal computers, we can use a Cloud IDE. 
+Instead of installing the programs on our personal computers, we can use a Cloud IDE.
 
 While there are many options, we recommend starting with Codenvy; it has much of what is needed set up already. Cloud IDEs allow us to run a full-fledged coding environment inside our web browser. The setup is quick and straightforward, which makes using a cloud IDE a no-brainer at this stage of the game.
 
@@ -65,7 +65,7 @@ Follow these steps to set up the stack we'll be using:
 2. In the text field enter the following code:
   
     ```docker
-    FROM tteltrab/rr-pg-for-codenvy
+    FROM trilogyed/codenvy
     ``` 
     
    Then click the **OK** button:
@@ -271,9 +271,3 @@ Congratulations, your application is now up and running!
 If you want to stop your running application, simply close the rails process in the terminal/process pane.
 
 > Note: Remember <a href="#workspace-note">this note regarding how your workspace will reset after it has been stopped</a>. Also remember to re-navigate into your project using `cd projects/<your-project-folder>`, where `<your-project-folder>` should be replaced by the name of your project folder.
-
-## Alternatives 
-
-Another option is to use [AWS Cloud 9](https://aws.amazon.com/cloud9/), which has a free tier but requires you to sign up with AWS with a credit card (and charges you automatically if you go beyond your free tier).
-
-Similarly to above, you sign up and get an in-browser editor. With Cloud 9, Ruby and Rails are already set up and available in the default workspace.
