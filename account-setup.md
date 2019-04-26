@@ -83,7 +83,7 @@ Your environment will need to connect it's SSH key to the GitHub service, too.  
 **Next**, copy and paste the following command in your coding environment.  After running this command, enter your GitHub username and password to connect your account.
 
 ```
-curl https://raw.githubusercontent.com/university-bootcamp/coding-environment/cloud-ide-instructions/github_auth.rb > ~/.bootcamp-github.rb && ruby ~/.bootcamp-github.rb
+curl https://raw.githubusercontent.com/university-bootcamp/coding-environment/master/github_auth.rb > ~/.bootcamp-github.rb && ruby ~/.bootcamp-github.rb
 ```
 
 > **Important**:  After running the above command the command should display the text `ok!` in the terminal window.
