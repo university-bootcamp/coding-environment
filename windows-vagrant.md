@@ -60,6 +60,8 @@ If you feel confident updating your BIOS settings to enable virtualization, do s
 
 You will need a variety of files to set up your Vagrant virtual machine. Download and unzip [coding-environment.zip](tools/coding-environment.zip) to your Desktop folder.
 
+**If you utilize any Cloud storage systems (such as OneDrive), you __must not__ unzip the Coding Environment to your Cloud Desktop. It must be unzipped to your true, local Desktop. If you have any questions, reach out to the TA Team.**
+
 The coding-environment folder will be the folder where your web development environment and source code will be used.
 
 ## Step Two Install Four Programs
@@ -118,7 +120,7 @@ Complete the following steps:
 
    - Run the following command to change your working directory. This will make it so you're working with the web development environment you downloaded earlier.
 
-   `cd ~/Desktop/coding-environment`
+   `cd Desktop\coding-environment`
 
    - Before running the command to turn on your virtual computer environment, understand that the next command will require you to download a file that is hundreds of MBs long. Make sure you are on a strong internet connection before you run this command.
 
