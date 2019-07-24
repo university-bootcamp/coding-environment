@@ -56,8 +56,6 @@ If you feel confident updating your BIOS settings to enable virtualization, do s
 
 **Do not proceed if virtualization is not enabled on your machine, use [Codenvy](windows.md#step-two-set-up-a-cloud-ide-alternative) instead.**
 
-See a vide
-
 [Watch a video of Important Check: Virtualization](https://drive.google.com/open?id=1p3n5_WkCup8vrvhADaAcmhhMAj1SAztU)
 
 ## Step One: Get The Files
