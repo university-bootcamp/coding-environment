@@ -56,11 +56,17 @@ If you feel confident updating your BIOS settings to enable virtualization, do s
 
 **Do not proceed if virtualization is not enabled on your machine, use [Codenvy](windows.md#step-two-set-up-a-cloud-ide-alternative) instead.**
 
+See a vide
+
+[Watch a video of Important Check: Virtualization](https://drive.google.com/open?id=1p3n5_WkCup8vrvhADaAcmhhMAj1SAztU)
+
 ## Step One: Get The Files
 
 You will need a variety of files to set up your Vagrant virtual machine. Download and unzip [coding-environment.zip](tools/coding-environment.zip) to your Desktop folder.
 
 The coding-environment folder will be the folder where your web development environment and source code will be used.
+
+[Watch a video of Step One: Get The Files](https://drive.google.com/open?id=1eWe0SFXZy1QBWissQGYqmqqdAM67mvGP)
 
 ## Step Two Install Four Programs
 
@@ -104,7 +110,13 @@ Note: if you are using the Windows 10 operating system, or later upgrade your op
 
 3. Restart your computer if you're prompted to.
 
+[Watch a video of Step Two Downloading Four Programs](https://drive.google.com/open?id=1KCQvKi5S7MjS0diuq9ovdwziRJnjYxH0)
+
+[Watch a video of Step Two Installing Four Programs](https://drive.google.com/open?id=1wqet_mCb6DFU6J-acWCxO15-yDRHt0E6)
+
+
 ## Step Three: Starting Your Virtual Machine
+
 
 The previous steps installed the four programs that are needed to use a Vagrant virtual machine. Now you are ready to turn the virtual environment.
 
@@ -174,6 +186,8 @@ _Hello. I'm setting up my web development environment using Vagrant and when run
 
 Then take a screenshot of the full output of the command you just ran in terminal the terminal window and include it in your request for help. We will respond to your request for help as soon as possible!
 
+[Watch a video of Step Three: Starting Your Virtual Machine](https://drive.google.com/open?id=1fJbjq46QYYAPWvXVgF-91_N0C3c0CHxo)
+
 ## Step Four: Log Into Your Dev Environment
 
 You have now installed, configured, and turned on a virtual computer to use for web development. The next step will log you in to your dev environment, so you can begin using it.
@@ -213,6 +227,8 @@ This command will change your regular terminal window into a terminal window tha
 When you are logged into your virtual computer, it is ready for you to run commands inside this virtual machine.
 
 This brings you into your web dev environment ready to run commands. This PuTTY window with the green [ENV] text is a terminal window that is running inside your vagrant virtual computer. We will refer to as _your coding environment_ from now on.
+
+[Watch a video of Step Four: Log Into Your Dev Environment](https://drive.google.com/open?id=1xCJzVczNqRrvpVUEFKVb47Ks-hGZR39L)
 
 ## Step Five: Connecting Your Environment With Your Accounts
 
