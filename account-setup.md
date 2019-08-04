@@ -102,7 +102,7 @@ The above steps set git and GitHub to use your SSH key as a way to connect to yo
 git config --global user.email "you@example.com"
 ```
 
-**Enter the following command in your web development environment**, and also be sure to adjust the email address in the command you execute to be your name instead of the `Your Name` value.
+**Enter the following command in your web development environment**, and also be sure to adjust the text in the command you execute to be your name instead of the `Your Name` value.
 
 ```
 git config --global user.name "Your Name"
