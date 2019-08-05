@@ -221,9 +221,26 @@ After your server finishes spinning up and the text that says User Ctrl-C to st
 
 You will be able to preview the application in your web browser and it will look like the following:
 
-![image alt text](images/mac-vagrant-image_5.png)
+![image alt text](images/mac-vagrant-image_9.png)
 
 If you see this page, it means you've finished setting up your application and can preview an application that is running.
+
+If you see a page not found, be sure to fully restart your browser by following these instructions:
+
+1. Open your dock
+
+2. Right click the browser you are using (Google Chrome, Safari, Firefox, etc...) and tap Quit. This should make the little dot below it disappear. If this fails, right click it again and tap Force Quit.
+
+3. Reopen that broswer and attempt to go to the url again: [http://127.0.0.1:3030](http://127.0.0.1:3030/).
+
+4. During the `vagrant up` command, ports may have been redirrected. The example below would infer http://127.0.0.1:****/ would work by filling in **** with the port `2204`.
+
+`
+==> default: Fixed port collision for 3000 => 3030. Now on port 2204.
+` 
+
+
+5. If the problem continues, setting up your environment with a [cloud IDE] (https://github.com/university-bootcamp/coding-environment/blob/master/cloud-ide.md) may be a better solution.
 
 ## Step Seven: Stop Your Rails Server
 
